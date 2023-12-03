@@ -1,0 +1,14 @@
+{
+  "name": "devnodejs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "start" : "node uuidv.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "uuidv4": "^6.2.13"
+  }
+}

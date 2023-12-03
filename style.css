@@ -1,0 +1,136 @@
+body {
+  margin: 9rem;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 1rem;
+}
+
+.name {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+
+  user-select: none;
+  font-size: 5rem;
+}
+
+.general {
+  /* border: 1px solid black; */
+  height: 50rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.HeadGroup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  border-radius: 10px;
+  background-color: rgb(243, 241, 241);
+  padding: 1rem;
+  /* border: 1px solid black; */
+}
+
+
+
+.btn {
+  display: flex;
+  user-select: none;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0.5rem;
+
+  border-radius: 5px;
+  border: 1px solid black;
+  width: 14rem;
+  height: 2rem;
+  font-size: 1.4rem;
+  font-weight: 700;
+  background-color: rgb(243, 241, 241);
+}
+
+.btn:hover {
+  filter: brightness(80%);
+}
+
+.btn:active {
+  filter: brightness(90%);
+}
+
+.stt {
+  display: flex;
+  background-color: rgb(229, 226, 226);
+  cursor: pointer;
+  user-select: none;
+  border-radius: 0px 10px 10px 0px;
+  width: 4rem;
+  height: 4rem;
+  position: fixed;
+  top: 0em;
+  left: 1em;
+  transform: translateY(-150%);
+  animation: ani 1s forwards;
+  /* border: 1px solid black; */
+}
+
+.upward {
+  transform: translateY(0);
+  animation: moveUp 1s forwards;
+}
+
+@keyframes moveUp {
+  0% {
+    transform: translateY(0) rotate(90deg);
+  }
+  100% {
+    transform: translateY(-100%) rotate(90deg);
+  }
+}
+
+@keyframes ani {
+  0% {
+    transform: translateY(-150%) rotate(90deg);
+  }
+  100% {
+    transform: translateY(0) rotate(90deg);
+  }
+}
+
+.stt:hover {
+  filter: brightness(80%);
+}
+
+.stt:active {
+  filter: brightness(90%);
+}
+
+.title {
+  font-size: 3rem;
+}
+
+.section {
+  display: flex;
+  flex-wrap: wrap;
+
+}
+
+.item {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  overflow: hidden;
+  width: 20rem;
+  height: 20rem;
+  margin: 1rem;
+  border-radius: 10px;
+  border: 1px solid black;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+}
