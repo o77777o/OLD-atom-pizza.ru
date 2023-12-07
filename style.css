@@ -115,7 +115,7 @@ body {
   flex-wrap: wrap;
 }
 
-.item {
+.product {
   display: flex;
   flex-direction: column;
   align-content: center;
@@ -137,8 +137,9 @@ body {
   /* border: 1px solid black; */
 }
 .structure_product {
-  margin: 0.5rem 0rem;
-  font-size: 1.2rem;
+  /* border: 1px solid black; */
+  height: 3rem;
+  font-size: 1.1rem;
 }
 
 .weight_product {

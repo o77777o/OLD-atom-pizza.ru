@@ -20,11 +20,11 @@ document.addEventListener("scroll", () => {
   }
 });
 
-const HeadGroupEL = document.querySelector(".HeadGroup");
-document.addEventListener("scroll", () => {
-  console.log(window.scrollY);
-  window.scrollY >= 430
-    ? (HeadGroupEL.classList.add = "fixed")
-    : (HeadGroupEL.classList.remove = "static");
-});
+// const HeadGroupEL = document.querySelector(".HeadGroup");
+// document.addEventListener("scroll", () => {
+//   console.log(window.scrollY);
+//   window.scrollY >= 430
+//     ? (HeadGroupEL.classList.add = "fixed")
+//     : (HeadGroupEL.classList.remove = "static");
+// });
 
