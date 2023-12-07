@@ -4,7 +4,7 @@
   "description": "",
   "main": "script.js",
   "scripts": {
-    "start" : "node cart.js"
+    "start" : "node uuidv.js"
   },
   "author": "",
   "license": "ISC",
