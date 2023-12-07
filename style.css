@@ -119,6 +119,7 @@ body {
   display: flex;
   flex-direction: column;
   align-content: center;
+  
   width: 20rem;
   height: 27rem;
   margin: 1rem;
@@ -137,14 +138,16 @@ body {
   /* border: 1px solid black; */
 }
 .structure_product {
-  /* border: 1px solid black; */
   height: 3rem;
   font-size: 1.1rem;
+  /* border: 1px solid black; */
 }
 
 .weight_product {
+  height: 1.5rem;
   font-size: 1rem;
   color: rgb(129, 129, 129);
+  /* border: 1px solid black; */
 }
 
 .price_product {
@@ -156,11 +159,11 @@ body {
   align-items: center;
 
   border-radius: 10px;
-  width: 7rem;
+  width: 5rem;
   height: 2rem;
   /* border: 1px solid black; */
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 1.2rem;
+  font-weight: 600;
+  font-size: 1.4rem;
   background-color: rgb(243, 241, 241);
 }
 
