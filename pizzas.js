@@ -1,7 +1,7 @@
 const pizzas = [
   {
     name: "Буритто, томатная основа",
-    photo: "./img_product/example.jpg",
+    photo: "https://api.starterapp.ru/service/image/w:640/aHR0cHM6Ly9jZG4uc2FuaXR5LmlvL2ltYWdlcy9objYwaWF5MS9wcm9kdWN0aW9uL2EyMzJlNzkzMjI5MzI1MjM1ODM1NzY1NjM1ZmRmYTVjYzFmMjg4ZjItMzQ4NHgyMjc4LmpwZw==",
     ingredients:
       "моцарелла, курочка, томатный соус, болгарский перец, лук, кукуруза, зелень, лёгкая пикантность",
     diameter: "30 см",
@@ -11,7 +11,7 @@ const pizzas = [
   },
   {
     name: "Ветчина грибы, томатная основа",
-    photo: "./img_product/example.jpg",
+    photo: "https://api.starterapp.ru/service/image/w:640/aHR0cHM6Ly9jZG4uc2FuaXR5LmlvL2ltYWdlcy9objYwaWF5MS9wcm9kdWN0aW9uLzEwYWU4ZjFkOWFiYzgzNGM4MzdkNmM4MjMyNWM5NDk2OGIwNmIyOTgtMzMxN3gyMjc1LmpwZw==",
     ingredients: "томатная основа, моцарелла, ветчина, грибы, зелень",
     diameter: "30 см",
     weight: 600,
@@ -20,7 +20,7 @@ const pizzas = [
   },
   {
     name: "Гавайская, томатная основа",
-    photo: "./img_product/example.jpg",
+    photo: "https://api.starterapp.ru/service/image/w:640/aHR0cHM6Ly9jZG4uc2FuaXR5LmlvL2ltYWdlcy9objYwaWF5MS9wcm9kdWN0aW9uL2Y4MTBmMTVkYjg4OTM5YjRiMGM2MjIzMjJiNTNjNGZkM2YzNTgzZjYtNTExNXgzNzIxLmpwZw==",
     ingredients: "соус фирменный, моцарелла, курица, ананас, пармезан",
     diameter: "30 см",
     weight: 600,
@@ -29,7 +29,7 @@ const pizzas = [
   },
   {
     name: "Грибная, томатная основа",
-    photo: "./img_product/example.jpg",
+    photo: "https://api.starterapp.ru/service/image/w:640/aHR0cHM6Ly9jZG4uc2FuaXR5LmlvL2ltYWdlcy9objYwaWF5MS9wcm9kdWN0aW9uLzE5ZmFhMGM0ZTkzMWIzZjRiY2M2MTM4MDA1N2U5OWYxMDg1ZDFlMTYtMzQxN3gyMjY0LmpwZw==",
     ingredients:
       "шампиньоны, томатный соус (бешамель на выбор), моцарелла, соус унаги, пармезан, руккола",
     diameter: "30 см",
@@ -39,7 +39,7 @@ const pizzas = [
   },
   {
     name: "Друзья Ариель, сливочная основа",
-    photo: "./img_product/example.jpg",
+    photo: "https://api.starterapp.ru/service/image/w:640/aHR0cHM6Ly9jZG4uc2FuaXR5LmlvL2ltYWdlcy9objYwaWF5MS9wcm9kdWN0aW9uLzRjM2QwM2NmNTdhNzIxMmUyYTY0YTUzZWM4NmY1NTQ0ZmNhMWZmZWEtMzQxMXgyMjc0LmpwZw==",
     ingredients:
       "с-с бешамель, моцарелла, тигровые креветки, мидии, гребешок, руккола, парmезан",
     diameter: "30 см",
