@@ -5,9 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Atomic Pizza</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style_modal.css" />
+
     <script defer src="script.js"></script>
     <script defer src="pizzas.js"></script>
     <script defer src="create_section.js"></script>
+    <script defer src="create_modal.js"></script>
   </head>
   <body>
     <div class="stt upward" style="animation: moveUp 0s forwards">
@@ -78,7 +81,22 @@
     <div class="menu">
       <div class="title">Пицца</div>
       <hr />
-      <div class="section"></div>
+      <div class="section">
+        <div class="product">
+          <div class="img_product" id="test">
+            <img
+              src="https://s1.eda.ru/StaticContent/Photos/130128172303/160825174548/p_O.jpg"
+              alt=""
+            />
+          </div>
+          <div class="description_product">
+            <div class="structure_product">ТЕСТ, томатмная основа</div>
+            <div class="weight_product">600 грамм, ⌀ 30 см</div>
+            <div class="price_product" id="add_to_cart">600 ₽</div>
+          </div>
+        </div>
+      </div>
+
       <!-- --------------------------- -->
     </div>
   </body>

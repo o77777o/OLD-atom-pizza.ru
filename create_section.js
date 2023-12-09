@@ -5,7 +5,7 @@ for (let i = 0; i < pizzas.length; i++) {
   ProductCart.classList.add("product");
 
   ProductCart.innerHTML = 
-  `<div class="img_product">
+  `<div class="img_product" id="${pizzas[i].ID}">
   <img
   src="${pizzas[i].photo}"
   alt=""/>
