@@ -1,16 +1,7 @@
-html {
-  width: auto;
-}
-
 body {
   margin: 9rem;
   font-family: "Courier New", Courier, monospace;
   font-size: 1rem;
-}
-
-:root {
-  --general_bg_color: rgb(240, 240, 240);
-  --general_weight_font_color: rgb(63, 62, 62);
 }
 
 .name {
@@ -123,7 +114,7 @@ body {
   flex-wrap: wrap;
 }
 
-.product {
+.product_card {
   display: flex;
   flex-direction: column;
   align-content: center;
@@ -164,7 +155,7 @@ body {
 .weight_product {
   height: 1.5rem;
   font-size: 1rem;
-  color: var(--general_weight_font_color) ;
+  color: var(--general_weight_font_color);
   /* border: 1px solid black; */
 }
 
@@ -176,8 +167,8 @@ body {
   justify-content: center;
   align-items: center;
 
-  border-radius: 10px;
-  width: 5rem;
+  border-radius: 20px;
+  width: 7rem;
   height: 2rem;
   /* border: 1px solid black; */
   font-weight: 600;
@@ -186,9 +177,9 @@ body {
 }
 
 .price_product:hover {
-  filter: brightness(80%);
+  filter: brightness(90%);
 }
 
 .price_product:active {
-  filter: brightness(90%);
+  filter: brightness(80%);
 }
