@@ -1,21 +1,21 @@
-const pizzaContainer = document.querySelector(".section");
+const pizza_container = document.querySelector(".section");
 
-for (let i = 0; i < pizzas.length; i++) {
-  const ProductCard = document.createElement("div");
-  ProductCard.classList.add("product_card");
-  ProductCard.id = pizzas[i].ID;
+for (let i = 0; i < menu_position.length; i++) {
+  const product_card = document.createElement("div");
+  product_card.classList.add("product_card");
+  product_card.id = menu_position[i].ID;
 
-  ProductCard.innerHTML = 
-  `<div class="img_product" id="${pizzas[i].ID}">
+  product_card.innerHTML = 
+  `<div class="img_product" id="${menu_position[i].ID}">
   <img
-  src="${pizzas[i].photo}"
+  src="${menu_position[i].photo}"
   alt=""/>
   </div>
   <div class="description_product">
-  <div class="structure_product">${pizzas[i].name}, <br> ${pizzas[i].base}</div>
-  <div class="weight_product">${pizzas[i].weight} грамм, ⌀ ${pizzas[i].diameter} </div>
-  <div class="price_product">${pizzas[i].price}₽</div>
+  <div class="structure_product">${menu_position[i].name}, <br> ${menu_position[i].base}</div>
+  <div class="weight_product">${menu_position[i].weight} грамм, ⌀ ${menu_position[i].diameter} </div>
+  <div class="price_product">${menu_position[i].price}₽</div>
   </div>`;
 
-  pizzaContainer.appendChild(ProductCard);
+  pizza_container.appendChild(product_card);
 }

@@ -4,16 +4,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Atomic Pizza</title>
-    <link rel="stylesheet" href="style_general.css">
+    <link rel="stylesheet" href="style_general.css" />
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="style_modal.css" />
+    <link rel="stylesheet" href="style_shopping_cart.css" />
 
     <script defer src="script.js"></script>
-    <script defer src="pizzas.js"></script>
-    <script defer src="create_section.js"></script> 
+    <script defer src="menu_position.js"></script>
+    <script defer src="create_section.js"></script>
     <script defer src="create_modal.js"></script>
     <script defer src="show_modal.js"></script>
-    <script defer src="Add_to_cart.js"></script>
+    <script defer src="add_to_cart.js"></script>
   </head>
   <body>
     <div class="stt upward" style="animation: moveUp 0s forwards">
@@ -71,6 +72,7 @@
       </div>
       <br />
       <div class="HeadGroup">
+        <div class="btn" id="del">Очистить корзину</div>
         <div class="btn">Пицца</div>
         <div class="btn">Паста</div>
         <div class="btn">Салаты</div>
@@ -79,24 +81,14 @@
       </div>
     </div>
 
+    <div class="shopping_cart"></div>
+
     <div class="menu">
       <div class="title">Пицца</div>
       <hr />
       <div class="section"></div>
     </div>
 
-    <div class="modal_menu">
-      <!-- <div class="modal_card">
-        <div class="img_modal_card">
-          <img src="./img_product/example.jpg" alt="" />
-        </div>
-        <div class="description_modal_card">
-          <div class="structure_modal_card"></div>
-          <div class="weight_modal_card"></div>
-          <div class="compound_modal_card"></div>
-          <div class="price_modal_card"></div> -->
-        </div>
-      </div>
-    </div>
+    <div class="modal_menu"></div>
   </body>
 </html>

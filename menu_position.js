@@ -1,5 +1,6 @@
-const pizzas = [
+const menu_position = [
   {
+    type: "Пицца",
     name: "Буритто",
     photo: "./img_product/ветчина грибы-2.jpg",
     base: "томатная основа",
@@ -11,6 +12,7 @@ const pizzas = [
     ID: "b3e0508c-070e-4120-8aa0-dc385fddc54e",
   },
   {
+    type: "Пицца",
     name: "Ветчина и грибы",
     photo: "./img_product/ветчина грибы777.jpg",
     base: "томатная основа",
@@ -21,6 +23,7 @@ const pizzas = [
     ID: "ab827436-2162-453f-b3d0-dd15b1a48c99",
   },
   {
+    type: "Пицца",
     name: "Гавайская",
     photo: "./img_product/ветчина грибы777.jpg",
     base: "томатная основа",
@@ -31,6 +34,7 @@ const pizzas = [
     ID: "cbffdd2f-ab26-4c14-873f-4ca97e5722e1",
   },
   {
+    type: "Пицца",
     name: "Грибная",
     photo: "./img_product/ветчина грибы777.jpg",
     base: "томатная основа",
@@ -42,6 +46,7 @@ const pizzas = [
     ID: "9bd2adff-3d6f-440c-9991-3591cc39fa8d",
   },
   {
+    type: "Пицца",
     name: "Друзья Ариель",
     photo: "https://api.starterapp.ru/service/image/w:640/aHR0cHM6Ly9jZG4uc2FuaXR5LmlvL2ltYWdlcy9objYwaWF5MS9wcm9kdWN0aW9uLzRjM2QwM2NmNTdhNzIxMmUyYTY0YTUzZWM4NmY1NTQ0ZmNhMWZmZWEtMzQxMXgyMjc0LmpwZw==",
     base: "сливочная основа",
@@ -53,6 +58,7 @@ const pizzas = [
     ID: "aafabc9d-ddb3-4d9c-b95b-822d0774d6db",
   },
   {
+    type: "Пицца",
     name: "Дьябло",
     photo: "./img_product/example.jpg",
     base: "томатная основа",
@@ -64,6 +70,7 @@ const pizzas = [
     ID: "88e3933a-c91d-44cc-95b6-99f451724217",
   },
   {
+    type: "Пицца",
     name: "Креветки",
     photo: "./img_product/example.jpg",
     base: "томатная основа",
@@ -75,6 +82,7 @@ const pizzas = [
     ID: "92848fc1-baa3-4965-9444-57da59e88d62",
   },
   {
+    type: "Пицца",
     name: "Курица-грибы",
     photo: "./img_product/example.jpg",
     base: "томатная основа",
@@ -85,6 +93,7 @@ const pizzas = [
     ID: "960f8754-454c-4873-9b62-02e2591d4a2e",
   },
   {
+    type: "Пицца",
     name: "Марго",
     photo: "./img_product/example.jpg",
     base: "томатная основа",
@@ -95,6 +104,7 @@ const pizzas = [
     ID: "42a38cc0-3f29-4bd4-8318-49625a658663",
   },
   {
+    type: "Пицца",
     name: "Мидийность",
     photo: "./img_product/example.jpg",
     base: "сливочная основа",
@@ -106,6 +116,7 @@ const pizzas = [
     ID: "c4eb7396-c242-4eb9-9972-f5feab86db38",
   },
   {
+    type: "Пицца",
     name: "Охотничья",
     photo: "./img_product/example.jpg",
     base: "томатная основа",
@@ -117,6 +128,7 @@ const pizzas = [
     ID: "a646c5cc-420a-4118-a15e-943e66b08895",
   },
   {
+    type: "Пицца",
     name: "Пепперони",
     photo: "./img_product/example.jpg",
     base: "томатная основа",
@@ -127,6 +139,7 @@ const pizzas = [
     ID: "462b0d94-0fdf-4a69-886e-a832fe55e7f2",
   },
   {
+    type: "Пицца",
     name: "Солянка",
     photo: "./img_product/example.jpg",
     base: "томатная основа",
@@ -138,6 +151,7 @@ const pizzas = [
     ID: "903fe182-17a8-4d8e-bbe8-ce3acb8e0aeb",
   },
   {
+    type: "Пицца",
     name: "Сырная груша",
     photo: "./img_product/example.jpg",
     base: "сливочная основа",
@@ -148,6 +162,7 @@ const pizzas = [
     ID: "4896acc7-2208-4b78-9fa9-b12395e25e7e",
   },
   {
+    type: "Пицца",
     name: "Сёмга",
     photo: "./img_product/example.jpg",
     base: "сливочная основа",
@@ -158,6 +173,7 @@ const pizzas = [
     ID: "0770c19a-f64d-4c4e-9c0a-192bb84c249f",
   },
   {
+    type: "Пицца",
     name: "Том Ям",
     photo: "./img_product/example.jpg",
     base: "Соус Том Ям",
@@ -169,6 +185,7 @@ const pizzas = [
     ID: "643f82e4-3d9f-4b5a-bdfc-cf11db705d84",
   },
   {
+    type: "Пицца",
     name: "Цезарь-креветки",
     photo: "./img_product/example.jpg",
     base: "сливочная основа",
@@ -179,6 +196,7 @@ const pizzas = [
     ID: "0f61615e-28d5-4527-8123-19d62c05dd0b",
   },
   {
+    type: "Пицца",
     name: "Цезарь-курица",
     photo: "./img_product/example.jpg",
     base: "сливочная основа",
@@ -189,6 +207,7 @@ const pizzas = [
     ID: "346082b4-e5af-4d91-8ca4-8097cf1b340c",
   },
   {
+    type: "Пицца",
     name: "Четыре сыра",
     photo: "./img_product/example.jpg",
     base: "сливочная основа",
@@ -200,4 +219,4 @@ const pizzas = [
   },
 ];
 
-window.pizzas = pizzas;
+window.menu_position = menu_position;

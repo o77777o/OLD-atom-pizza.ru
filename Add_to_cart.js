@@ -1,31 +1,34 @@
+//Куда несем данные
+let selected_product = "";
+let selected_item_price = 0;
+
+//Что будем отображать в корзине
+let total_products = "";
+let total_price = 0;
+
+//массив всех элементов-кнопок
 const all_buttons = document.querySelectorAll(
-  ".price_modal_card, .price_product"
+  ".price_product, .price_modal_card"
 );
 
-const all_product_cards = document.querySelectorAll(
-  ".product_card, .modal_card"
-);
-
-//Конвертер строки в число
 for (let i = 0; i < all_buttons.length; i++) {
-  all_buttons[i].addEventListener("click", (event) => {
-    const value = event.target.textContent;
-    const priceValue = parseFloat(value);
-    console.log(priceValue);
+  all_buttons[i].addEventListener("click", () => {
+    const correct_index = i % menu_position.length;
+    selected_product = menu_position[correct_index];
+    selected_item_price = menu_position[correct_index].price;
+    localStorage.setItem(correct_index, JSON.stringify(selected_product));
+    console.log(selected_product);
+    console.log(selected_item_price);
   });
 }
 
-const add_to_cart = () => {
-  for (let i = 0; i < all_product_cards.length; i++) {
-    all_product_cards[i].addEventListener("click", () => {
-      const selectedProduct = pizzas[i];
-      console.log(selectedProduct);
-      localStorage.setItem("selectedProduct", JSON.stringify(selectedProduct)); // Сохраняем выбранный продукт в localStorage
-      console.log("Выбранный продукт:", selectedProduct);
-    });
-  }
+// Быстрая кнопка очистки LS
+const ClearAllCart = () => {
+  console.clear();
+  window.localStorage.clear();
+  console.log("Local Storage was cleared");
 };
 
-window.addEventListener("load", () => {
-  add_to_cart();
-});
+const delbtn = document.querySelector("#del");
+
+delbtn.onclick = ClearAllCart;
