@@ -7,8 +7,67 @@
   border-radius: 20px;
   background-color: white;
   margin: 1rem;
+  padding: 1rem;
 
   -webkit-box-shadow: 0px 5px 15px 5px rgba(34, 60, 80, 0.2);
   -moz-box-shadow: 0px 5px 15px 5px rgba(34, 60, 80, 0.2);
   box-shadow: 0px 5px 15px 5px rgba(34, 60, 80, 0.2);
+}
+
+.shopping_cart_title {
+  flex: 1.5;
+  font-size: 3rem;
+  font-weight: 600;
+  text-align: center;
+  /* border: solid 1px black; */
+}
+
+.cart_section {
+  border: solid 1px black;
+
+  padding: 0.5rem;
+  margin: 0.5rem;
+  border-radius: 20px;
+}
+
+.product_list {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+
+  border: solid 1px black;
+}
+
+.order_registration {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+
+  border: solid 1px black;
+}
+
+.cutlery {
+  flex: 1;
+}
+
+.order_time {
+  flex: 1;
+}
+
+.comment_for_the_order {
+  flex: 2;
+}
+
+.payment_method {
+  flex: 1;
+}
+
+.total_cost {
+  flex: 1;
+}
+
+.place_an_order {
+  flex: 1;
 }
