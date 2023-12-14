@@ -1,45 +1,38 @@
 //Куда несем данные
-let selected_product = "";
-let selected_item_price = 0;
+let selectedProduct = '';
+let selectedItemPrice = 0;
+const DB_NAME = 'DataBase';
 
 //Что будем отображать в корзине
-let total_products = [];
-let total_price = 0;
+// let totalProducts = localStorage.getItem("DataBase");
+let totalPrice = 0;
 
 //массив всех элементов-кнопок
-const all_buttons = document.querySelectorAll(
-  ".price_product, .price_modal_card"
+const allButtons = document.querySelectorAll(
+  '.price_product, .price_modal_card',
 );
 
 const saveToLS = (i) => {
   const correct_index = i % menu_position.length;
-  console.log(correct_index);
-  selected_product = menu_position[correct_index];
-  selected_item_price = menu_position[correct_index].price;
-  localStorage.getItem("DataBase")
-  total_products.push(selected_product)
-  console.log(total_products)
+  selectedProduct = menu_position[correct_index];
+  selectedItemPrice = menu_position[correct_index].price;
 
-  localStorage.setItem("DataBase", JSON.stringify(total_products));
-  // console.log(selected_product);
-  // console.log(selected_item_price);
+  totalProducts.push(selectedProduct);
 
-  
-  
+  // if null
+  if (!localStorage.getItem(DB_NAME)) {
+    localStorage.setItem(DB_NAME, JSON.stringify([]));
+  }
+
+  const cart = JSON.parse(localStorage.getItem(DB_NAME));
+
+  cart.push(selectedProduct);
+
+  localStorage.setItem('DataBase', JSON.stringify(cart));
 };
 
-console.log(total_products)
-
-if (total_products == null) {
-  total_products = []
-}
-
-console.log(total_products)
-
-
-
-for (let i = 0; i < all_buttons.length; i++) {
-  all_buttons[i].addEventListener("click", () => {
+for (let i = 0; i < allButtons.length; i++) {
+  allButtons[i].addEventListener('click', () => {
     saveToLS(i);
   });
 }
@@ -48,9 +41,9 @@ for (let i = 0; i < all_buttons.length; i++) {
 const ClearAllCart = () => {
   console.clear();
   window.localStorage.clear();
-  console.log("Local Storage was cleared");
+  console.log('Local Storage was cleared');
 };
 
-const delbtn = document.querySelector("#del");
+const delbtn = document.querySelector('#del');
 
 delbtn.onclick = ClearAllCart;
