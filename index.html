@@ -4,17 +4,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Atomic Pizza</title>
-    <link rel="stylesheet" href="style_general.css" />
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="style_modal.css" />
-    <link rel="stylesheet" href="style_shopping_cart.css" />
+    <link rel="stylesheet" href="./CSS/style_general.css" />
+    <link rel="stylesheet" href="./CSS/style.css" />
+    <link rel="stylesheet" href="./CSS/style_product_card.css" />
+    <link rel="stylesheet" href="./CSS/style_modal.css" />
+    <link rel="stylesheet" href="./CSS/style_shopping_cart.css" />
 
-    <script defer src="script.js"></script>
-    <script defer src="menu_position.js"></script>
-    <script defer src="create_section.js"></script>
-    <script defer src="create_modal.js"></script>
-    <script defer src="show_modal.js"></script>
-    <script defer src="add_to_cart.js"></script>
+    <script defer src="./JS/script.js"></script>
+    <script defer src="./JS/menuPosition.js"></script>
+    <script defer src="./JS/create_section.js"></script>
+    <script defer src="./JS/create_modal.js"></script>
+    <script defer src="./JS/cart.js"></script>
   </head>
   <body>
     <div class="stt upward" style="animation: moveUp 0s forwards">
@@ -72,7 +72,6 @@
       </div>
       <br />
       <div class="HeadGroup">
-        <div class="btn" id="del">Очистить корзину</div>
         <div class="btn">Пицца</div>
         <div class="btn">Паста</div>
         <div class="btn">Салаты</div>
@@ -83,10 +82,14 @@
 
     <div class="shopping_cart">
       <div class="product_list">
-        <div class="shopping_cart_title">Корзина</div>
+        <div class="topic_cart">
+          <div class="shopping_cart_title">Корзина</div>
+          <div class="button_clear_all">Очистить</div>
+        </div>
+        <div class="total_product"></div>
+        <div class="total_cost">Итого:</div>
       </div>
 
-      <!-- <div class="order_address shopping_cart_title">Адрес доставки</div> -->
       <div class="order_registration">
         <div class="shopping_cart_title">Заказ</div>
         <div class="cutlery cart_section">Приборы</div>
@@ -95,8 +98,7 @@
           Комментарий к заказу
         </div>
         <div class="payment_method cart_section">Способ оплаты</div>
-        <div class="total_cost cart_section">Итого</div>
-        <div class="place_an_order cart_section">Оформить заказ</div>
+        <div class="place_an_order ">Оформить заказ</div>
       </div>
     </div>
 

@@ -38,4 +38,19 @@
 //   });
 // }
 
+//Тест отрисовки корзины
+
+// for (let i = 0; i < menuPosition.length; i++) {
+//   let productNumber = i + 1
+//   const productInCart = document.createElement("div");
+//   productInCart.classList.add("product");
+//   productInCart.innerHTML = `
+//   <div class="product_number">${productNumber}.</div>
+//   <div class="product_name">${menuPosition[i].name}</div>
+//   <div class="product_count">3 шт.</div>
+//   <div class="product_price">${menuPosition[i].price}₽</div>
+//   `;
+//   totalProduct.appendChild(productInCart)
+// }
+
 //---------------------------------------------------------------------

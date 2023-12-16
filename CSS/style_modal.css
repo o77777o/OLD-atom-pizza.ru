@@ -47,7 +47,7 @@
 .weight_modal_card {
   flex: 1;
   font-size: 1.1rem;
-  color: var(--general_weight_font_color);
+  color: var(--general_gray_font_color);
   /* border: 1px solid black; */
 }
 

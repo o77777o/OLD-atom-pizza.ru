@@ -1,4 +1,4 @@
-const menu_position = [
+const menuPosition = [
   {
     type: "Пицца",
     name: "Буритто",
@@ -219,4 +219,4 @@ const menu_position = [
   },
 ];
 
-window.menu_position = menu_position;
+window.menuPosition = menuPosition;
