@@ -6,7 +6,7 @@ for (let i = 0; i < menuPosition.length; i++) {
   productCard.id = menuPosition[i].ID;
 
   productCard.innerHTML = 
-  `<div class="img_product" id="${menuPosition[i].ID}">
+  `<div class="img_product">
   <img
   src="${menuPosition[i].photo}"
   alt=""/>

@@ -1,8 +1,6 @@
 // let selectedProduct = "";
 // let productNumber = 0;
 
-const DB_NAME = 'DataBase';
-
 // let cart = JSON.parse(localStorage.getItem(DB_NAME));
 
 // const allButtons = document.querySelectorAll(
@@ -52,21 +50,16 @@ const DB_NAME = 'DataBase';
 //   localStorage.setItem(DB_NAME, JSON.stringify(cart));
 // };
 
-// const clearAllCart = () => {
-//   productNumber = 0;
-//   window.localStorage.setItem(DB_NAME, JSON.stringify([]));
-
-//   let productToDelete = document.querySelectorAll(".product");
-//   productToDelete.forEach((i) => {
-//     i.remove();
-//   });
-// };
+const DB_NAME = "DataBase";
 
 const processButton = (id) => {
   const element = menuPosition.find((element) => element.ID === id);
+  console.log(element.ID);
+  console.log(id)
+
 
   if (!element) {
-    alert('Ты куда жмал бля');
+    alert("Ты куда жмал бля");
     return;
   }
 
@@ -75,22 +68,31 @@ const processButton = (id) => {
   localStorage.setItem(DB_NAME, JSON.stringify([...all, element]));
 };
 
+
 const init = () => {
   if (!localStorage.getItem(DB_NAME)) {
     localStorage.setItem(DB_NAME, JSON.stringify([]));
   }
 
-  const products = document.querySelectorAll('.product_card');
+  const products = document.querySelectorAll(".product_card");
 
   for (const product of products) {
     const description = product.childNodes[2];
     const addToCartButton = description.children[2];
 
-    addToCartButton.addEventListener('click', () => {
+    addToCartButton.addEventListener("click", () => {
       processButton(product.id);
     });
   }
 };
+
+const clearAllCart = () => {
+  window.localStorage.setItem(DB_NAME, JSON.stringify([]));
+};
+
+document.querySelector(".button_clear_all").addEventListener("click", () => {
+  clearAllCart();
+});
 
 window.onload = () => {
   init();
