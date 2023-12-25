@@ -49,8 +49,11 @@
 //   cart.push(selectedProduct);
 //   localStorage.setItem(DB_NAME, JSON.stringify(cart));
 // };
-
 const DB_NAME = "DataBase";
+
+const clearAllCart = () => {
+  window.localStorage.setItem(DB_NAME, JSON.stringify([]));
+};
 
 const processButton = (id) => {
   const element = menuPosition.find((element) => element.ID === id);
@@ -84,10 +87,6 @@ const init = () => {
       processButton(product.id);
     });
   }
-};
-
-const clearAllCart = () => {
-  window.localStorage.setItem(DB_NAME, JSON.stringify([]));
 };
 
 document.querySelector(".button_clear_all").addEventListener("click", () => {

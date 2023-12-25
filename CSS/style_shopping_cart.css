@@ -129,7 +129,7 @@
   font-weight: 600;
   font-size: 1.8rem;
   color: white;
-  height: 2rem;
+  height: 2.2rem;
   background-color: var(--general_green_color);
 }
 
@@ -147,7 +147,7 @@
   font-size: 1.8rem;
   color: white;
   font-weight: 600;
-  height: 2rem;
+  height: 2.2rem;
   width: 12rem;
   cursor: pointer;
   user-select: none;

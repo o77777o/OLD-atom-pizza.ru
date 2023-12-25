@@ -217,6 +217,7 @@ const menuPosition = [
     price: 600,
     ID: "b031f7d2-bcfc-408e-ac28-d3311dbcc2f7",
   },
+  
 ];
 
 window.menuPosition = menuPosition;
