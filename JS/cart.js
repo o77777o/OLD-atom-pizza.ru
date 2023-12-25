@@ -8,16 +8,27 @@ const clearAllCart = () => {
   });
 };
 
-const deleteProduct = (id) => {
+const delButton = (id) => {
   const all = JSON.parse(localStorage.getItem(DB_NAME));
-  const elementHTML = productToDelete.find((product) => product.ID === id)
-  const elementLS = all.find((product) => product.ID === id)
+  const element = all.find((position) => position.ID === id);
+  console.log(element);
+};
 
-}
+const operationInCart = () => {
+  const allProductFromCart = document.querySelectorAll(".product");
 
-
-
-
+  if (!allProductFromCart.length) {
+    
+  } else {
+    for (const product of allProductFromCart) {
+      const deleteButton = product.children[4];
+      console.log(deleteButton);
+      deleteButton.addEventListener("click", () => {
+        delButton(product.id);
+      });
+    }
+  }
+};
 
 const getAllCart = () => {
   const all = JSON.parse(localStorage.getItem(DB_NAME));
@@ -25,7 +36,7 @@ const getAllCart = () => {
   for (let i = 0; i < all.length; i++) {
     const productInCart = document.createElement("div");
     productInCart.classList.add("product");
-    productInCart.id = all[i].ID
+    productInCart.id = all[i].ID;
     productInCart.innerHTML = `
     <div class="product_number">${i + 1}.</div>
     <div class="product_name">${all[i].name}</div>
@@ -61,7 +72,7 @@ const displayProduct = (id) => {
   let totalProduct = document.querySelector(".total_product");
   const productInCart = document.createElement("div");
   productInCart.classList.add("product");
-  productInCart.id = element.ID
+  productInCart.id = element.ID;
   productInCart.innerHTML = `
   <div class="product_number">${all.length}.</div>
   <div class="product_name">${element.name}</div>
@@ -84,7 +95,7 @@ const init = () => {
   const products = document.querySelectorAll(".product_card");
 
   for (const product of products) {
-    const description = product.childNodes[2];
+    const description = product.children[1];
 
     const addToCartButton = description.children[2];
     // console.log(addToCartButton);
@@ -103,4 +114,5 @@ document.querySelector(".button_clear_all").addEventListener("click", () => {
 window.onload = () => {
   getAllCart();
   init();
+  operationInCart();
 };
