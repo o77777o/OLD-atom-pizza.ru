@@ -62,7 +62,6 @@
   font-weight: 600;
   font-size: 1.8rem;
   height: 2rem;
-
 }
 
 .product {
@@ -163,6 +162,31 @@
 .button_clear_all:active {
   filter: brightness(80%);
 }
+
+.delete_btn {
+  cursor: pointer;
+  user-select: none;
+  border-radius: 50%;
+  /* border: solid 1px black; */
+  background-color: var(--general_bg_color);
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  object-fit: contain;
+  overflow: hidden;
+}
+
+.delete_btn:hover {
+  filter: brightness(90%);
+}
+
+.delete_btn:active {
+  filter: brightness(80%);
+}
+
+/* .delete_btn svg {
+  fill: var(--general_red_color);
+} */
 
 .testwin {
   height: 100px;
