@@ -1,10 +1,26 @@
 //Ключ в Local Storage (LS)
 const DB_NAME = "Cart";
 
+//Создать пустое хранилище
+const setEmptyStorage = () => {
+  return localStorage.setItem(DB_NAME, JSON.stringify([]));
+};
+
+//Поиск объекта по ID
+
+const findByID = (id) => {
+  element = menuPosition.find((position) => position.ID === id);
+  if (!element) {
+    alert("Ошибка");
+    return;
+  }
+  return element;
+};
+
 //Проверка на Ключ
 const createLS = () => {
   if (!localStorage.getItem(DB_NAME)) {
-    localStorage.setItem(DB_NAME, JSON.stringify([]));
+    setEmptyStorage();
   }
 };
 
@@ -25,27 +41,24 @@ const saveElementToLS = (array, element) => {
 
 //Очистка LS и Корзины
 const clearAllCart = () => {
-  window.localStorage.setItem(DB_NAME, JSON.stringify([]));
+  setEmptyStorage();
   const elementToDelete = document.querySelectorAll(".product");
   elementToDelete.forEach((element) => {
     element.remove();
   });
-  showSum()
+  showSum();
   console.log("LS and Cart has been cleared");
 };
 
 //Получение элемента и его сохранение в LS
 const processButton = (id) => {
-  const element = menuPosition.find((position) => position.ID === id);
-  if (!element) {
-    alert("Ошибка");
-    return;
-  }
+  const element = findByID(id);
+  console.log(element);
   const all = getFromLS();
   saveElementToLS(all, element);
 };
 
-//Общая сумма чека
+//Посчитать сумму чека
 const showSum = () => {
   let sum = 0;
 
@@ -60,36 +73,44 @@ const showSum = () => {
   totalCost.innerHTML = `Итого: ${sum}₽`;
 };
 
-//Получение элемента и его отрисовка в Cart
-const displayElementInCart = (id) => {
-  const element = menuPosition.find((position) => position.ID === id);
-  if (!element) {
-    alert("Ошибка");
-    return;
-  }
-  const totalProduct = document.querySelector(".total_product");
+//Кнопка удаления товара из корзины и пересчет суммы
+const pushToDelete = (product) => {
+  const deleteButton = product.children[2];
+  deleteButton.addEventListener("click", () => {
+    product.remove();
+    showSum();
+  });
+};
 
-  const product = document.createElement("div");
+//Отрисовка элемента в Cart
+const createElement = (source) => {
+  product = document.createElement("div");
   product.classList.add("product");
-  product.id = element.ID;
+  product.id = source.ID;
   product.innerHTML = `
   
-  <div class="product_name">${element.name}</div>
-  <div class="product_price">${element.price}₽</div>
+  <div class="product_name">${source.name}</div>
+  <div class="product_price">${source.price}₽</div>
   <div class="delete_btn"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
   <line x1="18" y1="6" x2="6" y2="18"/>
   <line x1="6" y1="6" x2="18" y2="18"/>
   </svg></div>
   `;
+  return product;
+};
+
+
+//------------------------------------------------------------
+
+//Получение элемента и его отрисовка в Cart
+const displayElementInCart = (id) => {
+  const element = findByID(id);
+  const totalProduct = document.querySelector(".total_product");
+  const product = createElement(element);
   totalProduct.appendChild(product);
 
-  const deleteButton = product.children[2];
-  deleteButton.addEventListener("click", () => {
-    product.remove();
-    showSum()
-  });
-
-  showSum()
+  pushToDelete(product);
+  showSum();
 };
 
 //Отрисовка элементов в Cart из LS после перезагрузки страницы
@@ -99,27 +120,11 @@ const displayAllCartAfterReboot = () => {
   const totalProduct = document.querySelector(".total_product");
 
   for (let i = 0; i < all.length; i++) {
-    const product = document.createElement("div");
-    product.classList.add("product");
-    product.id = all[i].ID;
-    product.innerHTML = `
-
-    <div class="product_name">${all[i].name}</div>
-    <div class="product_price">${all[i].price}₽</div>
-    <div class="delete_btn"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-    <line x1="18" y1="6" x2="6" y2="18"/>
-    <line x1="6" y1="6" x2="18" y2="18"/>
-    </svg></div>
-    `;
+    const product = createElement(all[i]);
     totalProduct.appendChild(product);
-
-    const deleteButton = product.children[2];
-    deleteButton.addEventListener("click", () => {
-      product.remove();
-      showSum()
-    });
+    pushToDelete(product);
   }
-  showSum()
+  showSum();
 };
 
 //Добавление элемента в Cart и LS
@@ -146,7 +151,6 @@ const init = () => {
     const description = product.children[1];
     const addToCartButton = description.children[2];
     cardToCart(product, addToCartButton);
-    
   }
 
   displayAllCartAfterReboot();
