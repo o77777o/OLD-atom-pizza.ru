@@ -10,3 +10,18 @@ body {
   font-family: "Courier New", Courier, monospace;
   font-size: 1rem;
 }
+
+::-webkit-scrollbar {
+  width: 4px; /* Задаем узкую ширину */
+}
+
+/* Цвет внутренней заливки */
+::-webkit-scrollbar-track {
+  background-color: none
+}
+
+/* Цвет ползунка прокрутки */
+::-webkit-scrollbar-thumb {
+  background-color: var(--general_red_color) ;
+  border-radius: 10px; /* Задаем закругление углов */
+}
