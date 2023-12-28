@@ -32,7 +32,8 @@
   }
   .structure_product {
     height: 3rem;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
+    font-weight: 600;
     /* border: 1px solid black; */
   }
   
@@ -54,16 +55,25 @@
     border-radius: 20px;
     width: 7rem;
     height: 2rem;
-    /* border: 1px solid black; */
+    
+    color: var(--general_font_color);
     font-weight: 600;
-    font-size: 1.4rem;
-    background-color: var(--general_bg_color);
+    font-size: 1.6rem;
+    background-color: var(--general_price_button_color);
+  
+    transition: background-color 0.3s ease;
   }
+
+  /* .price_product_card:hover {
+    transform: scale(0.9);
+  } */
   
   .price_product_card:hover {
-    filter: brightness(90%);
+    background-color: var(--general_red_color);
+    /* filter: brightness(90%); */
   }
   
   .price_product_card:active {
-    filter: brightness(80%);
+    filter: brightness(110%);
+    transform: scale(0.9);
   }
