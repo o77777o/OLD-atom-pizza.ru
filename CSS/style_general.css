@@ -1,6 +1,6 @@
 :root {
   --general_bg_color: rgb(220, 220, 220);
-  --general_gray_font_color: rgb(63, 62, 62);
+  --general_gray_font_color: gray;
   --general_red_color: rgb(230, 93, 81);
   --general_green_color: rgb(93, 173, 100);
 }
@@ -17,11 +17,13 @@ body {
 
 /* Цвет внутренней заливки */
 ::-webkit-scrollbar-track {
-  background-color: none
+  background-color: none;
 }
 
 /* Цвет ползунка прокрутки */
 ::-webkit-scrollbar-thumb {
-  background-color: var(--general_red_color) ;
+  background-color: var(--general_red_color);
   border-radius: 10px; /* Задаем закругление углов */
 }
+
+

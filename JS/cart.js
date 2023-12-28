@@ -151,7 +151,7 @@ buttonClearAll.addEventListener("click", () => {
 });
 
 //Точка входа
-const init = () => {
+const initCart = () => {
   createLS();
 
   const products = document.querySelectorAll(".product_card");
@@ -166,5 +166,5 @@ const init = () => {
 };
 
 window.onload = () => {
-  init();
+  initCart();
 };
