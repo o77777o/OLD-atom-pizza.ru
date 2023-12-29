@@ -105,3 +105,4 @@
 //   cart.push(selectedProduct);
 //   localStorage.setItem(DB_NAME, JSON.stringify(cart));
 // };
+

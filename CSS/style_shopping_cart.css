@@ -20,7 +20,7 @@
 
 .delevery_map {
   display: flex;
-  flex: 1;
+  flex: 2;
   flex-direction: column;
   /* border: solid 1px black; */
   font-weight: 600;
@@ -34,6 +34,17 @@
   /* border: solid 1px black; */
   height: 100%;
   border-radius: 20px 0px 0px 20px;
+}
+
+.text_input {
+  font-family: "Courier New", Courier, monospace;
+  color: var(--general_gray_font_color);
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.text_input:focus {
+  outline: none; /* Убираем фокусную рамку, чтобы не было выделения */
 }
 
 .delivery_address {
@@ -52,52 +63,79 @@
 }
 
 .city {
-  /* flex: 1; */
   display: flex;
+  align-items: center;
+  border: solid 1px var(--general_border_color);
+  padding: 0rem 0.5rem;
+  height: 3.3rem;
   margin: 0.5rem;
-  align-items: center;
-  height: 2.8rem;
-  align-items: center;
-  border: solid 1px black;
+  border-radius: 20px;
 }
 
 .full_address_house {
-  margin: 0.5rem;
   display: flex;
-  height: 2.8rem;
+  align-items: center;
   border: solid 1px black;
+  height: 2.8rem;
+  margin: 0.5rem;
+  /* border-radius: 20px; */
 }
 
 .street {
-  margin: 0.5rem;
+  flex: 9;
+
   display: flex;
   align-items: center;
-  flex: 9;
-  border: solid 1px black;
+  border: solid 1px var(--general_border_color);
+  padding: 0rem 0.5rem;
+  height: 2.8rem;
+  border-radius: 20px;
 }
 
 .house_number {
-  margin: 0.5rem;
+  flex: 1;
+
   display: flex;
   align-items: center;
-  flex: 1;
-  border: solid 1px black;
+  border: solid 1px var(--general_border_color);
+  padding: 0rem 0.5rem;
+  height: 2.8rem;
+  margin: 0.5rem;
+  border-radius: 20px;
 }
 
 .apartment_number {
-  margin: 0.5rem;
+  flex: 1;
+
   display: flex;
   align-items: center;
-  flex: 1;
-  border: solid 1px black;
+  border: solid 1px var(--general_border_color);
+  padding: 0rem 0.5rem;
+  height: 2.8rem;
+  margin: 0.5rem;
+  border-radius: 20px;
 }
 
 .floor {
-  margin: 0.5rem;
+  flex: 1;
+
   display: flex;
   align-items: center;
-  flex: 1;
   border: solid 1px var(--general_border_color);
+  padding: 0rem 0.5rem;
+  height: 2.8rem;
+  margin: 0.5rem;
+  border-radius: 20px;
+}
+
+.telephone_number {
+  display: flex;
+  align-items: center;
+  border: solid 1px var(--general_border_color);
+  padding: 0rem 0.5rem;
+  height: 2.8rem;
+  margin: 0.5rem;
+  border-radius: 20px;
 }
 
 /* ------------------------------------------------ */
@@ -250,12 +288,16 @@
 
 .comment_for_the_order {
   flex: 1;
+
   margin: 1px;
   border: none;
   resize: none;
   border-radius: 5px;
-  font-size: 1.3rem;
+
+  font-family: "Courier New", Courier, monospace;
   color: var(--general_gray_font_color);
+  font-size: 1.3rem;
+  font-weight: 600;
 }
 
 .comment_for_the_order:focus {
@@ -386,7 +428,6 @@
   align-items: center;
   transition: transform 0.1s;
 }
-
 
 .add_button:active {
   transform: scale(0.8);

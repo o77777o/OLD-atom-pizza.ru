@@ -81,13 +81,6 @@
         PIZZA_
       </div>
       <br />
-      <!-- <div class="HeadGroup">
-        <div class="btn">Пицца</div>
-        <div class="btn">Паста</div>
-        <div class="btn">Салаты</div>
-        <div class="btn">Десерты</div>
-        <div class="btn">Напитки</div>
-      </div> -->
     </div>
 
     <div class="delivery_area">
@@ -97,13 +90,25 @@
       <div class="delivery_address">
         <div class="modal_window_title">Адрес доставки</div>
         <div class="full_address">
-          <div class="city">1</div>
+          <input
+            class="city text_input"
+            placeholder="Город, улица и дом"
+            type="text"
+            maxlength="50"
+          />
+  
           <div class="full_address_house">
-            <div class="street">2</div>
+            <input
+              class="street text_input"
+              placeholder="Улица"
+              type="text"
+              maxlength="30"
+            />
             <div class="house_number">2</div>
             <div class="apartment_number">2</div>
             <div class="floor">2</div>
           </div>
+          <div class="telephone_number"></div>
           <div class="section_comment_for_the_order">
             <div class="head_order">
               <svg
@@ -119,7 +124,7 @@
                   d="M12 20C18.0751 20 23 15.9706 23 11C23 6.02944 18.0751 2 12 2C5.92487 2 1 6.02944 1 11C1 12.9267 1.73994 14.7119 3 16.1759C3 16.1759 3.5 19.3865 2 22C6 22 8 19.3865 8 19.3865C9.23973 19.7826 10.5888 20 12 20ZM8 12C8.55228 12 9 11.5523 9 11C9 10.4477 8.55228 10 8 10C7.44772 10 7 10.4477 7 11C7 11.5523 7.44772 12 8 12ZM12 12C12.5523 12 13 11.5523 13 11C13 10.4477 12.5523 10 12 10C11.4477 10 11 10.4477 11 11C11 11.5523 11.4477 12 12 12ZM17 11C17 11.5523 16.5523 12 16 12C15.4477 12 15 11.5523 15 11C15 10.4477 15.4477 10 16 10C16.5523 10 17 10.4477 17 11Z"
                   fill="var(--general_font_color)"
                 ></path></svg
-              >|Комментарий для курьера
+              >|Комментарий к адресу
             </div>
             <textarea
               placeholder="..."
