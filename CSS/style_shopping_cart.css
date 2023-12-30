@@ -1,166 +1,19 @@
-.delivery_area {
+.modal_delivery_area,
+.modal_shopping_cart {
   width: 67rem;
   height: 42rem;
-  /* border: solid 1px black; */
-
   display: flex;
   border-radius: 20px;
   background-color: white;
   margin: 1rem;
-  /* padding: 1rem; */
 
   -webkit-box-shadow: 0px 5px 15px 5px rgba(34, 60, 80, 0.2);
   -moz-box-shadow: 0px 5px 15px 5px rgba(34, 60, 80, 0.2);
   box-shadow: 0px 5px 15px 5px rgba(34, 60, 80, 0.2);
 }
 
-.padding {
-  padding: 0rem 0.5rem;
-}
-
-.delevery_map {
-  display: flex;
-  flex: 2;
-  flex-direction: column;
-  /* border: solid 1px black; */
-  font-weight: 600;
-  font-size: 1.5rem;
-
-  border-radius: 20px 0px 0px 20px;
-}
-
-#map {
-  overflow: hidden;
-  /* border: solid 1px black; */
-  height: 100%;
-  border-radius: 20px 0px 0px 20px;
-}
-
-.text_input {
-  font-family: "Courier New", Courier, monospace;
-  color: var(--general_gray_font_color);
-  font-size: 1rem;
-  font-weight: 600;
-}
-
-.text_input:focus {
-  outline: none; /* Убираем фокусную рамку, чтобы не было выделения */
-}
-
-.delivery_address {
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-  border: solid 1px black;
-  margin: 0.5rem;
-}
-
-.full_address {
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-  border: solid 1px black;
-}
-
-.city {
-  display: flex;
-  align-items: center;
+.border {
   border: solid 1px var(--general_border_color);
-  padding: 0rem 0.5rem;
-  height: 3.3rem;
-  margin: 0.5rem;
-  border-radius: 20px;
-}
-
-.full_address_house {
-  display: flex;
-  align-items: center;
-  border: solid 1px black;
-  height: 2.8rem;
-  margin: 0.5rem;
-  /* border-radius: 20px; */
-}
-
-.street {
-  flex: 9;
-
-  display: flex;
-  align-items: center;
-  border: solid 1px var(--general_border_color);
-  padding: 0rem 0.5rem;
-  height: 2.8rem;
-  border-radius: 20px;
-}
-
-.house_number {
-  flex: 1;
-
-  display: flex;
-  align-items: center;
-  border: solid 1px var(--general_border_color);
-  padding: 0rem 0.5rem;
-  height: 2.8rem;
-  margin: 0.5rem;
-  border-radius: 20px;
-}
-
-.apartment_number {
-  flex: 1;
-
-  display: flex;
-  align-items: center;
-  border: solid 1px var(--general_border_color);
-  padding: 0rem 0.5rem;
-  height: 2.8rem;
-  margin: 0.5rem;
-  border-radius: 20px;
-}
-
-.floor {
-  flex: 1;
-
-  display: flex;
-  align-items: center;
-  border: solid 1px var(--general_border_color);
-  padding: 0rem 0.5rem;
-  height: 2.8rem;
-  margin: 0.5rem;
-  border-radius: 20px;
-}
-
-.telephone_number {
-  display: flex;
-  align-items: center;
-  border: solid 1px var(--general_border_color);
-  padding: 0rem 0.5rem;
-  height: 2.8rem;
-  margin: 0.5rem;
-  border-radius: 20px;
-}
-
-/* ------------------------------------------------ */
-.shopping_cart {
-  width: 67rem;
-  height: 42rem;
-  /* border: solid 1px black; */
-
-  display: flex;
-  border-radius: 20px;
-  background-color: white;
-  margin: 1rem;
-  /* padding: 1rem; */
-
-  -webkit-box-shadow: 0px 5px 15px 5px rgba(34, 60, 80, 0.2);
-  -moz-box-shadow: 0px 5px 15px 5px rgba(34, 60, 80, 0.2);
-  box-shadow: 0px 5px 15px 5px rgba(34, 60, 80, 0.2);
-}
-
-.modal_window_title {
-  margin: 1rem 0rem;
-  font-size: 3rem;
-  font-weight: 600;
-  text-align: center;
-  /* border: solid 1px black; */
 }
 
 .topic_cart {
@@ -170,13 +23,13 @@
   align-items: center;
 }
 
-.product_list {
-  margin: 0.5rem;
+.product_list,
+.order_registration {
   flex: 1;
+  margin: 0.5rem;
   display: flex;
   flex-direction: column;
   border-radius: 20px;
-  border: solid 1px var(--general_border_color);
 }
 
 .total_product {
@@ -196,65 +49,17 @@
 .product_name {
   flex: 1;
   font-weight: 600;
-  /* border: solid 1px black; */
 }
 
 .product_price {
-  /* flex: 1; */
   font-weight: 600;
   font-size: 1.5rem;
-  /* border: solid 1px black; */
 }
 
-.delete_btn {
-  /* flex: 1; */
-  margin: 0.2rem 1rem;
-  height: 1.5rem;
-  width: 1.5rem;
-  cursor: pointer;
-  user-select: none;
-  border-radius: 50%;
-  /* border: solid 1px black; */
-  background-color: var(--general_red_color);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  object-fit: contain;
-  overflow: hidden;
-}
-
-.delete_btn:hover {
-  filter: brightness(90%);
-}
-
-.delete_btn:active {
-  filter: brightness(80%);
-}
-
-.order_registration {
-  flex: 1;
-  margin: 0.5rem 1rem 0.5rem 0.5rem;
-  display: flex;
-  flex-direction: column;
-  border-radius: 20px;
-
-  border: solid 1px rgba(0, 0, 0, 0);
-}
-
-.cutlery {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  border: solid 1px var(--general_border_color);
-  font-weight: 600;
-  font-size: 1.5rem;
-  padding: 0rem 0.5rem;
-  height: 2.8rem;
-  margin: 0.5rem;
-  border-radius: 20px;
-}
-
-.order_time {
+.cutlery,
+.order_time,
+.payment_method,
+.phone_number {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -271,54 +76,46 @@
   align-items: center;
 }
 
+#phone_number {
+  border: none;
+  
+  color: var(--general_font_color);
+  font-size: 1.5rem;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: 600;
+}
+
 .section_comment_for_the_order {
   display: flex;
-  /* align-items: center; */
   flex-direction: column;
-
   border: solid 1px var(--general_border_color);
   height: 6rem;
   font-weight: 600;
   font-size: 1.5rem;
   padding: 0rem 0.5rem;
-  /* height: 2.8rem; */
   margin: 0.5rem;
   border-radius: 20px;
 }
 
 .comment_for_the_order {
   flex: 1;
-
   margin: 1px;
   border: none;
   resize: none;
   border-radius: 5px;
-
   font-family: "Courier New", Courier, monospace;
-  color: var(--general_gray_font_color);
   font-size: 1.3rem;
   font-weight: 600;
 }
 
-.comment_for_the_order:focus {
-  outline: none; /* Убираем фокусную рамку, чтобы не было выделения */
-  border: none; /* Убираем границу при наличии фокуса */
+
+.comment_for_the_order:focus,
+#phone_number {
+  outline: none;
 }
 
-.payment_method {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  border: solid 1px var(--general_border_color);
-  font-weight: 600;
-  font-size: 1.5rem;
-  padding: 0rem 0.5rem;
-  height: 2.8rem;
-  margin: 0.5rem;
-  border-radius: 20px;
-}
-
-.place_an_order {
+.button_place_an_order,
+.button_to_cart {
   margin: 0.5rem;
   border-radius: 20px;
   cursor: pointer;
@@ -331,28 +128,6 @@
   height: 2.8rem;
   color: white;
   background-color: var(--general_green_color);
-}
-
-.place_an_order:hover {
-  filter: brightness(90%);
-}
-
-.place_an_order:active {
-  filter: brightness(80%);
-}
-
-.total_cost {
-  border: solid 1px var(--general_border_color);
-
-  padding: 0rem 0.5rem;
-  margin: 0.5rem;
-  border-radius: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-weight: 600;
-  font-size: 1.8rem;
-  height: 2.7rem;
 }
 
 .button_clear_all {
@@ -370,18 +145,62 @@
   align-items: center;
 }
 
-.button_clear_all:hover {
+.button_delete {
+  margin: 0.2rem 1rem;
+  height: 1.5rem;
+  width: 1.5rem;
+  cursor: pointer;
+  user-select: none;
+  border-radius: 50%;
+  background-color: var(--general_red_color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  object-fit: contain;
+  overflow: hidden;
+}
+
+.remove_button,
+.add_button {
+  cursor: pointer;
+  user-select: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.1s;
+}
+
+.remove_button:active,
+.add_button:active {
+  transform: scale(0.8);
+}
+
+.button_place_an_order:hover,
+.button_to_cart:hover,
+.button_clear_all:hover,
+.button_delete:hover {
   filter: brightness(90%);
 }
 
-.button_clear_all:active {
+.button_place_an_order:active,
+.button_to_cart:active,
+.button_clear_all:active,
+.button_delete:active {
   filter: brightness(80%);
 }
 
-.testwin {
-  height: 100px;
+.total_cost {
   border: solid 1px var(--general_border_color);
-  background-color: antiquewhite;
+
+  padding: 0rem 0.5rem;
+  margin: 0.5rem;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  font-size: 1.8rem;
+  height: 2.7rem;
 }
 
 .configurate {
@@ -393,22 +212,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: row;
-
   border-radius: 20rem;
-  /* border: solid 1px black; */
-}
-
-.remove_button {
-  cursor: pointer;
-  user-select: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: transform 0.1s; /* Добавляем плавное переходное состояние для плавной анимации */
-}
-
-.remove_button:active {
-  transform: scale(0.8);
 }
 
 .count {
@@ -418,17 +222,4 @@
   width: 3rem;
   color: var(--general_gray_font_color);
   font-weight: 600;
-}
-
-.add_button {
-  cursor: pointer;
-  user-select: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: transform 0.1s;
-}
-
-.add_button:active {
-  transform: scale(0.8);
 }

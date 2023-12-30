@@ -17,7 +17,7 @@ body {
 }
 
 ::-webkit-scrollbar {
-  width: 4px; /* Задаем узкую ширину */
+  width: 4px;
 }
 
 /* Цвет внутренней заливки */
@@ -28,7 +28,13 @@ body {
 /* Цвет ползунка прокрутки */
 ::-webkit-scrollbar-thumb {
   background-color: var(--general_red_color);
-  border-radius: 10px; /* Задаем закругление углов */
+  border-radius: 10px; 
 }
 
+.modal_window_title {
+  margin: 1rem 0rem;
+  font-size: 3rem;
+  font-weight: 600;
+  text-align: center;
+}
 

@@ -14,7 +14,7 @@ for (let i = 0; i < menuPosition.length; i++) {
   <div class="description_product">
   <div class="structure_product">${menuPosition[i].name}, <br> ${menuPosition[i].base}</div>
   <div class="weight_product">${menuPosition[i].weight} грамм, ⌀ ${menuPosition[i].diameter} </div>
-  <div class="price_product_card">${menuPosition[i].price}₽</div>
+  <div class="button_price_product_card">${menuPosition[i].price}₽</div>
   </div>`;
 
   PizzaContainer.appendChild(productCard);
