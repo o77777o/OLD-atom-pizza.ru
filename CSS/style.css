@@ -1,4 +1,6 @@
-.name {
+.logo {
+  /* line-height: 0; */
+  /* letter-spacing: 0; */
   display: flex;
   align-items: center;
   text-align: center;
@@ -6,6 +8,7 @@
 
   user-select: none;
   font-size: 5rem;
+  font-weight: 600;
 }
 
 .general {
@@ -16,42 +19,6 @@
   align-items: center;
 }
 
-.HeadGroup {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-
-  border-radius: 10px;
-  background-color: var(--general_bg_color);
-  padding: 1rem;
-  /* border: 1px solid black; */
-}
-
-.btn {
-  display: flex;
-  user-select: none;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  margin: 0.5rem;
-
-  border-radius: 5px;
-  border: 1px solid black;
-  width: 14rem;
-  height: 2rem;
-  font-size: 1.4rem;
-  font-weight: 700;
-  background-color: var(--general_bg_color);
-}
-
-.btn:hover {
-  filter: brightness(80%);
-}
-
-.btn:active {
-  filter: brightness(90%);
-}
 
 .stt {
   display: flex;
@@ -105,16 +72,16 @@
 
 .section {
   display: flex;
+  /* justify-content: center; */
   flex-wrap: wrap;
 }
-
 
 /* Переключатель________________________________ */
 .toggle {
   position: relative;
   display: inline-block;
-  width: 60px;
-  height: 34px;
+  width: 3.75rem;
+  height: 2.1rem;
 }
 
 .toggle input {
@@ -130,9 +97,9 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: var(--general_bg_color) ;
-  -webkit-transition: .4s;
-  transition: .4s;
+  background-color: var(--general_bg_color);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
   border-radius: 34px;
 }
 
@@ -144,8 +111,8 @@
   left: 4px;
   bottom: 4px;
   background-color: white;
-  -webkit-transition: .4s;
-  transition: .4s;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
   border-radius: 50%;
 }
 
@@ -159,4 +126,3 @@ input:checked + .slider:before {
   transform: translateX(26px);
 }
 /* __________________________________________________ */
-

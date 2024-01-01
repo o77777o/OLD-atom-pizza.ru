@@ -12,10 +12,6 @@
   box-shadow: 0px 5px 15px 5px rgba(34, 60, 80, 0.2);
 }
 
-.border {
-  border: solid 1px var(--general_border_color);
-}
-
 .topic_cart {
   margin: 0rem 0.5rem;
   display: flex;
@@ -42,7 +38,6 @@
   display: flex;
   align-items: center;
   margin: 0.5rem;
-  font-size: 1.3rem;
   border-bottom: dashed 1px black;
 }
 
@@ -67,21 +62,23 @@
   font-weight: 600;
   font-size: 1.5rem;
   padding: 0rem 0.5rem;
-  height: 2.8rem;
+  height: 4rem;
   margin: 0.5rem;
   border-radius: 20px;
 }
+
 .head_order {
   display: flex;
   align-items: center;
 }
 
-#phone_number {
+#input_phone_number {
   border: none;
-  
+
+
   color: var(--general_font_color);
   font-size: 1.5rem;
-  font-family: "Courier New", Courier, monospace;
+  font-family: var(--general_font);
   font-weight: 600;
 }
 
@@ -89,10 +86,10 @@
   display: flex;
   flex-direction: column;
   border: solid 1px var(--general_border_color);
-  height: 6rem;
+  height: 6.5rem;
   font-weight: 600;
   font-size: 1.5rem;
-  padding: 0rem 0.5rem;
+  padding: 1rem 0.5rem 0.5rem 0.5rem;
   margin: 0.5rem;
   border-radius: 20px;
 }
@@ -103,14 +100,11 @@
   border: none;
   resize: none;
   border-radius: 5px;
-  font-family: "Courier New", Courier, monospace;
-  font-size: 1.3rem;
   font-weight: 600;
 }
 
-
 .comment_for_the_order:focus,
-#phone_number {
+#input_phone_number:focus {
   outline: none;
 }
 
@@ -124,7 +118,7 @@
   justify-content: center;
   align-items: center;
   font-weight: 600;
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   height: 2.8rem;
   color: white;
   background-color: var(--general_green_color);
@@ -133,7 +127,7 @@
 .button_clear_all {
   border-radius: 20px;
   background-color: var(--general_red_color);
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   color: white;
   font-weight: 600;
   height: 2.8rem;
@@ -191,16 +185,14 @@
 
 .total_cost {
   border: solid 1px var(--general_border_color);
-
-  padding: 0rem 0.5rem;
   margin: 0.5rem;
   border-radius: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
   font-weight: 600;
-  font-size: 1.8rem;
-  height: 2.7rem;
+  font-size: 1.5rem;
+  min-height: 4rem;
 }
 
 .configurate {

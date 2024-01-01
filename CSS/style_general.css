@@ -1,19 +1,41 @@
+@font-face {
+  font-family: 'general_font';
+  src: url('../font/Archerus/Horizon\ Type\ -\ AcherusFeral-Light.otf') format('opentype');
+}
+
 :root {
   --general_bg_color: rgba(128, 128, 128, 0.3);
   --general_gray_font_color: rgb(128, 128, 128);
   --general_red_color: rgb(230, 93, 81);
   --general_green_color: rgb(93, 173, 100);
-  --general_border_color:rgba(128, 128, 128, 0.3);
+  --general_border_color: rgba(128, 128, 128, 0.3);
 
   --general_font_color: rgba(0, 0, 0, 0.8);
-  --general_price_button_color: rgba(128, 128, 128, 0.3);
+  --general_price_button_color:rgb(230, 93, 81);
+
+  --general_font: "general_font";
 }
 
 body {
-  margin: 9rem;
+  margin: 10% 20% 10% 20%;
   color: var(--general_font_color);
-  font-family: "Courier New", Courier, monospace;
-  font-size: 1rem;
+  font-family: var(--general_font), "Courier New";
+
+  font-size: 1.2rem;
+}
+
+input {
+  color: var(--general_font_color);
+  font-family: var(--general_font), "Courier New";
+
+  font-size: 1.2rem;
+}
+
+textarea {
+  color: var(--general_font_color);
+  font-family: var(--general_font), "Courier New";
+
+  font-size: 1.2rem;
 }
 
 ::-webkit-scrollbar {
@@ -28,7 +50,7 @@ body {
 /* Цвет ползунка прокрутки */
 ::-webkit-scrollbar-thumb {
   background-color: var(--general_red_color);
-  border-radius: 10px; 
+  border-radius: 10px;
 }
 
 .modal_window_title {
@@ -37,4 +59,3 @@ body {
   font-weight: 600;
   text-align: center;
 }
-

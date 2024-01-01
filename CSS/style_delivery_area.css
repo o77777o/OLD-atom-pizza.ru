@@ -1,11 +1,8 @@
-
-
 .delevery_map {
   display: flex;
-  flex: 1.5;
+  flex: 1;
   flex-direction: column;
-  font-weight: 600;
-  font-size: 1.5rem;
+
   border-radius: 20px 0px 0px 20px;
 }
 
@@ -18,7 +15,6 @@
 .delivery_address {
   display: flex;
   flex-direction: column;
-  flex: 1;
   margin: 0.5rem;
 }
 
@@ -27,44 +23,38 @@
   grid-template-columns: 1fr 1fr;
 }
 
-.city_street_number,
-.address_comment {
-  grid-column: 1 / span 2;
+.grid_whole {
+  grid-column: 1 / 2 span;
+}
+
+.grid_half {
+  grid-column: 1 span;
+}
+
+.input_entrance,
+.input_door_code,
+.input_floor,
+.input_apartment,
+.input_city_street_number,
+.input_address_comment {
   display: flex;
   align-items: center;
   border: solid 1px var(--general_border_color);
-  padding: 0rem 0.5rem;
-  height: 4rem;
-  margin: 0.5rem;
-  border-radius: 20px;
-}
 
-.entrance,
-.door_code,
-.floor,
-.apartment {
-  grid-column: span 1;
-
-  display: flex;
-  align-items: center;
-  border: solid 1px var(--general_border_color);
-  padding: 0rem 0.5rem;
-  height: 4rem;
-  margin: 0.5rem;
-  border-radius: 20px;
-}
-
-/* .padding {
-  padding: 0rem 0.5rem;
-}
-
-.text_input {
-  font-family: "Courier New", Courier, monospace;
   color: var(--general_gray_font_color);
-  font-size: 1rem;
   font-weight: 600;
+
+  padding: 0rem 0.5rem;
+  height: 4rem;
+  margin: 0.5rem;
+  border-radius: 20px;
 }
 
-.text_input:focus {
-  outline: none;
-} */
+.input_city_street_number:focus,
+.input_entrance:focus,
+.input_door_code:focus,
+.input_floor:focus,
+.input_apartment:focus,
+.input_address_comment:focus {
+  outline: 1px solid var(--general_green_color);
+}
