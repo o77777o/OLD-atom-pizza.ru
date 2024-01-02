@@ -1,6 +1,7 @@
 @font-face {
-  font-family: 'general_font';
-  src: url('../font/Archerus/Horizon\ Type\ -\ AcherusFeral-Light.otf') format('opentype');
+  font-family: "general_font";
+  src: url("../font/Archerus/Horizon\ Type\ -\ AcherusFeral-Light.otf")
+    format("opentype");
 }
 
 :root {
@@ -11,13 +12,13 @@
   --general_border_color: rgba(128, 128, 128, 0.3);
 
   --general_font_color: rgba(0, 0, 0, 0.8);
-  --general_price_button_color:rgb(230, 93, 81);
+  --general_price_button_color: rgb(230, 93, 81);
 
   --general_font: "general_font";
 }
 
 body {
-  margin: 10% 20% 10% 20%;
+  padding: 10% 15% 10% 15%;
   color: var(--general_font_color);
   font-family: var(--general_font), "Courier New";
 
