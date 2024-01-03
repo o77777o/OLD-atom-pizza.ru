@@ -1,19 +1,32 @@
-.modal_card {
-  /* display: none;
-  position: fixed;
-  top: 0rem; */
+.modal_background {
+  cursor: pointer;
+  position: fixed; /* фиксированное позиционирование, чтобы элемент занимал весь экран */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6); /* черный цвет с прозрачностью 60% для затемнения */
+  z-index: 1000; /* установка z-index на большее значение, чем у других элементов, чтобы занимать поверхность */
 
   display: flex;
-  width: 65rem;
-  height: 40rem;
+  justify-content: center; /* выравнивание по центру по горизонтали */
+  align-items: center; /* выравнивание по центру по вертикали */
+}
+
+.modal_delivery_area,
+.modal_shopping_cart,
+.modal_card {
+  position: fixed;
+  top: 50%; 
+  left: 50%; 
+  transform: translate(-50%, -50%);      
+  z-index: 1000; 
+
+  display: flex;
+  width: 67rem;
+  height: 42rem;
   border-radius: 20px;
   background-color: white;
-
-  -webkit-box-shadow: 0px 5px 15px 5px rgba(34, 60, 80, 0.2);
-  -moz-box-shadow: 0px 5px 15px 5px rgba(34, 60, 80, 0.2);
-  box-shadow: 0px 5px 15px 5px rgba(34, 60, 80, 0.2);
-
-  /* border: 1px solid black; */
   margin: 1rem;
 }
 
@@ -25,7 +38,6 @@
   object-fit: contain;
   overflow: hidden;
   border-radius: 20px 0px 0px 20px;
-  /* background-color: rgb(255, 0, 0); */
 }
 
 .description_modal_card {
@@ -33,51 +45,20 @@
   flex: 1;
   flex-direction: column;
   margin: 1rem;
-  /* background-color: aqua; */
-  /* border: 1px solid black; */
 }
 
 .structure_modal_card {
   flex: 1;
   font-size: 2rem;
   font-weight: 600;
-  /* border: 1px solid black; */
+
 }
 
 .weight_modal_card {
   flex: 1;
-  font-size: 1.1rem;
   color: var(--general_gray_font_color);
-  /* border: 1px solid black; */
 }
 
 .compound_modal_card {
   flex: 4;
-  font-size: 1.2rem;
-  /* border: 1px solid black; */
-}
-
-.price_modal_card {
-  cursor: pointer;
-  user-select: none;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  height: 2rem;
-  border-radius: 18px;
-  font-weight: 600;
-  font-size: 1.8rem;
-  color: white;
-  background-color: var(--general_red_color);
-
-  /* border: 1px solid black; */
-}
-
-.price_modal_card:hover {
-  filter: brightness(90%);
-}
-
-.price_modal_card:active {
-  filter: brightness(80%);
 }

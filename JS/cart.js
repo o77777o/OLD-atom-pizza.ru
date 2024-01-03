@@ -46,6 +46,7 @@ const clearAllCart = () => {
     element.remove();
   });
   showSum();
+  getArrayLength();
   console.log("LS and Cart has been cleared");
 };
 
@@ -74,7 +75,7 @@ const showSum = () => {
 //Удаление элемента из массива
 const deleteFromLS = (id) => {
   let all = getFromLS();
-  
+
   const elementToDelete = all.findIndex((element) => element.ID === id);
   if (elementToDelete !== -1) {
     all.splice(elementToDelete, 1);
@@ -88,6 +89,7 @@ const pushToDelete = (product, id) => {
   deleteButton.addEventListener("click", () => {
     product.remove();
     deleteFromLS(id);
+    getArrayLength();
     showSum();
   });
 };
@@ -111,7 +113,7 @@ const createElement = (source) => {
 
 //------------------------------------------------------------
 
-//Получение элемента и его отрисовка в Cart
+//Получение элемента и его отрисовка в Cart (неактуально при динамичной корзине)
 const displayElementInCart = (id) => {
   const element = findByID(id);
   const totalProduct = document.querySelector(".total_product");
@@ -122,8 +124,8 @@ const displayElementInCart = (id) => {
   showSum();
 };
 
-//Отрисовка элементов в Cart из LS после перезагрузки страницы
-const displayAllCartAfterReboot = () => {
+//Отрисовка элементов в Cart из LS
+const displayAllPositionInCart = () => {
   const all = getFromLS();
   const totalProduct = document.querySelector(".total_product");
 
@@ -131,40 +133,54 @@ const displayAllCartAfterReboot = () => {
     const product = createElement(all[i]);
     totalProduct.appendChild(product);
     pushToDelete(product, all[i].ID);
-    
   }
   showSum();
 };
 
-//Добавление элемента в Cart и LS
+//Добавление элемента в LS
 const cardToCart = (product, element) => {
   element.addEventListener("click", () => {
     processButton(product.id);
-    displayElementInCart(product.id);
+    getArrayLength();
+    // displayElementInCart(product.id); (неактуально при динамичной корзине)
   });
 };
 
 //Очистка LS и Cart по кнопке
-const buttonClearAll = document.querySelector(".button_clear_all");
-buttonClearAll.addEventListener("click", () => {
-  clearAllCart();
-});
+const pushButtonClearAll = () => {
+  const buttonClearAllHTML = document.querySelector(".button_clear_all");
+  addClick(buttonClearAllHTML, clearAllCart);
+};
+
+//Отобразить сколько товаров в корзине
+const getArrayLength = () => {
+  const countCartHTML = document.querySelector(".count_cart");
+  const array = getFromLS();
+  const arrayLength = array.length;
+  if (!arrayLength) {
+    countCartHTML.innerHTML = "";
+    return;
+  } else {
+    countCartHTML.innerHTML = arrayLength;
+  }
+};
 
 //Точка входа
 const initCart = () => {
   createLS();
+  getArrayLength();
+  const productCardHTML = document.querySelectorAll(".product_card");
 
-  const products = document.querySelectorAll(".product_card");
-
-  for (const product of products) {
+  for (const product of productCardHTML) {
     const description = product.children[1];
     const addToCartButton = description.children[2];
     cardToCart(product, addToCartButton);
   }
-
-  displayAllCartAfterReboot();
 };
 
 window.onload = () => {
   initCart();
+  initModal();
+  initButtonOpenCart();
+  initButtonOpenDeliveryModal();
 };

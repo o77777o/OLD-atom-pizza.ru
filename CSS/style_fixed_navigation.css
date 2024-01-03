@@ -15,8 +15,6 @@
 
   border-radius: 20px;
   border: 1px solid var(--general_border_color);
-
-
 }
 
 .fixed_logo {
@@ -24,8 +22,7 @@
   justify-content: center;
   align-items: center;
   margin: 0.5rem;
-  border: 1px solid var(--general_border_color);
-
+  /* border: 1px solid var(--general_border_color); */
 }
 
 .fixed_promo,
@@ -59,4 +56,12 @@
   border-radius: 20px;
   background-color: var(--general_red_color);
   /* border: 1px solid var(--general_border_color); */
+}
+
+.count_cart {
+  color: var(--general_red_color);
+  font-size: 1.3rem;
+  font-weight: 600;
+  position: absolute;
+  z-index: 1; /* Устанавливаем поверх SVG */
 }

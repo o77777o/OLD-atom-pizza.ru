@@ -1,4 +1,4 @@
-ymaps.ready(function () {
+const func = () => {
   let myMap = new ymaps.Map("map", {
     center: [59.984272, 30.39355],
     zoom: 15,
@@ -58,11 +58,12 @@ ymaps.ready(function () {
           // Если адрес находится за пределами зоны, меняем значение в поле input
           addressInputHTML.value = "(Вне зоны доставки) " + request;
           addressInputHTML.style.border = "1px solid var(--general_red_color)";
-          addressInputHTML.style.outline = "1px solid var(--general_red_color)"
+          addressInputHTML.style.outline = "1px solid var(--general_red_color)";
         } else {
           // Устанавливаем новую метку
           addressInputHTML.style.border = "1px solid var(--general_green_color";
-          addressInputHTML.style.outline = "1px solid var(--general_green_color";
+          addressInputHTML.style.outline =
+            "1px solid var(--general_green_color";
           myPlacemark = new ymaps.Placemark(
             addressCoordinates,
             {
@@ -84,4 +85,9 @@ ymaps.ready(function () {
       }
     );
   });
-});
+};
+
+const initYmaps = () => {
+  ymaps.ready(func);
+} 
+

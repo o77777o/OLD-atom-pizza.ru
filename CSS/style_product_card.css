@@ -44,6 +44,7 @@
   /* border: 1px solid black; */
 }
 
+.button_price_modal_card,
 .button_price_product_card {
   cursor: pointer;
   user-select: none;
@@ -66,10 +67,14 @@
   
 }
 
+.button_open_cart:hover,
+.button_price_modal_card:hover,
 .button_price_product_card:hover {
   filter: brightness(110%);
 }
 
+.button_open_cart:active,
+.button_price_modal_card:active,
 .button_price_product_card:active {
   filter: brightness(90%);
   /* transform: scale(0.9); */
