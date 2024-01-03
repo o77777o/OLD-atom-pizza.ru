@@ -48,7 +48,8 @@ const menuPosition = [
   {
     type: "Пицца",
     name: "Друзья Ариель",
-    photo: "https://api.starterapp.ru/service/image/w:640/aHR0cHM6Ly9jZG4uc2FuaXR5LmlvL2ltYWdlcy9objYwaWF5MS9wcm9kdWN0aW9uLzRjM2QwM2NmNTdhNzIxMmUyYTY0YTUzZWM4NmY1NTQ0ZmNhMWZmZWEtMzQxMXgyMjc0LmpwZw==",
+    photo:
+      "https://api.starterapp.ru/service/image/w:640/aHR0cHM6Ly9jZG4uc2FuaXR5LmlvL2ltYWdlcy9objYwaWF5MS9wcm9kdWN0aW9uLzRjM2QwM2NmNTdhNzIxMmUyYTY0YTUzZWM4NmY1NTQ0ZmNhMWZmZWEtMzQxMXgyMjc0LmpwZw==",
     base: "сливочная основа",
     ingredients:
       "Соус бешамель, моцарелла, тигровые креветки, мидии, гребешок, руккола, парmезан",
@@ -217,7 +218,6 @@ const menuPosition = [
     price: 600,
     ID: "b031f7d2-bcfc-408e-ac28-d3311dbcc2f7",
   },
-  
 ];
 
 window.menuPosition = menuPosition;

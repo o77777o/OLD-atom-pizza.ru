@@ -13,6 +13,7 @@
 }
 
 .delivery_address {
+  flex: 1;
   display: flex;
   flex-direction: column;
   margin: 0.5rem;
@@ -31,6 +32,7 @@
   grid-column: 1 span;
 }
 
+.pickup,
 .input_entrance,
 .input_door_code,
 .input_floor,
@@ -38,6 +40,7 @@
 .input_city_street_number,
 .input_address_comment {
   display: flex;
+  justify-content: space-between;
   align-items: center;
   border: solid 1px var(--general_border_color);
 
@@ -57,4 +60,20 @@
 .input_apartment:focus,
 .input_address_comment:focus {
   outline: 1px solid var(--general_green_color);
+}
+
+.ymaps-2-1-79-search__suggest {
+  font-family: var(--general_font);
+  color: var(--general_font_color);
+  border: 1px solid var(--general_border_color);
+  border-radius: 10px; /* Скругление углов */
+}
+
+.ymaps-2-1-79-search__suggest-item {
+  font-family: var(--general_font);
+  color: var(--general_font_color);
+}
+
+.ymaps-2-1-79-search__suggest-item:hover {
+  background-color: rgba(93, 173, 100, 0.3);
 }

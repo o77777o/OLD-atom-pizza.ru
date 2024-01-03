@@ -1,0 +1,62 @@
+.fixed_navigation {
+  position: fixed;
+  top: 1em;
+  left: 1em;
+
+  cursor: pointer;
+  user-select: none;
+  padding: 0.5rem;
+
+  display: flex;
+  /* align-items: center; */
+  width: 10%;
+  height: 50%;
+  flex-direction: column;
+
+  border-radius: 20px;
+  border: 1px solid var(--general_border_color);
+
+
+}
+
+.fixed_logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0.5rem;
+  border: 1px solid var(--general_border_color);
+
+}
+
+.fixed_promo,
+.fixed_pizza,
+.fixed_sauce,
+.fixed_delivery_zone,
+.fixed_about_us,
+.test {
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  margin: 0.5rem;
+  padding: 0rem 0.5rem;
+  flex: 1;
+  max-height: 2.7rem;
+  border-radius: 20px;
+  border: 1px solid var(--general_border_color);
+}
+
+.button_open_cart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* flex: 1; */
+  /* position: absolute; */
+  bottom: 0;
+  width: 3.8rem;
+  height: 3.8rem;
+  margin: 0.5rem;
+  border-radius: 20px;
+  background-color: var(--general_red_color);
+  /* border: 1px solid var(--general_border_color); */
+}

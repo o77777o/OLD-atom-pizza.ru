@@ -42,6 +42,22 @@ const phoneFormat = (e) => {
     (x[5] ? " " + x[5] : "");
 };
 
+const pickup = document.querySelector("#pickup");
+const fullAddressHTML = document.querySelector(".full_address")
+
+console.log(pickup);
+
+pickup.addEventListener("change", (event) => {
+    if (event.target.checked) {
+        fullAddressHTML.style.display = "none"
+
+
+    } else {
+        fullAddressHTML.style.display = ""
+
+    }
+  });
+
 //точка входа
 const initOrder = (e) => {
   addClick(removeButtonHTML, removeСutlery);
