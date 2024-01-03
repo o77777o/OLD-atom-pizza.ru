@@ -178,9 +178,3 @@ const initCart = () => {
   }
 };
 
-window.onload = () => {
-  initCart();
-  initModal();
-  initButtonOpenCart();
-  initButtonOpenDeliveryModal();
-};

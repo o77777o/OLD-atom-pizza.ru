@@ -3,14 +3,15 @@
   top: 1em;
   left: 1em;
 
-  cursor: pointer;
+  font-weight: 600;
+
   user-select: none;
   padding: 0.5rem;
 
   display: flex;
   /* align-items: center; */
   width: 10%;
-  height: 50%;
+  /* height: 50%; */
   flex-direction: column;
 
   border-radius: 20px;
@@ -19,10 +20,27 @@
 
 .fixed_logo {
   display: flex;
+  cursor: pointer;
   justify-content: center;
   align-items: center;
   margin: 0.5rem;
+  transition: 0.1s;
   /* border: 1px solid var(--general_border_color); */
+}
+
+.button_open_cart:hover,
+.fixed_logo:hover {
+  transform: scale(1.1);
+}
+
+.fixed_promo:hover,
+.fixed_pizza:hover,
+.fixed_sauce:hover,
+.fixed_delivery_zone:hover,
+.fixed_about_us:hover,
+.fixed_delivery_zone:hover {
+  border: 1px solid var(--general_green_color);
+  transform: scale(1.1);
 }
 
 .fixed_promo,
@@ -32,30 +50,33 @@
 .fixed_about_us,
 .test {
   display: flex;
-  /* justify-content: center; */
+  cursor: pointer;
+
   align-items: center;
   margin: 0.5rem;
-  padding: 0rem 0.5rem;
+  padding: 0rem 1rem;
   flex: 1;
-  max-height: 2.7rem;
+  min-height: 3.8rem;
+  max-height: 3.8rem;
   border-radius: 20px;
   border: 1px solid var(--general_border_color);
+  transition: 0.1s;
 }
 
 .button_open_cart {
   display: flex;
+  cursor: pointer;
   justify-content: center;
   align-items: center;
 
-  /* flex: 1; */
-  /* position: absolute; */
   bottom: 0;
   width: 3.8rem;
   height: 3.8rem;
   margin: 0.5rem;
   border-radius: 20px;
   background-color: var(--general_red_color);
-  /* border: 1px solid var(--general_border_color); */
+  transition: 0.1s;
+  
 }
 
 .count_cart {
@@ -63,5 +84,5 @@
   font-size: 1.3rem;
   font-weight: 600;
   position: absolute;
-  z-index: 1; /* Устанавливаем поверх SVG */
+  z-index: 1; 
 }
