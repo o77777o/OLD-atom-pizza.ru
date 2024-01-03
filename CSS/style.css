@@ -7,52 +7,6 @@
   user-select: none;
 }
 
-.stt {
-  display: flex;
-  background-color: var(--general_red_color);
-  cursor: pointer;
-  user-select: none;
-  border-radius: 0px 10px 10px 0px;
-  width: 4rem;
-  height: 4rem;
-  position: fixed;
-  top: 0em;
-  left: 1em;
-  transform: translateY(-150%);
-  animation: ani 1s forwards;
-}
-
-.upward {
-  transform: translateY(0);
-  animation: moveUp 1s forwards;
-}
-
-@keyframes moveUp {
-  0% {
-    transform: translateY(0) rotate(90deg);
-  }
-  100% {
-    transform: translateY(-100%) rotate(90deg);
-  }
-}
-
-@keyframes ani {
-  0% {
-    transform: translateY(-150%) rotate(90deg);
-  }
-  100% {
-    transform: translateY(0) rotate(90deg);
-  }
-}
-
-.stt:hover {
-  filter: brightness(90%);
-}
-
-.stt:active {
-  filter: brightness(80%);
-}
-
 .title {
   font-size: 3rem;
 }
