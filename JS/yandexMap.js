@@ -87,6 +87,7 @@ const func = () => {
   });
 };
 
+//Точка входа
 const initYmaps = () => {
   ymaps.ready(func);
 } 

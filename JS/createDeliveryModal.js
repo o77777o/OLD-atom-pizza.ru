@@ -1,3 +1,4 @@
+//Точка входа
 const initButtonOpenDeliveryModal = () => {
   const buttonOpenDeliveryModal = document.querySelector(".fixed_delivery_zone");
 

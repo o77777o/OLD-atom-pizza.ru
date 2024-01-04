@@ -165,10 +165,8 @@ const getArrayLength = () => {
   }
 };
 
-//Точка входа
-const initCart = () => {
-  createLS();
-  getArrayLength();
+//Найти и навесить клики на кнопки карточек продукта
+const activatePriceButton = () => {
   const productCardHTML = document.querySelectorAll(".product_card");
 
   for (const product of productCardHTML) {
@@ -178,3 +176,9 @@ const initCart = () => {
   }
 };
 
+//Точка входа
+const initCart = () => {
+  createLS();
+  getArrayLength();
+  activatePriceButton();
+};

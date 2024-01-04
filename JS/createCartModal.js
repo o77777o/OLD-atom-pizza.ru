@@ -1,3 +1,4 @@
+//Точка входа
 const initButtonOpenCart = () => {
   const buttonOpenCart = document.querySelector(".button_open_cart");
 

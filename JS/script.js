@@ -1,14 +1,9 @@
 window.onload = () => {
   initNavigation();
-
   initCart();
-
   initModal();
-
   initButtonOpenCart();
-
   initButtonOpenDeliveryModal();
-
 };
 
 const qwe = (func) => {
