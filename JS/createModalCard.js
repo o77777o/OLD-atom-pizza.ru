@@ -1,4 +1,4 @@
-//Добавление затемнения
+//Добавляем затемнение
 const createModalBackground = (parentElement) => {
   const modalBackground = document.createElement("div");
   modalBackground.classList.add("modal_background");
@@ -12,6 +12,14 @@ const addToCart = (modalCard) => {
   buttonPriceModalCardHTML = modalCardDescriptionHTML.children[3];
 
   cardToCart(modalCard, buttonPriceModalCardHTML);
+};
+
+//Проверка перед созданием окна
+const checkSecondModal = () => {
+  const parentHTML = document.querySelector(".modal_window");
+  if (parentHTML.children.length) {
+    parentHTML.innerHTML = "";
+  }
 };
 
 //Создание модального окна продукта
@@ -34,12 +42,12 @@ const createModalCard = (element) => {
   return modalCard;
 };
 
-//Удаление затемнения и модального окна продукта
-const deleteModalCard = (modalCard) => {
+//Удаление затемнения и модального окна продукта по кнопке
+const deleteModalCardButton = () => {
   const removeZone = document.querySelector(".modal_background");
+
   removeZone.addEventListener("click", () => {
-    modalCard.remove();
-    removeZone.remove();
+    checkSecondModal()
   });
 };
 
@@ -49,10 +57,11 @@ const openModal = (id) => {
   const modalWindow = document.querySelector(".modal_window");
   const modalCard = createModalCard(element);
 
+  checkSecondModal();
   createModalBackground(modalWindow);
   modalWindow.appendChild(modalCard);
   addToCart(modalCard);
-  deleteModalCard(modalCard);
+  deleteModalCardButton();
 };
 
 //Точка входа, навесить click на img в product_card
@@ -67,4 +76,3 @@ const initModal = () => {
     });
   }
 };
-

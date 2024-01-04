@@ -1,19 +1,23 @@
 //Точка входа
 const initButtonOpenCart = () => {
+  configurateButtonOpenCart();
+};
+
+//Настроить кнопку открытия корзины
+const configurateButtonOpenCart = () => {
   const buttonOpenCart = document.querySelector(".button_open_cart");
 
-  addClick(buttonOpenCart,displayCartModal)
-
+  addClick(buttonOpenCart, displayCartModal);
 };
 
 //Отобразить модальное окно корзины
 const displayCartModal = () => {
   const modalWindow = document.querySelector(".modal_window");
-
+  checkSecondModal();
   createModalBackground(modalWindow);
-  const cartModal = createCartModal(modalWindow);
-  deleteModalCard(cartModal);
+  createCartModal(modalWindow);
   activateCart();
+  deleteModalCardButton();
 };
 
 //Активировать корзину после отображения

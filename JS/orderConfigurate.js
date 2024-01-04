@@ -57,23 +57,7 @@ const configuratePhoneFormat = () => {
   });
 };
 
-//Чекбокс на самовывоз
-const makeOrderToGo = (checkbox, element) => {
-  checkbox.addEventListener("change", (event) => {
-    if (event.target.checked) {
-      element.style.display = "none";
-    } else {
-      element.style.display = "";
-    }
-  });
-};
 
-//Настроить заказ на самовывоз
-const configurateToGo = () => {
-  const pickup = document.querySelector("#pickup");
-  const fullAddressHTML = document.querySelector(".full_address");
-  makeOrderToGo(pickup, fullAddressHTML);
-};
 
 //точка входа
 const initOrderConfigurate = () => {

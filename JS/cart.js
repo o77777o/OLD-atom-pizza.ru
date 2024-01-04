@@ -157,8 +157,7 @@ const getArrayLength = () => {
   const buttonOpenCart = document.querySelector(".button_open_cart");
   const countCartHTML = document.querySelector(".count_cart");
   const array = getFromLS();
-  const arrayLength = array.length;
-  if (!arrayLength) {
+  if (!array.length) {
     countCartHTML.innerHTML = "";
     buttonOpenCart.style.opacity = "0"; // устанавливаем прозрачность элемента
     buttonOpenCart.style.pointerEvents = "none"; // устанавливаем отключение событий на элементе
@@ -166,7 +165,7 @@ const getArrayLength = () => {
   } else {
     buttonOpenCart.style.opacity = "1"; // возвращаем непрозрачность элемента
     buttonOpenCart.style.pointerEvents = "all"; // возвращаем обработку событий на элементе
-    countCartHTML.innerHTML = arrayLength;
+    countCartHTML.innerHTML = array.length;
   }
 };
 

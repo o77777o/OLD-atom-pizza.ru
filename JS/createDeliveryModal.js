@@ -1,18 +1,26 @@
 //Точка входа
 const initButtonOpenDeliveryModal = () => {
-  const buttonOpenDeliveryModal = document.querySelector(".fixed_delivery_zone");
+  configurateButtonOpenDelivery();
+};
+
+//Настроить кнопку открытия зоны доставки
+const configurateButtonOpenDelivery = () => {
+  const buttonOpenDeliveryModal = document.querySelector(
+    ".fixed_delivery_zone"
+  );
 
   addClick(buttonOpenDeliveryModal, displayDeliveryModal);
 };
 
+//Отобразить модальное окно зоны доставки, настроить все кнопки
 const displayDeliveryModal = () => {
   const modalWindow = document.querySelector(".modal_window");
-
+  checkSecondModal()
   createModalBackground(modalWindow);
-  const deliveryModal = createDeliveryModal(modalWindow);
-  initYmaps()
-  configurateToGo()
-  deleteModalCard(deliveryModal);
+  createDeliveryModal(modalWindow);
+  initYmaps();
+  initDeliveryConfigurate()
+  deleteModalCardButton();
 };
 
 //Создать модальное окно зоны доставки
@@ -70,10 +78,10 @@ const createDeliveryModal = (parentHTML) => {
         type="text"
       />
     </div>
-    <div class="button_to_cart">Далее</div>
+    <div class="button_to_cart">Перейти в корзину</div>
   </div>
     `;
-    parentHTML.appendChild(deliveryModal);
+  parentHTML.appendChild(deliveryModal);
 
   return deliveryModal;
 };
