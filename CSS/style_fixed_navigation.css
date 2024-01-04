@@ -86,3 +86,7 @@
   position: absolute;
   z-index: 1; 
 }
+
+.button_open_cart, .count_cart {
+  transition: all 0.3s ease; /* добавляем плавный переход для изменений стилей */
+}

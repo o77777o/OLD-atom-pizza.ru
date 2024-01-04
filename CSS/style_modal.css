@@ -28,6 +28,8 @@
   border-radius: 20px;
   background-color: white;
   margin: 1rem;
+
+  transition: all 0.3s ease;
 }
 
 .img_modal_card {

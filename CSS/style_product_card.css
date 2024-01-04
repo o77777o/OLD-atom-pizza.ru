@@ -16,6 +16,7 @@
 
 .img_product {
   display: flex;
+  cursor: pointer;
   justify-content: center;
   align-content: center;
   overflow: hidden;

@@ -31,7 +31,6 @@ const createModalCard = (element) => {
       <div class="button_price_modal_card">${element.price}₽</div>
     </div>
     `;
-
   return modalCard;
 };
 
