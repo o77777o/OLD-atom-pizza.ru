@@ -179,7 +179,7 @@ const createCartModal = (parentHTML) => {
     </div>
 
     `;
-
+  makeSmoothAnimation(cartModal);
   parentHTML.appendChild(cartModal);
 
   return cartModal;

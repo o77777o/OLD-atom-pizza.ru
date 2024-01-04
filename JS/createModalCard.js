@@ -3,7 +3,18 @@ const createModalBackground = (parentElement) => {
   const modalBackground = document.createElement("div");
   modalBackground.classList.add("modal_background");
 
+  makeSmoothAnimation(modalBackground)
   parentElement.appendChild(modalBackground);
+};
+
+//Плавная анимация появления
+const makeSmoothAnimation = (elementHTML) => {
+  elementHTML.style.opacity = 0; // устанавливаем начальную непрозрачность
+
+  setTimeout(() => {
+    elementHTML.style.transition = "opacity 0.4s";
+    elementHTML.style.opacity = 1;
+  }, 100);
 };
 
 //Функция добавления элемента по ID в корзину и сохранения в LS
@@ -39,6 +50,7 @@ const createModalCard = (element) => {
       <div class="button_price_modal_card">${element.price}₽</div>
     </div>
     `;
+    makeSmoothAnimation(modalCard)
   return modalCard;
 };
 
@@ -47,7 +59,7 @@ const deleteModalCardButton = () => {
   const removeZone = document.querySelector(".modal_background");
 
   removeZone.addEventListener("click", () => {
-    checkSecondModal()
+    checkSecondModal();
   });
 };
 

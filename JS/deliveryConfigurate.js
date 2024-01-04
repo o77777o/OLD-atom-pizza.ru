@@ -21,11 +21,9 @@ const activateButtonToCartFromDelivery = () => {
   const buttonToCartHTML = document.querySelector(".button_to_cart");
   const array = getFromLS();
   if (array.length) {
-    buttonToCartHTML.addEventListener("click", () => {
-      displayCartModal();
-    });
+    addClick(buttonToCartHTML, displayCartModal)
   } else {
-    buttonToCartHTML.innerHTML = "В корзине ничего нет"
+    buttonToCartHTML.innerHTML = "В корзине ничего нет..."
     buttonToCartHTML.style.background = "var(--general_red_color)"
   }
 };

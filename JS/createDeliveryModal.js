@@ -15,11 +15,11 @@ const configurateButtonOpenDelivery = () => {
 //Отобразить модальное окно зоны доставки, настроить все кнопки
 const displayDeliveryModal = () => {
   const modalWindow = document.querySelector(".modal_window");
-  checkSecondModal()
+  checkSecondModal();
   createModalBackground(modalWindow);
   createDeliveryModal(modalWindow);
   initYmaps();
-  initDeliveryConfigurate()
+  initDeliveryConfigurate();
   deleteModalCardButton();
 };
 
@@ -81,6 +81,7 @@ const createDeliveryModal = (parentHTML) => {
     <div class="button_to_cart">Перейти в корзину</div>
   </div>
     `;
+  makeSmoothAnimation(deliveryModal);
   parentHTML.appendChild(deliveryModal);
 
   return deliveryModal;
