@@ -92,6 +92,7 @@
   outline: none;
 }
 
+.button_open_site,
 .button_place_an_order,
 .button_to_cart {
   margin: 0.5rem;
@@ -153,6 +154,7 @@
   transform: scale(0.8);
 }
 
+.button_open_site:hover,
 .button_place_an_order:hover,
 .button_to_cart:hover,
 .button_clear_all:hover,
@@ -160,6 +162,7 @@
   filter: brightness(90%);
 }
 
+.button_open_site:hover,
 .button_place_an_order:active,
 .button_to_cart:active,
 .button_clear_all:active,

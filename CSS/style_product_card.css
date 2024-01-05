@@ -24,7 +24,6 @@
   height: 20rem;
   border-radius: 20px;
   transition: 0.1s;
- 
 }
 
 .img_product:hover {
@@ -34,14 +33,12 @@
 .structure_product {
   height: 3rem;
   font-weight: 600;
-
 }
 
 .weight_product {
   height: 1.5rem;
   font-size: 1rem;
   color: var(--general_gray_font_color);
-
 }
 
 .button_price_modal_card,
@@ -54,17 +51,14 @@
   align-items: center;
 
   border-radius: 20px;
-  
+
   height: 2.8rem;
   margin: 1rem 0rem;
-
 
   color: white;
   font-weight: 600;
   font-size: 1.5rem;
   background-color: var(--general_price_button_color);
-
-  
 }
 
 .button_open_cart:hover,

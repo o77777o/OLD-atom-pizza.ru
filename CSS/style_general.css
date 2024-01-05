@@ -39,6 +39,11 @@ textarea {
   font-size: 1.2rem;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 ::-webkit-scrollbar {
   width: 4px;
 }

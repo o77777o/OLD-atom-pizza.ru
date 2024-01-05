@@ -1,4 +1,4 @@
-//Ключ в Local Storage (LS)
+//Ключ в Local Storage для Cart(LS)
 const DB_NAME = "Cart";
 
 //Создать пустое хранилище
@@ -41,10 +41,8 @@ const saveElementToLS = (array, element) => {
 //Очистка LS и Корзины
 const clearAllCart = () => {
   setEmptyStorage();
-  const elementToDelete = document.querySelectorAll(".product");
-  elementToDelete.forEach((element) => {
-    element.remove();
-  });
+  const totalProductHTML = document.querySelector(".total_product");
+  totalProductHTML.innerHTML = ""
   showSum();
   getArrayLength();
   console.log("LS and Cart has been cleared");
@@ -114,15 +112,15 @@ const createElement = (source) => {
 //------------------------------------------------------------
 
 //Получение элемента и его отрисовка в Cart (неактуально при динамичной корзине)
-const displayElementInCart = (id) => {
-  const element = findByID(id);
-  const totalProduct = document.querySelector(".total_product");
-  const product = createElement(element);
-  totalProduct.appendChild(product);
+// const displayElementInCart = (id) => {
+//   const element = findByID(id);
+//   const totalProduct = document.querySelector(".total_product");
+//   const product = createElement(element);
+//   totalProduct.appendChild(product);
 
-  pushToDelete(product, element.ID);
-  showSum();
-};
+//   pushToDelete(product, element.ID);
+//   showSum();
+// };
 
 //Отрисовка элементов в Cart из LS
 const displayAllPositionInCart = () => {
@@ -159,12 +157,12 @@ const getArrayLength = () => {
   const array = getFromLS();
   if (!array.length) {
     countCartHTML.innerHTML = "";
-    buttonOpenCart.style.opacity = "0"; // устанавливаем прозрачность элемента
-    buttonOpenCart.style.pointerEvents = "none"; // устанавливаем отключение событий на элементе
+    buttonOpenCart.style.opacity = "0"; 
+    buttonOpenCart.style.pointerEvents = "none"; 
     return;
   } else {
-    buttonOpenCart.style.opacity = "1"; // возвращаем непрозрачность элемента
-    buttonOpenCart.style.pointerEvents = "all"; // возвращаем обработку событий на элементе
+    buttonOpenCart.style.opacity = "1"; 
+    buttonOpenCart.style.pointerEvents = "all"; 
     countCartHTML.innerHTML = array.length;
   }
 };

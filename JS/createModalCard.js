@@ -12,10 +12,11 @@ const makeSmoothAnimation = (elementHTML) => {
   elementHTML.style.opacity = 0; // устанавливаем начальную непрозрачность
 
   setTimeout(() => {
-    elementHTML.style.transition = "opacity 0.4s";
+    elementHTML.style.transition = "0.2s";
     elementHTML.style.opacity = 1;
   }, 100);
 };
+
 
 //Функция добавления элемента по ID в корзину и сохранения в LS
 const addToCart = (modalCard) => {

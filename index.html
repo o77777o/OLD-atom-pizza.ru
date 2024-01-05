@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="./CSS/style_modal.css" />
     <link rel="stylesheet" href="./CSS/style_delivery_area.css" />
     <link rel="stylesheet" href="./CSS/style_shopping_cart.css" />
-
+    <link rel="stylesheet" href="./CSS/style_footer.css" />
 
     <script defer src="./JS/script.js"></script>
     <script defer src="./JS/siteNavigation.js"></script>
@@ -23,8 +23,8 @@
     <script defer src="./JS/deliveryConfigurate.js"></script>
     <script defer src="./JS/createCartModal.js"></script>
     <script defer src="./JS/createDeliveryModal.js"></script>
+    <script defer src="./JS/createFooterModal.js"></script>
 
-    
     <script
       defer
       src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=5bc6a18b-520c-4a08-af73-0d2ea6068eee&suggest_apikey=558f8ae7-2cad-4815-b735-84beba7d5ae2"
@@ -34,7 +34,6 @@
   </head>
 
   <body>
-
     <div class="fixed_navigation">
       <div class="fixed_logo">
         <svg
@@ -134,7 +133,6 @@
             stroke-width="1.8"
           ></path>
         </svg>
-        
       </div>
     </div>
 
@@ -220,5 +218,99 @@
     </div>
     <div class="modal_window"></div>
     <hr />
+
+    <div class="footer">
+      <div class="authorship">Atomic Pizza</div>
+      <div class="footer_item">Оплата заказа</div>
+      <div class="footer_item">Оферта</div>
+      <div class="footer_item">Политика конфиденциальности</div>
+    </div>
+
+    <div class="payment_system">
+      <div class="payment_item">
+        <svg
+          width="100%"
+          height="100%"
+          viewBox="0 0 45 16"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M5.02687 2.00203C5.41591 1.9997 6.57211 1.89557 7.06186 3.54845C7.39175 4.66185 7.91726 6.48566 8.63837 9.01986H8.93205C9.70539 6.34813 10.2366 4.52432 10.5258 3.54845C11.0206 1.87835 12.2577 2.00206 12.7526 2.00206L16.5704 2.00206V13.8783H12.6792V6.87945H12.4182L10.2491 13.8783H7.32138L5.15219 6.87426H4.89126V13.8783H1V2.00206L5.02687 2.00203ZM22.1582 2.00206V9.00615H22.4686L25.1072 3.24674C25.6194 2.1006 26.7111 2.00206 26.7111 2.00206H30.4767V13.8783H26.5041V6.87426H26.1937L23.6068 12.6337C23.0946 13.7746 21.9512 13.8783 21.9512 13.8783H18.1857V2.00206H22.1582ZM44.2075 7.64575C43.6534 9.21601 41.9132 10.3406 39.9866 10.3406H35.8206V13.8783H32.043V7.64575H44.2075Z"
+            fill="var(--general_gray_font_color)"
+          ></path>
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M40.1696 2.00391H31.8457C32.0438 4.64797 34.3208 6.91146 36.678 6.91146H44.4708C44.9205 4.71393 43.3724 2.00391 40.1696 2.00391Z"
+            fill="var(--general_gray_font_color)"
+          ></path>
+        </svg>
+      </div>
+
+      <div class="payment_item">
+        <svg
+          width="100%"
+          height="100%"
+          viewBox="0 0 40 16"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M17.0681 13.8273H14.0645L15.9431 2.21094H18.9466L17.0681 13.8273Z"
+            fill="var(--general_gray_font_color)"
+          ></path>
+          <path
+            d="M27.9553 2.49455C27.3629 2.25951 26.4232 2 25.2613 2C22.2952 2 20.2064 3.58171 20.1936 5.84309C20.169 7.51153 21.6891 8.43822 22.826 8.99453C23.9881 9.56299 24.3831 9.93403 24.3831 10.4407C24.3713 11.2189 23.4441 11.5777 22.5793 11.5777C21.3801 11.5777 20.7376 11.3927 19.7611 10.9598L19.3656 10.7742L18.9453 13.3818C19.6498 13.7027 20.9477 13.9875 22.2952 14C25.4468 14 27.4985 12.4428 27.5229 10.0329C27.5348 8.71054 26.7322 7.69729 25.0016 6.86931C23.9511 6.33781 23.3078 5.97942 23.3078 5.43559C23.3201 4.9412 23.8519 4.43482 25.0378 4.43482C26.0142 4.41002 26.7317 4.64473 27.2752 4.87961L27.5468 5.00296L27.9553 2.49455Z"
+            fill="var(--general_gray_font_color)"
+          ></path>
+          <path
+            d="M31.9479 9.71201C32.1952 9.04467 33.147 6.46186 33.147 6.46186C33.1346 6.48666 33.3939 5.7822 33.5422 5.34973L33.7521 6.35066C33.7521 6.35066 34.3209 9.13122 34.4444 9.71201C33.975 9.71201 32.5411 9.71201 31.9479 9.71201ZM35.6555 2.21094H33.3322C32.6157 2.21094 32.0714 2.42085 31.7623 3.17475L27.3008 13.8271H30.4524C30.4524 13.8271 30.9712 12.3934 31.0828 12.0846C31.4285 12.0846 34.4944 12.0846 34.9392 12.0846C35.0254 12.4924 35.2976 13.8271 35.2976 13.8271H38.0786L35.6555 2.21094Z"
+            fill="var(--general_gray_font_color)"
+          ></path>
+          <path
+            d="M11.5543 2.21094L8.6128 10.1322L8.29137 8.52564C7.74754 6.67193 6.04199 4.65791 4.13867 3.65649L6.83301 13.8149H10.0092L14.7304 2.21094H11.5543Z"
+            fill="var(--general_gray_font_color)"
+          ></path>
+          <path
+            d="M5.88196 2.21094H1.04944L1 2.44565C4.76967 3.40962 7.26625 5.73325 8.29198 8.52613L7.24145 3.1874C7.06849 2.44548 6.53698 2.23541 5.88196 2.21094Z"
+            fill="var(--general_gray_font_color)"
+          ></path>
+        </svg>
+      </div>
+
+      <div class="payment_item">
+        <svg
+          width="100%"
+          height="100%"
+          viewBox="0 0 26 16"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M9.84513 7.9646C9.84513 5.42035 11.0398 3.16372 12.8761 1.70354C11.5265 0.641596 9.82301 0 7.9646 0C3.56195 0 0 3.56195 0 7.9646C0 12.3673 3.56195 15.9292 7.9646 15.9292C9.82301 15.9292 11.5265 15.2876 12.8761 14.2257C11.0398 12.7876 9.84513 10.5089 9.84513 7.9646Z"
+            fill="var(--general_gray_font_color)"
+          ></path>
+          <path
+            d="M25.7745 7.9646C25.7745 12.3673 22.2126 15.9292 17.8099 15.9292C15.9515 15.9292 14.248 15.2876 12.8984 14.2257C14.7568 12.7655 15.9294 10.5089 15.9294 7.9646C15.9294 5.42035 14.7347 3.16372 12.8984 1.70354C14.248 0.641596 15.9515 0 17.8099 0C22.2126 0 25.7745 3.58407 25.7745 7.9646Z"
+            fill="var(--general_gray_font_color)"
+          ></path>
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M9.84521 7.9646C9.84521 5.42035 11.0399 3.16372 12.8762 1.70354C12.876 1.7034 12.8758 1.70326 12.8757 1.70312H12.8991C12.8989 1.70326 12.8987 1.7034 12.8985 1.70354C14.7348 3.16372 15.9295 5.42035 15.9295 7.9646C15.9295 10.5086 14.7571 12.7651 12.899 14.2253H12.8757C11.0397 12.7872 9.84521 10.5086 9.84521 7.9646Z"
+            fill="var(--general_gray_font_color)"
+          ></path>
+        </svg>
+      </div>
+    </div>
+
+    <div class="development">
+      <div class="developer">
+        <a href="https://t.me/o77777o" target="_blank">Developed by @o77777o</a>
+      </div>
+    </div>
   </body>
 </html>
