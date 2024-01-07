@@ -60,6 +60,7 @@ a {
 }
 
 .modal_window_title {
+  user-select: none;
   margin: 1rem 0rem;
   font-size: 3rem;
   font-weight: 600;
