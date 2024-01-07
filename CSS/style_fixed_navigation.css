@@ -1,7 +1,7 @@
 .fixed_navigation {
   position: fixed;
-  top: 1em;
-  left: 1em;
+  top: -5rem;
+  left: 1rem;
 
   font-weight: 600;
 
@@ -9,23 +9,39 @@
   padding: 0.5rem;
 
   display: flex;
-  /* align-items: center; */
-  width: 10%;
-  /* height: 50%; */
   flex-direction: column;
-
+  width: 11%;
+  /* align-items: center; */
   border-radius: 20px;
-  border: 1px solid var(--general_border_color);
+  /* border: 1px solid var(--general_border_color); */
+
+  transition: 0.3s;
+}
+
+.fixed_navigation.show {
+  top: 1rem;
+  /* -webkit-box-shadow: 0px 4px 13px -3px rgba(34, 60, 80, 0.2);
+  -moz-box-shadow: 0px 4px 13px -3px rgba(34, 60, 80, 0.2);
+  box-shadow: 0px 4px 13px -3px rgba(34, 60, 80, 0.2); */
 }
 
 .fixed_logo {
+  pointer-events: none;
   display: flex;
+  opacity: 0;
   cursor: pointer;
   justify-content: center;
   align-items: center;
   margin: 0.5rem;
   transition: 0.1s;
+
   /* border: 1px solid var(--general_border_color); */
+}
+
+.button_open_cart.show,
+.fixed_logo.show {
+  opacity: 1;
+  pointer-events: all;
 }
 
 .button_open_cart:hover,
@@ -33,6 +49,7 @@
   transform: scale(1.1);
 }
 
+.fixed_contacts:hover,
 .fixed_promo:hover,
 .fixed_pizza:hover,
 .fixed_sauce:hover,
@@ -43,6 +60,7 @@
   transform: scale(1.1);
 }
 
+.fixed_contacts,
 .fixed_promo,
 .fixed_pizza,
 .fixed_sauce,
@@ -69,14 +87,15 @@
   justify-content: center;
   align-items: center;
 
-  bottom: 0;
   width: 3.8rem;
   height: 3.8rem;
   margin: 0.5rem;
   border-radius: 20px;
   background-color: var(--general_red_color);
-  transition: 0.1s;
-  
+
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.3s;
 }
 
 .count_cart {
@@ -84,9 +103,5 @@
   font-size: 1.3rem;
   font-weight: 600;
   position: absolute;
-  z-index: 1; 
-}
-
-.button_open_cart, .count_cart {
-  transition: all 0.3s ease; /* добавляем плавный переход для изменений стилей */
+  z-index: 1;
 }

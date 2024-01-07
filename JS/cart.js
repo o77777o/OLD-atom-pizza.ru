@@ -157,12 +157,10 @@ const getArrayLength = () => {
   const array = getFromLS();
   if (!array.length) {
     countCartHTML.innerHTML = "";
-    buttonOpenCart.style.opacity = "0"; 
-    buttonOpenCart.style.pointerEvents = "none"; 
+    buttonOpenCart.classList.remove("show")
     return;
   } else {
-    buttonOpenCart.style.opacity = "1"; 
-    buttonOpenCart.style.pointerEvents = "all"; 
+    buttonOpenCart.classList.add("show")
     countCartHTML.innerHTML = array.length;
   }
 };

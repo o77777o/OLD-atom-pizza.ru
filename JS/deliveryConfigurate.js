@@ -2,9 +2,9 @@
 const makeOrderToGo = (checkbox, element) => {
   checkbox.addEventListener("change", (event) => {
     if (event.target.checked) {
-      element.style.display = "none";
+      element.classList.add("hide");
     } else {
-      element.style.display = "";
+      element.classList.remove("hide");
     }
   });
 };
@@ -21,10 +21,10 @@ const activateButtonToCartFromDelivery = () => {
   const buttonToCartHTML = document.querySelector(".button_to_cart");
   const array = getFromLS();
   if (array.length) {
-    addClick(buttonToCartHTML, displayCartModal)
+    addClick(buttonToCartHTML, displayCartModal);
   } else {
-    buttonToCartHTML.innerHTML = "В корзине ничего нет..."
-    buttonToCartHTML.style.background = "var(--general_red_color)"
+    buttonToCartHTML.innerHTML = "В корзине ничего нет...";
+    buttonToCartHTML.style.background = "var(--general_red_color)";
   }
 };
 

@@ -7,9 +7,29 @@ const scrollToTop = () => {
 
 //Подняться наверх
 const getToTop = () => {
-  const pushToTop = document.querySelector(".fixed_logo");
+  const pushToTopHTML = document.querySelector(".fixed_logo");
+  addClick(pushToTopHTML, scrollToTop);
+};
 
-  addClick(pushToTop, scrollToTop);
+//Получить текущее значение прокрутки страницы
+const getCurentScroll = () => {
+  const fixedNavigationHTML = document.querySelector(".fixed_navigation");
+  const pushToTopHTML = document.querySelector(".fixed_logo");
+  const curentScroll = window.scrollY;
+  if (curentScroll >= 300) {
+    fixedNavigationHTML.classList.add("show");
+    pushToTopHTML.classList.add("show");
+  } else {
+    fixedNavigationHTML.classList.remove("show");
+    pushToTopHTML.classList.remove("show");
+  }
+};
+
+// Спрятать кнопку поднятия наверх
+const hideGetToTop = () => {
+  window.addEventListener("scroll", () => {
+    getCurentScroll();
+  });
 };
 
 // Функция для получения текущей даты и времени по Москве
@@ -26,7 +46,7 @@ const isWorkingTimeNow = () => {
   const moscowTime = getCurrentDateTimeInMoscow();
   const dayOfWeek = moscowTime.getDay();
   const hours = moscowTime.getHours();
-
+  
   if (dayOfWeek >= 3 && dayOfWeek <= 7) {
     if (hours >= 10 && hours < 21) {
       return true;
@@ -55,7 +75,7 @@ const createAlertModal = (parentHTML) => {
   `;
   makeSmoothAnimation(alertModal);
   parentHTML.appendChild(alertModal);
-  activateButtonOpenSite()
+  activateButtonOpenSite();
   return alertModal;
 };
 
@@ -73,6 +93,8 @@ const displayAlertModal = () => {
 
 //Точка входа
 const initNavigation = () => {
+  getCurentScroll();
+  // checkRestaurantSchedule();
+  hideGetToTop();
   getToTop();
-  checkRestaurantSchedule();
 };
