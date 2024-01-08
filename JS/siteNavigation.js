@@ -95,7 +95,7 @@ const displayAlertModal = () => {
 //Точка входа
 const initNavigation = () => {
   getCurentScroll();
-  checkRestaurantSchedule();
+  // checkRestaurantSchedule();
   hideGetToTop();
   getToTop();
 };
