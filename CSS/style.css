@@ -13,10 +13,16 @@
 
 .section {
   display: flex;
-  /* justify-content: center; */
+  justify-content: center;
   flex-wrap: wrap;
 }
 
-
+.modal_window_title {
+  user-select: none;
+  margin: 1rem 0rem;
+  font-size: 3rem;
+  font-weight: 600;
+  text-align: center;
+}
 
 

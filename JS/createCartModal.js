@@ -33,7 +33,7 @@ const createCartModal = (parentHTML) => {
   cartModal.classList.add("modal_shopping_cart");
 
   cartModal.innerHTML = `
-      <div class="product_list border">
+      <div class="product_list">
       <div class="topic_cart">
         <div class="modal_window_title">Корзина</div>
         <div class="button_clear_all">Очистить</div>

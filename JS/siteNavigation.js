@@ -70,8 +70,9 @@ const createAlertModal = (parentHTML) => {
 
   alertModal.innerHTML = `
   <div class="work_time">
-  <p class="modal_window_title">Здравствуйте!</p> <p>Сейчас мы закрыты.</p> <p>Работаем с 10:00 до 21:00.</p> <p>Пн-Вт выходной.</p> <div class="button_open_site">Открыть сайт</div>
+  <div class="modal_window_title">Здравствуйте!</div> <p>Сейчас мы закрыты.</p> <p>Работаем с 10:00 до 21:00.</p> <p>Пн-Вт выходной.</p>
   </div>
+  <div class="button_open_site">Открыть сайт</div>
   `;
   makeSmoothAnimation(alertModal);
   parentHTML.appendChild(alertModal);
@@ -94,7 +95,7 @@ const displayAlertModal = () => {
 //Точка входа
 const initNavigation = () => {
   getCurentScroll();
-  // checkRestaurantSchedule();
+  checkRestaurantSchedule();
   hideGetToTop();
   getToTop();
 };
