@@ -17,8 +17,9 @@
   --general_font: "general_font";
 }
 
+
 body {
-  padding: 5% 15% 10% 15%;
+  margin: 10% 13%;
   color: var(--general_font_color);
   font-family: var(--general_font), "Courier New";
 
@@ -58,7 +59,6 @@ a {
   background-color: var(--general_red_color);
   border-radius: 10px;
 }
-
 
 /* .product:hover {
     -webkit-box-shadow: 0px 4px 13px -3px rgba(34, 60, 80, 0.2);
