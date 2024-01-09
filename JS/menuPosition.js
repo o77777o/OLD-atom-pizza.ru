@@ -218,17 +218,17 @@ const menuPosition = [
     ID: "b031f7d2-bcfc-408e-ac28-d3311dbcc2f7",
   },
 
-  {
-    type: "Пицца",
-    name: "ТЕСТ ТЕСТ",
-    photo: "",
-    base: "сливочная основа",
-    ingredients: "Соус бешамель, моцарелла, чеддар, блю чиз, пармезан",
-    diameter: "30 см",
-    weight: 600,
-    price: 600,
-    ID: "b031f7d2-bcfc-408e-ac28",
-  },
+  // {
+  //   type: "Пицца",
+  //   name: "ТЕСТ ТЕСТ",
+  //   photo: "",
+  //   base: "сливочная основа",
+  //   ingredients: "Соус бешамель, моцарелла, чеддар, блю чиз, пармезан",
+  //   diameter: "30 см",
+  //   weight: 600,
+  //   price: 600,
+  //   ID: "b031f7d2-bcfc-408e-ac28",
+  // },
 ];
 
 window.menuPosition = menuPosition;
