@@ -26,6 +26,12 @@ body {
   font-size: 1.2rem;
 }
 
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 input {
   color: var(--general_font_color);
   font-family: var(--general_font), "Courier New";
