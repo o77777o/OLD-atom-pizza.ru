@@ -20,8 +20,8 @@ const makeSmoothAnimation = (elementHTML) => {
 //Функция добавления элемента по ID в корзину и сохранения в LS
 const addToCart = (modalCard) => {
   const modalCardDescriptionHTML = modalCard.children[1];
-  buttonToCartHTML = modalCardDescriptionHTML.children[3];
-  buttonPriceModalCardHTML = modalCardDescriptionHTML.children[4];
+  buttonPriceModalCardHTML = modalCardDescriptionHTML.children[3];
+  buttonToCartHTML = modalCardDescriptionHTML.children[4];
   cardToCart(modalCard, buttonPriceModalCardHTML);
   addClick(buttonPriceModalCardHTML, displayButtonToCart, buttonToCartHTML);
 };
@@ -37,7 +37,6 @@ const checkSecondModal = () => {
 //Активировать кнопку перехода в корзину из модальной карточки продукта
 const activateButtonToCartFromModal = () => {
   const buttonToCartHTML = document.querySelector(".button_to_cart");
-  // console.log(buttonToCartHTML);
   addClick(buttonToCartHTML, displayCartModal);
   displayButtonToCart(buttonToCartHTML);
 };
@@ -67,8 +66,8 @@ const createModalCard = (element) => {
       <div class="structure_modal_card">${element.name}, <br> ${element.base} </div>
       <div class="weight_modal_card">${element.weight} грамм, ⌀ ${element.diameter}</div>
       <div class="compound_modal_card">${element.ingredients}</div>
-      <div class="button_to_cart">Перейти в корзину</div>
       <div class="button_price_modal_card">${element.price}₽</div>
+      <div class="button_to_cart">Перейти в корзину</div>
     </div>
     `;
   makeSmoothAnimation(modalCard);
