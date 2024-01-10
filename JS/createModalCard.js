@@ -3,7 +3,7 @@ const createModalBackground = (parentElement) => {
   const modalBackground = document.createElement("div");
   modalBackground.classList.add("modal_background");
 
-  makeSmoothAnimation(modalBackground)
+  makeSmoothAnimation(modalBackground);
   parentElement.appendChild(modalBackground);
 };
 
@@ -17,13 +17,13 @@ const makeSmoothAnimation = (elementHTML) => {
   }, 100);
 };
 
-
 //Функция добавления элемента по ID в корзину и сохранения в LS
 const addToCart = (modalCard) => {
   const modalCardDescriptionHTML = modalCard.children[1];
-  buttonPriceModalCardHTML = modalCardDescriptionHTML.children[3];
-
+  buttonToCartHTML = modalCardDescriptionHTML.children[3];
+  buttonPriceModalCardHTML = modalCardDescriptionHTML.children[4];
   cardToCart(modalCard, buttonPriceModalCardHTML);
+  addClick(buttonPriceModalCardHTML, displayButtonToCart, buttonToCartHTML);
 };
 
 //Проверка перед созданием окна
@@ -31,6 +31,25 @@ const checkSecondModal = () => {
   const parentHTML = document.querySelector(".modal_window");
   if (parentHTML.children.length) {
     parentHTML.innerHTML = "";
+  }
+};
+
+//Активировать кнопку перехода в корзину из модальной карточки продукта
+const activateButtonToCartFromModal = () => {
+  const buttonToCartHTML = document.querySelector(".button_to_cart");
+  // console.log(buttonToCartHTML);
+  addClick(buttonToCartHTML, displayCartModal);
+  displayButtonToCart(buttonToCartHTML);
+};
+
+//Отобразить/спрятать кнопку перехода в корзину из модальной карточки продукта
+const displayButtonToCart = (elementHTML) => {
+  const array = getFromLS();
+  if (array.length) {
+    elementHTML.classList.remove("hide");
+    elementHTML.classList.add("show");
+  } else {
+    elementHTML.classList.add("hide");
   }
 };
 
@@ -48,12 +67,15 @@ const createModalCard = (element) => {
       <div class="structure_modal_card">${element.name}, <br> ${element.base} </div>
       <div class="weight_modal_card">${element.weight} грамм, ⌀ ${element.diameter}</div>
       <div class="compound_modal_card">${element.ingredients}</div>
+      <div class="button_to_cart">Перейти в корзину</div>
       <div class="button_price_modal_card">${element.price}₽</div>
     </div>
     `;
-    makeSmoothAnimation(modalCard)
+  makeSmoothAnimation(modalCard);
   return modalCard;
 };
+
+//Переход в корзину из модального окна
 
 //Удаление затемнения и модального окна продукта по кнопке
 const deleteModalCardButton = () => {
@@ -74,6 +96,8 @@ const openModal = (id) => {
   createModalBackground(modalWindow);
   modalWindow.appendChild(modalCard);
   addToCart(modalCard);
+
+  activateButtonToCartFromModal();
   deleteModalCardButton();
 };
 

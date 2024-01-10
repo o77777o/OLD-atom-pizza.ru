@@ -95,7 +95,7 @@
 .button_open_site,
 .button_place_an_order,
 .button_to_cart {
-  margin: 0.5rem;
+  margin: 0.5rem 0rem;
   border-radius: 20px;
   cursor: pointer;
   user-select: none;
@@ -107,7 +107,19 @@
   height: 2.8rem;
   color: white;
   background-color: var(--general_green_color);
+  transition: 0.3s;
 }
+
+.button_to_cart.show {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.button_to_cart.hide {
+  opacity: 0;
+  pointer-events: none;
+}
+
 
 .button_clear_all {
   border-radius: 20px;

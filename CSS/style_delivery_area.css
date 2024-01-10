@@ -13,10 +13,11 @@
 }
 
 .delivery_address {
+  margin: 1rem;
   flex: 1;
   display: flex;
   flex-direction: column;
-  margin: 0.5rem;
+
 }
 
 .full_address {
@@ -59,7 +60,7 @@
 
   padding: 0rem 0.5rem;
   height: 4rem;
-  margin: 0.5rem;
+  margin: 0.5rem 0rem;
   border-radius: 20px;
 }
 

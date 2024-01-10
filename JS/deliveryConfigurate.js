@@ -16,7 +16,7 @@ const configurateToGo = () => {
   makeOrderToGo(pickup, fullAddressHTML);
 };
 
-//Активировать кнопку перехода в корзину
+//Активировать кнопку перехода в корзину из адреса доставки
 const activateButtonToCartFromDelivery = () => {
   const buttonToCartHTML = document.querySelector(".button_to_cart");
   const array = getFromLS();
@@ -27,6 +27,7 @@ const activateButtonToCartFromDelivery = () => {
     buttonToCartHTML.style.background = "var(--general_red_color)";
   }
 };
+
 
 //Точка входа
 const initDeliveryConfigurate = () => {
