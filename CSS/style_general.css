@@ -5,18 +5,23 @@
 }
 
 :root {
+  --general_font_color: rgba(0, 0, 0, 0.8);
   --general_bg_color: rgba(128, 128, 128, 0.3);
   --general_gray_font_color: rgb(128, 128, 128);
-  --general_red_color: rgb(230, 93, 81);
-  --general_green_color: rgb(93, 173, 100);
-  --general_border_color: rgba(128, 128, 128, 0.3);
 
-  --general_font_color: rgba(0, 0, 0, 0.8);
-  --general_price_button_color: rgb(230, 93, 81);
+  --general_red_color: #fc4710;
+  --general_green_color: #60b515;
+
+  --general_green2_color: rgb(93, 173, 100);
+  --general_red2_color: rgb(230, 93, 81);
+  --general_orange_color: #fc4710;
+  --general_blue_color: #168ecb;
+
+  --general_border_color: var(--general_bg_color);
+  --general_price_button_color: var(--general_red_color);
 
   --general_font: "general_font";
 }
-
 
 body {
   margin: 10% 13%;

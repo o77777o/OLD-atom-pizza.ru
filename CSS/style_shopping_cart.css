@@ -131,7 +131,7 @@
   cursor: pointer;
   user-select: none;
   border-radius: 50%;
-  background-color: var(--general_red_color);
+  background-color: var(--general_bg_color);
   display: flex;
   align-items: center;
   justify-content: center;

@@ -21,8 +21,8 @@ const func = () => {
       hintContent: "Зона доставки",
     },
     {
-      fillColor: "#5dad6480",
-      strokeColor: "#5dad6480",
+      fillColor: "#60b51580",
+      strokeColor: "#60b51580",
       strokeWidth: 2,
     }
   );
