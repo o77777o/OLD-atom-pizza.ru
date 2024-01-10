@@ -21,21 +21,21 @@ const createProductCard = () => {
   }
 };
 
-const setAttributeLazyLoad = () => {
-  const images = document.querySelectorAll("img");
-  images.forEach((img) => {
-    img.setAttribute("loading", "lazy");
-  });
-};
+// const setAttributeLazyLoad = () => {
+//   const images = document.querySelectorAll("img");
+//   images.forEach((img) => {
+//     img.setAttribute("loading", "lazy");
+//   });
+// };
 
-const addAttributeLazyLoad = () => {
-  document.addEventListener("DOMContentLoaded", () => {
-    setAttributeLazyLoad();
-  });
-};
+// const addAttributeLazyLoad = () => {
+//   document.addEventListener("DOMContentLoaded", () => {
+//     setAttributeLazyLoad();
+//   });
+// };
 
 //Точка входа
 const initProductCard = () => {
   createProductCard();
-  addAttributeLazyLoad();
+  // addAttributeLazyLoad(); 
 };
