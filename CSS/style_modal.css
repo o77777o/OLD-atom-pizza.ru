@@ -47,6 +47,18 @@
   
 }
 
+.modal_contact_info {
+
+
+  display: flex;
+  width: 67rem;
+  height: 42rem;
+  border-radius: 20px;
+  background-color: white;
+  border: 1px solid black;
+}
+
+
 .modal_delivery_area,
 .modal_shopping_cart,
 .modal_card {
