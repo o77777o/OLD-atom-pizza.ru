@@ -44,12 +44,9 @@
   flex: 1;
   flex-direction: column;
   align-items: center;
-  
 }
 
 .modal_contact_info {
-
-
   display: flex;
   width: 67rem;
   height: 42rem;
@@ -58,6 +55,14 @@
   border: 1px solid black;
 }
 
+.fixed_map {
+  flex: 1;
+  border: 1px solid black;
+}
+
+.delivery_info {
+  flex: 1;
+}
 
 .modal_delivery_area,
 .modal_shopping_cart,

@@ -7,4 +7,5 @@ window.onload = () => {
   initButtonOpenCart();
   initButtonOpenDeliveryModal();
   initFooter();
+  
 };

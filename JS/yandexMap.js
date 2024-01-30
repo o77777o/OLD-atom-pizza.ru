@@ -14,11 +14,22 @@ const func = () => {
     [59.991361, 30.375968],
   ];
 
+  let fixedPlacemark = new ymaps.Placemark(
+    [59.985111, 30.383179],
+    {
+      iconCaption: 'Пиццерия "Atomic Pizza"', // Подпись метки
+    },
+    {}
+  );
+
+  myMap.geoObjects.add(fixedPlacemark);
+  
+
   // Создаем многоугольник на основе координат зоны доставки
   let myDeliveryZone = new ymaps.Polygon(
     [deliveryZoneCoordinates],
     {
-      hintContent: "Зона доставки",
+      hintContent: "Зона доставки от 1100₽",
     },
     {
       fillColor: "#60b51580",
@@ -87,8 +98,27 @@ const func = () => {
   });
 };
 
+//Адрес Пиццерии
+const getPizzeriaAddress = () => {
+  let fixedMap = new ymaps.Map("fixed-map", {
+    center: [59.985111, 30.383179], // Координаты центра карты
+    zoom: 17, // Zoom
+  });
+
+  let fixedPlacemark = new ymaps.Placemark(
+    [59.985111, 30.383179],
+    {
+      iconCaption: 'Пиццерия "Atomic Pizza"', // Подпись метки
+    },
+    {}
+  );
+
+  fixedMap.geoObjects.add(fixedPlacemark);
+};
+
 //Точка входа
 const initYmaps = () => {
   ymaps.ready(func);
-} 
+};
 
+ymaps.ready(getPizzeriaAddress);
