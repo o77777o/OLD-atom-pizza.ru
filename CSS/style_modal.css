@@ -46,28 +46,51 @@
   align-items: center;
 }
 
-.modal_contact_info {
+/* .modal_contact_info {
+  overflow: hidden;
   display: flex;
   width: 67rem;
   height: 42rem;
   border-radius: 20px;
   background-color: white;
   border: 1px solid black;
-}
+} */
 
 .fixed_map {
   flex: 1;
-  border: 1px solid black;
+  /* border: 1px solid black; */
 }
 
 .delivery_info {
+  margin: 1rem;
   flex: 1;
 }
 
+.pizza_address,
+.pizza_phone,
+.work_time {
+  display: flex;
+  /* user-select: none; */
+  justify-content: center;
+  align-items: center;
+
+  border: solid 1px var(--general_border_color);
+
+  color: var(--general_gray_font_color);
+  font-weight: 600;
+
+  padding: 0rem 0.5rem;
+  height: 4rem;
+  margin: 0.5rem 0rem;
+  border-radius: 20px;
+}
+
+.modal_contact_info,
 .modal_delivery_area,
 .modal_shopping_cart,
 .modal_card {
   position: fixed;
+  overflow: hidden;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);

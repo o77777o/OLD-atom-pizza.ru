@@ -103,6 +103,7 @@ const getPizzeriaAddress = () => {
   let fixedMap = new ymaps.Map("fixed-map", {
     center: [59.985111, 30.383179], // Координаты центра карты
     zoom: 17, // Zoom
+    controls: [], // Убираем кнопки управления
   });
 
   let fixedPlacemark = new ymaps.Placemark(
