@@ -18,7 +18,7 @@ const displayDeliveryModal = () => {
   checkSecondModal();
   createModalBackground(modalWindow);
   createDeliveryModal(modalWindow);
-  initYmaps();
+  initYmapsCart();
   initDeliveryConfigurate();
   deleteModalCardButton();
 };

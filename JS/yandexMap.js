@@ -23,7 +23,6 @@ const func = () => {
   );
 
   myMap.geoObjects.add(fixedPlacemark);
-  
 
   // Создаем многоугольник на основе координат зоны доставки
   let myDeliveryZone = new ymaps.Polygon(
@@ -117,9 +116,13 @@ const getPizzeriaAddress = () => {
   fixedMap.geoObjects.add(fixedPlacemark);
 };
 
-//Точка входа
-const initYmaps = () => {
+//Точка входа корзины
+const initYmapsCart = () => {
   ymaps.ready(func);
 };
 
-ymaps.ready(getPizzeriaAddress);
+//Точка входа контактной информации
+
+const initYmapsContactInfo = () => {
+  ymaps.ready(getPizzeriaAddress);
+};

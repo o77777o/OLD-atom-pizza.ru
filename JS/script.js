@@ -4,8 +4,8 @@ window.onload = () => {
   initNavigation();
   initCart();
   initModal();
+  initButtonOpenContactInfo();
   initButtonOpenCart();
   initButtonOpenDeliveryModal();
   initFooter();
-  
 };
