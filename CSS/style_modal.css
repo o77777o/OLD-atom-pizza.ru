@@ -68,6 +68,7 @@
 
 .pizza_address,
 .pizza_phone,
+.pizza_community,
 .work_time {
   display: flex;
   /* user-select: none; */
@@ -83,6 +84,15 @@
   height: 4rem;
   margin: 0.5rem 0rem;
   border-radius: 20px;
+
+  transition: 0.1s;
+}
+
+.pizza_address:hover,
+.pizza_phone:hover,
+.pizza_community:hover {
+  border: 1px solid var(--general_green_color);
+  transform: scale(1.01);
 }
 
 .modal_contact_info,

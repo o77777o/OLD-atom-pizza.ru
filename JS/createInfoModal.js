@@ -29,12 +29,9 @@ const createContactModal = (parentHTML) => {
     <div class="fixed_map" id="fixed-map"></div>
     <div class="delivery_info">
         <div class="modal_window_title">Контакты</div>
-        <div class="pizza_address">
-        <a href="https://yandex.ru/maps/-/CDBEyR6k" target="_blank"
-            >Проспект Маршала Блюхера, 12ГК</a
-        >
-        </div>
-        <div class="pizza_phone"><a href="tel: +79040874827">Телефон +7(904) 087 48 27</a></div>
+        <a class="pizza_address" href="https://yandex.ru/maps/-/CDBEyR6k" target="_blank">Проспект Маршала Блюхера, 12ГК</a>
+        <a class="pizza_phone" href="tel: +79040874827">+7(904) 087 48 27</a>
+        <a class="pizza_community" href="https://t.me/KyXoNbKa" target="_blank">Обратная связь</a>
         <div class="work_time">Ср-Вск 10:00 - 21:00</div>
     </div>
   
