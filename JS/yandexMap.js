@@ -1,7 +1,7 @@
 const func = () => {
   let myMap = new ymaps.Map("map", {
-    center: [59.984272, 30.39355],
-    zoom: 15,
+    center: [59.985111, 30.383179], // Координаты центра карты
+    zoom: 13, // Zoom
     controls: [], // Убираем кнопки управления
   });
 
@@ -31,8 +31,8 @@ const func = () => {
       hintContent: "Заказ от 1100₽",
     },
     {
-      fillColor: "#60b51580",
-      strokeColor: "#60b51580",
+      fillColor: "#fc471090",
+      strokeColor: "#fc471090",
       strokeWidth: 2,
     }
   );
