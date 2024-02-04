@@ -23,6 +23,7 @@ const displayCartModal = () => {
 //Активировать корзину после отображения
 const activateCart = () => {
   pushButtonClearAll();
+  configurateButtonClearOrderConfigurate();
   displayAllPositionInCart();
   initOrderConfigurate();
 };
@@ -175,6 +176,7 @@ const createCartModal = (parentHTML) => {
         </div>
         <textarea placeholder="..." class="comment_for_the_order"></textarea>
       </div>
+      <div class="button_clear_order_configurate">Сбросить настройки заказа</div>
       <div class="button_place_an_order">Оформить заказ</div>
     </div>
 

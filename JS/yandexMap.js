@@ -87,7 +87,7 @@ const func = () => {
           // Добавляем метку на карту
           myMap.geoObjects.add(myPlacemark);
           // Отцентрируем карту по установленной метке
-          myMap.setCenter(addressCoordinates, 15);
+          myMap.setCenter(addressCoordinates, 17);
         }
       },
       (err) => {

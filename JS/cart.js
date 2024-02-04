@@ -111,16 +111,7 @@ const createElement = (source) => {
 
 //------------------------------------------------------------
 
-//Получение элемента и его отрисовка в Cart (неактуально при динамичной корзине)
-// const displayElementInCart = (id) => {
-//   const element = findByID(id);
-//   const totalProduct = document.querySelector(".total_product");
-//   const product = createElement(element);
-//   totalProduct.appendChild(product);
 
-//   pushToDelete(product, element.ID);
-//   showSum();
-// };
 
 //Отрисовка элементов в Cart из LS
 const displayAllPositionInCart = () => {
@@ -140,7 +131,6 @@ const cardToCart = (product, element) => {
   element.addEventListener("click", () => {
     processButton(product.id);
     getArrayLength();
-    // displayElementInCart(product.id); (неактуально при динамичной корзине)
   });
 };
 

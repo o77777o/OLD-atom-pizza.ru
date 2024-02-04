@@ -120,7 +120,8 @@
   pointer-events: none;
 }
 
-
+.button_clear_order_configurate,
+.button_clear_address,
 .button_clear_all {
   border-radius: 20px;
   background-color: var(--general_red_color);
@@ -128,7 +129,8 @@
   color: white;
   font-weight: 600;
   height: 2.8rem;
-  width: 12rem;
+  /* width: 12rem; */
+  padding: 0rem 0.5rem;
   cursor: pointer;
   user-select: none;
   display: flex;
@@ -166,6 +168,8 @@
   transform: scale(0.8);
 }
 
+.button_clear_order_configurate:hover,
+.button_clear_address:hover,
 .button_open_site:hover,
 .button_place_an_order:hover,
 .button_to_cart:hover,
@@ -174,7 +178,9 @@
   filter: brightness(90%);
 }
 
-.button_open_site:hover,
+.button_clear_order_configurate:active,
+.button_clear_address:active,
+.button_open_site:active,
 .button_place_an_order:active,
 .button_to_cart:active,
 .button_clear_all:active,

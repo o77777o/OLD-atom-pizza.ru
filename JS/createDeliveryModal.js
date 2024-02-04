@@ -20,6 +20,7 @@ const displayDeliveryModal = () => {
   createDeliveryModal(modalWindow);
   initYmapsCart();
   initDeliveryConfigurate();
+  configurateButtonSaveUserDataToLS();
   deleteModalCardButton();
 };
 
@@ -78,7 +79,8 @@ const createDeliveryModal = (parentHTML) => {
         type="text"
       />
     </div>
-    <div class="button_to_cart">Перейти в корзину</div>
+    <div class="button_clear_address">Очистить</div>
+    <div class="button_to_cart">Сохранить и перейти в корзину</div>
   </div>
     `;
   makeSmoothAnimation(deliveryModal);
