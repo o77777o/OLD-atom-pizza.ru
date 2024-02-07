@@ -23,7 +23,27 @@ const makeOrderToGo = (checkbox, element) => {
   });
 };
 
-//Проверка на самовывоз
+//Чекбокс на способ оплаты
+const pickPaymentMethod = () => {
+  const paymentCheckbox = document.querySelector("#payment")
+  const userData = JSON.parse(localStorage.getItem(DB_ORDER_CONFIGURATE));
+
+  if (userData.payment_method === "card") {
+    paymentCheckbox.checked = true;
+  } else {
+    paymentCheckbox.checked = false;
+  }
+
+  paymentCheckbox.addEventListener("change", (event) => {
+    if (event.target.checked) {
+      userData.payment_method = "card";
+      localStorage.setItem(DB_ORDER_CONFIGURATE, JSON.stringify(userData));
+    } else {
+      userData.payment_method = "cash";
+      localStorage.setItem(DB_ORDER_CONFIGURATE, JSON.stringify(userData));
+    }
+  });
+}
 
 //Настроить заказ на самовывоз
 const configurateToGo = () => {
@@ -37,7 +57,7 @@ const activateButtonToCartFromDelivery = () => {
   const buttonToCartHTML = document.querySelector(".button_to_cart");
   const array = getFromLS();
   if (array.length) {
-    addClick(buttonToCartHTML, saveUserDataToLS); 
+    addClick(buttonToCartHTML, saveUserDataAddressToLS);
     addClick(buttonToCartHTML, displayCartModal);
   } else {
     buttonToCartHTML.innerHTML = "В корзине ничего нет...";
@@ -55,9 +75,11 @@ const configurateButtonClearAddress = () => {
 
 //Активировать кнопку сброса настроек заказа
 const configurateButtonClearOrderConfigurate = () => {
-  const buttonClearOrderConfigurateHTML = document.querySelector(".button_clear_order_configurate")
-  addClick(buttonClearOrderConfigurateHTML, updUserDataOrder)
-}
+  const buttonClearOrderConfigurateHTML = document.querySelector(
+    ".button_clear_order_configurate"
+  );
+  addClick(buttonClearOrderConfigurateHTML, updUserDataOrder);
+};
 
 //Вписать данные адреса из LS
 const getUserDataFromLS = () => {
@@ -78,12 +100,26 @@ const getUserDataFromLS = () => {
   inputFloorHTML.value = userData.delivery_address_floor;
   inputApartmentHTML.value = userData.delivery_address_apartment;
   inputAddressCommentHTML.value = userData.address_comment;
+};
 
-  console.log("Полет нормальный");
+//Вписать данные настройски заказа из LS
+const getUserDataOrderFromLS = () => {
+  const userData = JSON.parse(localStorage.getItem(DB_ORDER_CONFIGURATE));
+  const inputPhoneNumberHTML = document.querySelector("#input_phone_number");
+  const commentForTheOrderHTML = document.querySelector(
+    ".comment_for_the_order"
+  );
+  const cutleryCountHTML = document.querySelector(".count");
+
+  pickPaymentMethod()
+
+  inputPhoneNumberHTML.value = userData.phone_number
+  commentForTheOrderHTML.value = userData.order_comment
+  cutleryCountHTML.innerHTML = userData.cutlery
 };
 
 //Записать данные адреса в LS
-const saveUserDataToLS = () => {
+const saveUserDataAddressToLS = () => {
   const userData = JSON.parse(localStorage.getItem(DB_ORDER_CONFIGURATE));
   const inputAddressHTML = document.querySelector(".input_city_street_number");
   const inputEntranceHTML = document.querySelector(".input_entrance");
@@ -104,9 +140,32 @@ const saveUserDataToLS = () => {
   localStorage.setItem(DB_ORDER_CONFIGURATE, JSON.stringify(userData));
 };
 
-const configurateButtonSaveUserDataToLS = () => {
+//Записать данные настройки заказа в LS
+const saveUserDataOrderToLS = () => {
+  const userData = JSON.parse(localStorage.getItem(DB_ORDER_CONFIGURATE));
+  const inputPhoneNumberHTML = document.querySelector("#input_phone_number");
+  const commentForTheOrderHTML = document.querySelector(
+    ".comment_for_the_order"
+  );
+  const cutleryCountHTML = document.querySelector(".count");
+
+  userData.cutlery = cutleryCountHTML.innerHTML;
+  userData.phone_number = inputPhoneNumberHTML.value;
+  userData.order_comment = commentForTheOrderHTML.value;
+
+  localStorage.setItem(DB_ORDER_CONFIGURATE, JSON.stringify(userData));
+};
+
+//Сохранение данных адреса
+const configurateButtonSaveUserDataAddressToLS = () => {
   const modalBackgroundHTML = document.querySelector(".modal_background");
-  addClick(modalBackgroundHTML, saveUserDataToLS);
+  addClick(modalBackgroundHTML, saveUserDataAddressToLS);
+};
+
+//Сохранение данных настройки заказа
+const configurateButtonSaveUserDataOrderToLS = () => {
+  const modalBackgroundHTML = document.querySelector(".modal_background");
+  addClick(modalBackgroundHTML, saveUserDataOrderToLS);
 };
 
 //Точка входа

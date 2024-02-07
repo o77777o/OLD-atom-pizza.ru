@@ -37,6 +37,7 @@
   font-size: 1.5rem;
 }
 
+.short_address,
 .cutlery,
 .order_time,
 .payment_method,
@@ -51,6 +52,11 @@
   height: 4rem;
   margin: 0.5rem 0rem;
   border-radius: 20px;
+  transition: 0.1s;
+}
+
+.short_address {
+  cursor: pointer;
 }
 
 .head_order {

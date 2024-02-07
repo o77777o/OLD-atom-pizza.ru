@@ -27,15 +27,6 @@ const createEmptyConfigurate = () => {
   }
 };
 
-//Сохранить свойство объекта
-const saveUserDataKey = (key, value) => {
-  const userData = JSON.parse(localStorage.getItem(DB_ORDER_CONFIGURATE));
-
-  userData[key] = value;
-
-  localStorage.setItem(DB_ORDER_CONFIGURATE, JSON.stringify(userData));
-};
-
 //Очистить данные адреса доставки
 const updUserDataAddress = () => {
   console.log("Адрес очищен");
@@ -73,7 +64,6 @@ const updUserDataAddress = () => {
 
 //Очистить данные настройки заказа
 const updUserDataOrder = () => {
-  console.log("Проверка связи");
   createEmptyConfigurate();
   const userData = JSON.parse(localStorage.getItem(DB_ORDER_CONFIGURATE));
 
@@ -81,15 +71,20 @@ const updUserDataOrder = () => {
   const commentForTheOrderHTML = document.querySelector(
     ".comment_for_the_order"
   );
-
+  const cutleryCountHTML = document.querySelector(".count"); 
+  
+  cutleryCountHTML.innerHTML = "0"
   phonenumberHTML.value = "";
   commentForTheOrderHTML.value = "";
 
+  userData.cutlery = "0"
   userData.payment_method = "cash";
   userData.phone_number = "";
   userData.order_comment = "";
 
   localStorage.setItem(DB_ORDER_CONFIGURATE, JSON.stringify(userData));
+
+  pickPaymentMethod()
 };
 
 const initUserConfigurate = () => {

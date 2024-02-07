@@ -140,6 +140,13 @@ const pushButtonClearAll = () => {
   addClick(buttonClearAllHTML, clearAllCart);
 };
 
+//Переход в зону доставки из корзины
+const pushButtonToCheckAddress = () => {
+  const buttonShortAddressHTML = document.querySelector(".short_address")
+  addClick(buttonShortAddressHTML, saveUserDataOrderToLS)
+  addClick(buttonShortAddressHTML, displayDeliveryModal)
+}
+
 //Отобразить сколько товаров в корзине
 const getArrayLength = () => {
   const buttonOpenCart = document.querySelector(".button_open_cart");

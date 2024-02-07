@@ -20,7 +20,7 @@ const displayDeliveryModal = () => {
   createDeliveryModal(modalWindow);
   initYmapsCart();
   initDeliveryConfigurate();
-  configurateButtonSaveUserDataToLS();
+  configurateButtonSaveUserDataAddressToLS();
   deleteModalCardButton();
 };
 

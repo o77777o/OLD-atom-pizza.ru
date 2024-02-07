@@ -88,6 +88,7 @@
   transition: 0.1s;
 }
 
+.short_address:hover,
 .pizza_address:hover,
 .pizza_phone:hover,
 .pizza_community:hover {

@@ -1,5 +1,3 @@
-let count = 0;
-
 //Повесить click
 const addClick = (elementHTML, func, arg) => {
   elementHTML.addEventListener("click", () => {
@@ -9,17 +7,25 @@ const addClick = (elementHTML, func, arg) => {
 
 //уменьшить кол-во приборов на 1
 const removeСutlery = (countHTML) => {
+  const userData = JSON.parse(localStorage.getItem(DB_ORDER_CONFIGURATE));
+  let count = +userData.cutlery
   if (!count) {
     return;
   }
   --count;
+  userData.cutlery = count
   countHTML.innerHTML = count;
+  localStorage.setItem(DB_ORDER_CONFIGURATE, JSON.stringify(userData));
 };
 
 //увеличить кол-во приборов на 1
 const addСutlery = (countHTML) => {
+  const userData = JSON.parse(localStorage.getItem(DB_ORDER_CONFIGURATE));
+  let count = +userData.cutlery
   ++count;
+  userData.cutlery = count
   countHTML.innerHTML = count;
+  localStorage.setItem(DB_ORDER_CONFIGURATE, JSON.stringify(userData));
 };
 
 //Настроить кол-во
