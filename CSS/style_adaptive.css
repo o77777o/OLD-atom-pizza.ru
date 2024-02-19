@@ -26,4 +26,24 @@
     color: white;
     font-weight: 600;
   }
+
+  .button_open_site,
+  .button_place_an_order,
+  .button_to_cart {
+    margin: 0.5rem 0rem;
+
+    height: 1.8rem;
+  }
+
+  .modal_contact_info,
+  .modal_delivery_area,
+  .modal_shopping_cart,
+  .modal_card {
+    transform: translate(-50%, -60%);
+
+    display: flex;
+    flex-direction: column;
+    width: 20rem;
+    height: 30rem;
+  }
 }

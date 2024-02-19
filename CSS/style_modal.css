@@ -121,20 +121,20 @@
   align-content: center;
   object-fit: contain;
   overflow: hidden;
-  border-radius: 20px 0px 0px 20px;
 }
 
 .description_modal_card {
   display: flex;
   flex: 1;
   flex-direction: column;
-  margin: 1rem;
+  margin: 0.5rem;
 }
 
 .structure_modal_card {
   flex: 1;
   font-size: var(--3font_size);
   font-weight: 600;
+  margin: 0.5rem 0rem;
 }
 
 .weight_modal_card {
