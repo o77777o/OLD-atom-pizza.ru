@@ -5,9 +5,9 @@
   }
 
   :root {
-    --1font_size: 0.7rem;
-    --2font_size: 1rem; /* ОСНОВНОЙ РАЗМЕР */
-    --3font_size: 1.2rem;
+    --1font_size: 0.5rem;
+    --2font_size: 0.7rem; /* ОСНОВНОЙ РАЗМЕР */
+    --3font_size: 1rem;
     --4font_size: 1.5rem;
   }
 
@@ -18,12 +18,12 @@
     height: 15rem;
   }
 
-  .img_product {
-    margin: 0.5rem;
-  }
+  .button_price_modal_card,
+  .button_price_product_card {
+    height: 1.8rem;
+    margin: 0.5rem 0rem;
 
-  .description_product {
-    flex: 1;
-    margin: 0rem 1rem 0rem;
+    color: white;
+    font-weight: 600;
   }
 }
