@@ -1,0 +1,30 @@
+/* Под мобильный телефон */
+
+@media only screen and (max-width: 480px) {
+  body {
+    margin: 0.4rem;
+  }
+
+  :root {
+    --1font_size: 0.5rem;
+    --2font_size: 0.7rem; /* ОСНОВНОЙ РАЗМЕР */
+    --3font_size: 1rem;
+    --4font_size: 1.5rem;
+  }
+
+  .product_card {
+    margin: 0.5rem;
+
+    width: 10rem;
+    height: 15rem;
+  }
+
+  .img_product {
+    margin: 0.5rem;
+  }
+
+  .description_product {
+    flex: 1;
+    margin: 0rem 1rem 0rem;
+  }
+}

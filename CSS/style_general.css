@@ -23,12 +23,20 @@
   --general_font: "general_font";
 }
 
+/* Основные размеры шрифта */
+:root {
+  --1font_size: 1rem;
+  --2font_size: 1.2rem; /* ОСНОВНОЙ РАЗМЕР */
+  --3font_size: 1.5rem;
+  --4font_size: 3rem
+}
+
 body {
   margin: 10% 13%;
   color: var(--general_font_color);
   font-family: var(--general_font), "Courier New";
 
-  font-size: 1.2rem;
+  font-size: var(--2font_size);
 }
 
 img {
@@ -41,14 +49,14 @@ input {
   color: var(--general_font_color);
   font-family: var(--general_font), "Courier New";
 
-  font-size: 1.2rem;
+  font-size: var(--2font_size);
 }
 
 textarea {
   color: var(--general_font_color);
   font-family: var(--general_font), "Courier New";
 
-  font-size: 1.2rem;
+  font-size: var(--2font_size);
 }
 
 a {
@@ -70,9 +78,3 @@ a {
   background-color: var(--general_red_color);
   border-radius: 10px;
 }
-
-/* .product:hover {
-    -webkit-box-shadow: 0px 4px 13px -3px rgba(34, 60, 80, 0.2);
-    -moz-box-shadow: 0px 4px 13px -3px rgba(34, 60, 80, 0.2);
-    box-shadow: 0px 4px 13px -3px rgba(34, 60, 80, 0.2);
-  } */

@@ -32,7 +32,7 @@
   border-radius: 20px;
 
   /* border: 2px solid white; */
-  font-size: 1.3rem;
+  font-size: var(--2font_size);
   font-weight: 600;
   color: white;
   background-color: var(--general_red_color);
@@ -133,7 +133,7 @@
 
 .structure_modal_card {
   flex: 1;
-  font-size: 2rem;
+  font-size: var(--3font_size);
   font-weight: 600;
 }
 

@@ -6,12 +6,11 @@
   border: 1px solid var(--general_border_color);
 
   width: 20rem;
-  height: 30rem;
-
+  height: 27rem;
 }
 
 .img_product {
-  margin: 1rem;
+  margin: 0.5rem;
   flex: 2;
   display: flex;
   cursor: pointer;
@@ -33,7 +32,7 @@ img {
 
 .description_product {
   flex: 1;
-  margin: 0rem 1rem 0rem;
+  margin: 0rem 0.5rem 0rem;
 }
 
 .img_product:hover {
@@ -45,7 +44,7 @@ img {
 }
 
 .weight_product {
-  font-size: 1rem;
+  font-size: var(--1font_size);
   color: var(--general_gray_font_color);
 }
 
@@ -65,7 +64,7 @@ img {
 
   color: white;
   font-weight: 600;
-  font-size: 1.5rem;
+  font-size: var(--3font_size);
   background-color: var(--general_price_button_color);
 }
 

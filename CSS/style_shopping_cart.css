@@ -34,7 +34,7 @@
 
 .product_price {
   font-weight: 600;
-  font-size: 1.5rem;
+  font-size: var(--3font_size);
 }
 
 .short_address,
@@ -47,7 +47,7 @@
   justify-content: space-between;
   border: solid 1px var(--general_border_color);
   font-weight: 600;
-  font-size: 1.5rem;
+  font-size: var(--3font_size);
   padding: 0rem 0.5rem;
   height: 4rem;
   margin: 0.5rem 0rem;
@@ -67,7 +67,7 @@
 #input_phone_number {
   border: none;
   color: var(--general_font_color);
-  font-size: 1.5rem;
+  font-size: var(--3font_size);
   font-family: var(--general_font);
   font-weight: 600;
 }
@@ -78,7 +78,7 @@
   border: solid 1px var(--general_border_color);
   height: 6.5rem;
   font-weight: 600;
-  font-size: 1.5rem;
+  font-size: var(--3font_size);
   padding: 1rem 0.5rem 0.5rem 0.5rem;
   margin: 0.5rem 0rem;
   border-radius: 20px;
@@ -109,7 +109,7 @@
   justify-content: center;
   align-items: center;
   font-weight: 600;
-  font-size: 1.5rem;
+  font-size: var(--3font_size);
   height: 2.8rem;
   color: white;
   background-color: var(--general_green_color);
@@ -131,7 +131,7 @@
 .button_clear_all {
   border-radius: 20px;
   background-color: var(--general_red_color);
-  font-size: 1.5rem;
+  font-size: var(--3font_size);
   color: white;
   font-weight: 600;
   height: 2.8rem;
@@ -202,7 +202,7 @@
   justify-content: center;
   align-items: center;
   font-weight: 600;
-  font-size: 1.5rem;
+  font-size: var(--3font_size);
   min-height: 4rem;
 }
 

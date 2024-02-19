@@ -97,7 +97,7 @@
 
 .count_cart {
   color: var(--general_red_color);
-  font-size: 1.3rem;
+  font-size: var(--2font_size);
   font-weight: 600;
   position: absolute;
   z-index: 1;
