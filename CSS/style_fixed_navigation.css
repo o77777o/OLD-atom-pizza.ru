@@ -3,7 +3,7 @@
   top: -5rem;
   left: 1rem;
 
-  font-weight: 600;
+  font-weight: 500;
 
   user-select: none;
   padding: 0.5rem;
@@ -98,7 +98,7 @@
 .count_cart {
   color: var(--general_red_color);
   font-size: var(--2font_size);
-  font-weight: 600;
+  font-weight: 500;
   position: absolute;
   z-index: 1;
 }

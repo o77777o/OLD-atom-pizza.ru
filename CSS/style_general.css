@@ -1,8 +1,8 @@
-@font-face {
+/* @font-face {
   font-family: "general_font";
   src: url("../font/Archerus/Horizon\ Type\ -\ AcherusFeral-Light.otf")
     format("opentype");
-}
+} */
 
 :root {
   --general_font_color: rgba(0, 0, 0, 0.8);
@@ -20,7 +20,7 @@
   --general_border_color: var(--general_bg_color);
   --general_price_button_color: var(--general_red_color);
 
-  --general_font: "general_font";
+  --general_font: "Inter", sans-serif;
 }
 
 /* Основные размеры шрифта */
@@ -28,7 +28,7 @@
   --1font_size: 1rem;
   --2font_size: 1.2rem; /* ОСНОВНОЙ РАЗМЕР */
   --3font_size: 1.5rem;
-  --4font_size: 3rem
+  --4font_size: 3rem;
 }
 
 body {

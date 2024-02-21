@@ -33,7 +33,7 @@
 
   /* border: 2px solid white; */
   font-size: var(--2font_size);
-  font-weight: 600;
+  font-weight: 500;
   color: white;
   background-color: var(--general_red_color);
 }
@@ -78,7 +78,6 @@
   border: solid 1px var(--general_border_color);
 
   color: var(--general_gray_font_color);
-  font-weight: 600;
 
   padding: 0rem 0.5rem;
   height: 4rem;
@@ -133,7 +132,7 @@
 .structure_modal_card {
   flex: 1;
   font-size: var(--3font_size);
-  font-weight: 600;
+  font-weight: 500;
   margin: 0.5rem 0rem;
 }
 

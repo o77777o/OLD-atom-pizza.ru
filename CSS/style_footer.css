@@ -5,6 +5,7 @@
 
   color: var(--general_gray_font_color);
   font-size: var(--1font_size);
+  font-weight: 300;
 }
 
 .authorship,

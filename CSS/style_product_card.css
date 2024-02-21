@@ -40,7 +40,7 @@ img {
 }
 
 .structure_product {
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .weight_product {
@@ -63,7 +63,7 @@ img {
   margin: 0.5rem 0rem;
 
   color: white;
-  font-weight: 600;
+  font-weight: 500;
   font-size: var(--3font_size);
   background-color: var(--general_price_button_color);
 }
