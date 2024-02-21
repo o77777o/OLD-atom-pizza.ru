@@ -20,6 +20,11 @@
   transition: 0.3s;
 }
 
+.authorship {
+  white-space: nowrap;
+}
+
+
 .authorship:hover,
 .developer:hover,
 .footer_item:hover {

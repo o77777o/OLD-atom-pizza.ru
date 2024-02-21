@@ -5,8 +5,8 @@
   }
 
   :root {
-    --1font_size: 0.5rem;
-    --2font_size: 0.7rem; /* ОСНОВНОЙ РАЗМЕР */
+    --1font_size: 0.6rem;
+    --2font_size: 0.8rem; /* ОСНОВНОЙ РАЗМЕР */
     --3font_size: 1rem;
     --4font_size: 1.5rem;
   }
