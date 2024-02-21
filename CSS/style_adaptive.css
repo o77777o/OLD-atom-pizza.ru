@@ -54,4 +54,8 @@
   .phone_number {
     height: 3rem;
   }
+
+  .total_cost {
+    min-height: 3rem;
+  }
 }
