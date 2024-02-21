@@ -40,7 +40,7 @@
   .modal_shopping_cart,
   .modal_card {
     transform: translate(-50%, -60%);
-
+    overflow: auto;
     display: flex;
     flex-direction: column;
     width: 20rem;
