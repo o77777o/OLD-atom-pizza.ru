@@ -20,19 +20,19 @@
 
   .button_price_modal_card,
   .button_price_product_card {
-    height: 1.8rem;
-    margin: 0.5rem 0rem;
-
-    color: white;
-    font-weight: 500;
+    height: 2.1rem;
   }
 
   .button_open_site,
   .button_place_an_order,
   .button_to_cart {
-    margin: 0.5rem 0rem;
+    height: 2.1rem;
+  }
 
-    height: 1.8rem;
+  .button_clear_order_configurate,
+  .button_clear_address,
+  .button_clear_all {
+    height: 2.1rem;
   }
 
   .modal_contact_info,
@@ -45,5 +45,13 @@
     flex-direction: column;
     width: 20rem;
     height: 30rem;
+  }
+
+  .short_address,
+  .cutlery,
+  .order_time,
+  .payment_method,
+  .phone_number {
+    height: 3rem;
   }
 }
