@@ -7,7 +7,7 @@
   :root {
     --1font_size: 0.6rem;
     --2font_size: 1rem; /* ОСНОВНОЙ РАЗМЕР */
-    --3font_size: 1rem;
+    --3font_size: 1.2rem;
     --4font_size: 1.5rem;
   }
 
@@ -39,11 +39,11 @@
   .modal_delivery_area,
   .modal_shopping_cart,
   .modal_card {
-    transform: translate(-50%, -55%);
+    transform: translate(-50%, -60%);
     overflow: auto;
     display: flex;
     flex-direction: column;
-    width: 20rem;
+    width: 23rem;
     height: 35rem;
   }
 

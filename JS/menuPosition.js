@@ -176,7 +176,7 @@ const menuPosition = [
     type: "Пицца",
     name: "Том Ям",
     photo: "./img_product/example.jpg",
-    base: "Соус Том Ям",
+    base: "Паста Том Ям",
     ingredients:
       "Острый соус Том Ям (бешамель на выбор) бекон, пармезан, моцарелла, зелень",
     diameter: "30 см",
