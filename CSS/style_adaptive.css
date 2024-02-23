@@ -43,8 +43,8 @@
     overflow: auto;
     display: flex;
     flex-direction: column;
-    width: 23rem;
-    height: 35rem;
+    width: 95%;
+    height: 70%;
   }
 
   .short_address,
