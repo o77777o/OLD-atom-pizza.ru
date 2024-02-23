@@ -1,12 +1,12 @@
 /* Под мобильный телефон */
 @media only screen and (max-width: 480px) {
   body {
-    margin: 3rem 0.6rem 10rem 0.6rem;
+    margin: 3rem 0.5rem 10rem 0.5rem;
   }
 
   :root {
     --1font_size: 0.6rem;
-    --2font_size: 0.8rem; /* ОСНОВНОЙ РАЗМЕР */
+    --2font_size: 1rem; /* ОСНОВНОЙ РАЗМЕР */
     --3font_size: 1rem;
     --4font_size: 1.5rem;
   }
@@ -39,12 +39,12 @@
   .modal_delivery_area,
   .modal_shopping_cart,
   .modal_card {
-    transform: translate(-50%, -60%);
+    transform: translate(-50%, -55%);
     overflow: auto;
     display: flex;
     flex-direction: column;
     width: 20rem;
-    height: 30rem;
+    height: 35rem;
   }
 
   .short_address,
