@@ -63,12 +63,47 @@
     position: fixed;
     bottom: 10%;
     left: 0.5rem;
-  
+
     width: 3.8rem;
     height: 3.8rem;
 
-    -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
-    -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
-    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+  }
+
+  .delevery_map {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    min-height: 10rem;
+    background-color: black;
+  }
+
+  .full_address {
+    display: grid;
+    grid-template-columns: 1fr;
+  
+    transition: 0.3s;
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  .grid_whole {
+    grid-column: 1 span;
+  }
+  
+  .grid_half {
+    grid-column: 1 span;
+  }
+
+  .pickup,
+  .input_entrance,
+  .input_door_code,
+  .input_floor,
+  .input_apartment,
+  .input_city_street_number,
+  .input_address_comment {
+    height: 3rem;
   }
 }
