@@ -58,4 +58,26 @@
   .total_cost {
     min-height: 3rem;
   }
+
+  .button_open_cart {
+    position: fixed;
+    bottom: 10%;
+    left: 1rem;
+  
+    user-select: none;
+    display: flex;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+  
+    width: 3.8rem;
+    height: 3.8rem;
+    border-radius: 20px;
+    font-weight: 500;
+    background-color: var(--general_red_color);
+  
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.3s;
+  }
 }

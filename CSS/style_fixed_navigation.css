@@ -2,18 +2,10 @@
   position: fixed;
   top: -5rem;
   left: 1rem;
-
   font-weight: 500;
-
-  user-select: none;
-  padding: 0.5rem;
-
   display: flex;
   flex-direction: column;
-  width: 11%;
-  /* align-items: center; */
-  border-radius: 20px;
-  /* border: 1px solid var(--general_border_color); */
+  width: 10%;
 
   transition: 0.3s;
 }
@@ -68,7 +60,7 @@
   cursor: pointer;
 
   align-items: center;
-  margin: 0.5rem;
+  margin: 0.5rem 0rem;
   padding: 0rem 1rem;
   flex: 1;
   min-height: 3.8rem;
@@ -79,6 +71,11 @@
 }
 
 .button_open_cart {
+  position: fixed;
+  bottom: 70%;
+  left: 1rem;
+
+  user-select: none;
   display: flex;
   cursor: pointer;
   justify-content: center;
@@ -86,13 +83,17 @@
 
   width: 3.8rem;
   height: 3.8rem;
-  margin: 0.5rem;
   border-radius: 20px;
+  font-weight: 500;
   background-color: var(--general_red_color);
 
   opacity: 0;
   pointer-events: none;
   transition: 0.3s;
+
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+  -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
 }
 
 .count_cart {
