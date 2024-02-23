@@ -62,22 +62,13 @@
   .button_open_cart {
     position: fixed;
     bottom: 10%;
-    left: 1rem;
-  
-    user-select: none;
-    display: flex;
-    cursor: pointer;
-    justify-content: center;
-    align-items: center;
+    left: 0.5rem;
   
     width: 3.8rem;
     height: 3.8rem;
-    border-radius: 20px;
-    font-weight: 500;
-    background-color: var(--general_red_color);
-  
-    opacity: 0;
-    pointer-events: none;
-    transition: 0.3s;
+
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+    -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
   }
 }
