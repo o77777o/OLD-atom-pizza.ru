@@ -1,6 +1,7 @@
 const initSiteLogo = () => {
   createGeneralSiteLogo();
   createFixedSiteLogo();
+  createNavSiteLogo();
 };
 
 const createGeneralSiteLogo = () => {
@@ -11,6 +12,11 @@ const createGeneralSiteLogo = () => {
 const createFixedSiteLogo = () => {
   const fixedLogoHTML = document.querySelector(".fixed_logo");
   createSiteLogo(fixedLogoHTML);
+};
+
+const createNavSiteLogo = () => {
+  const navLogoHTML = document.querySelector(".nav_logo");
+  createSiteLogo(navLogoHTML);
 };
 
 const createSiteLogo = (parentHTML) => {

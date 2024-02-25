@@ -1,0 +1,22 @@
+.nav_panel {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  z-index: 1000;
+  top: 0;
+  height: 2.9rem;
+  width: 75%;
+  background-color: bisque;
+}
+
+.nav_logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  overflow: hidden;
+  width: 20rem;
+}
+
+
+

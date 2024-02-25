@@ -1,7 +1,8 @@
 /* Под мобильный телефон */
 @media only screen and (max-width: 480px) {
   body {
-    margin: 3rem 0.5rem 10rem 0.5rem;
+    margin: 10% auto;
+    max-width: 95%;
   }
 
   :root {
@@ -60,6 +61,7 @@
   }
 
   .button_open_cart {
+    z-index: 1000;
     position: fixed;
     bottom: 10%;
     left: 0.5rem;
