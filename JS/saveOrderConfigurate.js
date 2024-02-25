@@ -2,18 +2,18 @@ const DB_ORDER_CONFIGURATE = "Order configurate";
 
 const setEmptyConfigurate = () => {
   let userData = {
-    pickup: "no",
-    delivery_address: "",
-    delivery_address_entrance: "",
-    delivery_address_door_code: "",
-    delivery_address_floor: "",
-    delivery_address_apartment: "",
-    address_comment: "",
+    pickup: false,
+    deliveryAddress: "",
+    deliveryAddressEntrance: "",
+    deliveryAddressDoorCode: "",
+    deliveryAddressFloor: "",
+    deliveryAddressApartment: "",
+    addressComment: "",
 
     cutlery: "0",
-    payment_method: "cash",
-    phone_number: "",
-    order_comment: "",
+    paymentMethod: "cash",
+    phoneNumber: "",
+    orderComment: "",
   };
 
   return localStorage.setItem(DB_ORDER_CONFIGURATE, JSON.stringify(userData));
@@ -49,13 +49,13 @@ const updUserDataAddress = () => {
   inputApartmentHTML.value = "";
   inputAddressCommentHTML.value = "";
 
-  userData.pickup = "no";
-  userData.delivery_address = "";
-  userData.address_comment = "";
-  userData.delivery_address_entrance = "";
-  userData.delivery_address_door_code = "";
-  userData.delivery_address_floor = "";
-  userData.delivery_address_apartment = "";
+  userData.pickup = false;
+  userData.deliveryAddress = "";
+  userData.addressComment = "";
+  userData.deliveryAddressEntrance = "";
+  userData.deliveryAddressDoorCode = "";
+  userData.deliveryAddressFloor = "";
+  userData.deliveryAddressApartment = "";
 
   localStorage.setItem(DB_ORDER_CONFIGURATE, JSON.stringify(userData));
 
@@ -78,9 +78,9 @@ const updUserDataOrder = () => {
   commentForTheOrderHTML.value = "";
 
   userData.cutlery = "0"
-  userData.payment_method = "cash";
-  userData.phone_number = "";
-  userData.order_comment = "";
+  userData.paymentMethod = "cash";
+  userData.phoneNumber = "";
+  userData.orderComment = "";
 
   localStorage.setItem(DB_ORDER_CONFIGURATE, JSON.stringify(userData));
 

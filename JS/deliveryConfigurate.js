@@ -2,7 +2,7 @@
 const makeOrderToGo = (checkbox, element) => {
   const userData = JSON.parse(localStorage.getItem(DB_ORDER_CONFIGURATE));
 
-  if (userData.pickup === "yes") {
+  if (userData.pickup) {
     checkbox.checked = true;
     element.classList.add("hide");
   } else {
@@ -13,11 +13,11 @@ const makeOrderToGo = (checkbox, element) => {
   checkbox.addEventListener("change", (event) => {
     if (event.target.checked) {
       element.classList.add("hide");
-      userData.pickup = "yes";
+      userData.pickup = true;
       localStorage.setItem(DB_ORDER_CONFIGURATE, JSON.stringify(userData));
     } else {
       element.classList.remove("hide");
-      userData.pickup = "no";
+      userData.pickup = false;
       localStorage.setItem(DB_ORDER_CONFIGURATE, JSON.stringify(userData));
     }
   });
@@ -28,7 +28,7 @@ const pickPaymentMethod = () => {
   const paymentCheckbox = document.querySelector("#payment")
   const userData = JSON.parse(localStorage.getItem(DB_ORDER_CONFIGURATE));
 
-  if (userData.payment_method === "card") {
+  if (userData.paymentMethod === "card") {
     paymentCheckbox.checked = true;
   } else {
     paymentCheckbox.checked = false;
@@ -36,10 +36,10 @@ const pickPaymentMethod = () => {
 
   paymentCheckbox.addEventListener("change", (event) => {
     if (event.target.checked) {
-      userData.payment_method = "card";
+      userData.paymentMethod = "card";
       localStorage.setItem(DB_ORDER_CONFIGURATE, JSON.stringify(userData));
     } else {
-      userData.payment_method = "cash";
+      userData.paymentMethod = "cash";
       localStorage.setItem(DB_ORDER_CONFIGURATE, JSON.stringify(userData));
     }
   });
@@ -94,12 +94,12 @@ const getUserDataFromLS = () => {
     ".input_address_comment"
   );
 
-  inputAddressHTML.value = userData.delivery_address;
-  inputEntranceHTML.value = userData.delivery_address_entrance;
-  inputDoorCodeHTML.value = userData.delivery_address_door_code;
-  inputFloorHTML.value = userData.delivery_address_floor;
-  inputApartmentHTML.value = userData.delivery_address_apartment;
-  inputAddressCommentHTML.value = userData.address_comment;
+  inputAddressHTML.value = userData.deliveryAddress;
+  inputEntranceHTML.value = userData.deliveryAddressEntrance;
+  inputDoorCodeHTML.value = userData.deliveryAddressDoorCode;
+  inputFloorHTML.value = userData.deliveryAddressFloor;
+  inputApartmentHTML.value = userData.deliveryAddressApartment;
+  inputAddressCommentHTML.value = userData.addressComment;
 };
 
 //Вписать данные настройски заказа из LS
@@ -113,8 +113,8 @@ const getUserDataOrderFromLS = () => {
 
   pickPaymentMethod()
 
-  inputPhoneNumberHTML.value = userData.phone_number
-  commentForTheOrderHTML.value = userData.order_comment
+  inputPhoneNumberHTML.value = userData.phoneNumber
+  commentForTheOrderHTML.value = userData.orderComment
   cutleryCountHTML.innerHTML = userData.cutlery
 };
 
@@ -130,12 +130,12 @@ const saveUserDataAddressToLS = () => {
     ".input_address_comment"
   );
 
-  userData.delivery_address = inputAddressHTML.value;
-  userData.delivery_address_entrance = inputEntranceHTML.value;
-  userData.delivery_address_door_code = inputDoorCodeHTML.value;
-  userData.delivery_address_floor = inputFloorHTML.value;
-  userData.delivery_address_apartment = inputApartmentHTML.value;
-  userData.address_comment = inputAddressCommentHTML.value;
+  userData.deliveryAddress = inputAddressHTML.value;
+  userData.deliveryAddressEntrance = inputEntranceHTML.value;
+  userData.deliveryAddressDoorCode = inputDoorCodeHTML.value;
+  userData.deliveryAddressFloor = inputFloorHTML.value;
+  userData.deliveryAddressApartment = inputApartmentHTML.value;
+  userData.addressComment = inputAddressCommentHTML.value;
 
   localStorage.setItem(DB_ORDER_CONFIGURATE, JSON.stringify(userData));
 };
@@ -150,8 +150,8 @@ const saveUserDataOrderToLS = () => {
   const cutleryCountHTML = document.querySelector(".count");
 
   userData.cutlery = cutleryCountHTML.innerHTML;
-  userData.phone_number = inputPhoneNumberHTML.value;
-  userData.order_comment = commentForTheOrderHTML.value;
+  userData.phoneNumber = inputPhoneNumberHTML.value;
+  userData.orderComment = commentForTheOrderHTML.value;
 
   localStorage.setItem(DB_ORDER_CONFIGURATE, JSON.stringify(userData));
 };
