@@ -1,7 +1,7 @@
 const initSiteLogo = () => {
   createGeneralSiteLogo();
   createFixedSiteLogo();
-  createNavSiteLogo();
+  // createNavSiteLogo();
 };
 
 const createGeneralSiteLogo = () => {

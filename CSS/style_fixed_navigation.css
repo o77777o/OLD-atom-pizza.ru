@@ -1,5 +1,6 @@
 .fixed_navigation {
   position: fixed;
+  z-index: 1000;
   top: -5rem;
   left: 2rem;
   font-weight: 500;
@@ -58,9 +59,11 @@
 .test {
   display: flex;
   cursor: pointer;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
 
   align-items: center;
-  margin: 0.5rem 0rem;
+  margin: 0.2rem 0rem;
   padding: 0rem 1rem;
   flex: 1;
   min-height: 3.8rem;
@@ -90,7 +93,6 @@
   opacity: 0;
   pointer-events: none;
   transition: 0.3s;
-
 }
 
 .count_cart {

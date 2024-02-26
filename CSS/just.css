@@ -1,22 +1,38 @@
 .nav_panel {
-  position: fixed;
-  display: flex;
-  justify-content: space-between;
   z-index: 1000;
-  top: 0;
-  height: 2.9rem;
-  width: 75%;
-  background-color: bisque;
-}
+  position: fixed;
+  width: 100%;
+  max-width: 100%;
 
-.nav_logo {
   display: flex;
   justify-content: center;
   align-items: center;
 
-  overflow: hidden;
-  width: 20rem;
+  justify-content: space-between;
+  top: 0;
+  left: 0;
+  height: 3.9rem;
+
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+.nav_logo {
+  padding: 0rem 1rem;
 
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
+  width: 15rem;
+  /* max-height: 2.9rem; */
+}
+
+.hamburger_icon {
+  padding: 0rem 1rem;
+  display: flex;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+}

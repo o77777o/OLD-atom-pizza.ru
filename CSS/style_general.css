@@ -32,13 +32,21 @@
 }
 
 body {
+  padding: 15%;
+  color: var(--general_font_color);
+  font-family: var(--general_font), "Courier New";
+
+  font-size: var(--2font_size);
+}
+
+/* body {
   margin: 10% auto;
   max-width: 75%;
   color: var(--general_font_color);
   font-family: var(--general_font), "Courier New";
 
   font-size: var(--2font_size);
-}
+} */
 
 img {
   width: 100%;
