@@ -20,8 +20,9 @@ const makeSmoothAnimation = (elementHTML) => {
 //Функция добавления элемента по ID в корзину и сохранения в LS
 const addToCart = (modalCard) => {
   const modalCardDescriptionHTML = modalCard.children[1];
-  buttonPriceModalCardHTML = modalCardDescriptionHTML.children[3];
-  buttonToCartHTML = modalCardDescriptionHTML.children[4];
+  buttonPriceModalCardHTML = modalCardDescriptionHTML.children[5];
+  buttonToCartHTML = modalCardDescriptionHTML.children[6];
+
   cardToCart(modalCard, buttonPriceModalCardHTML);
   addClick(buttonPriceModalCardHTML, displayButtonToCart, buttonToCartHTML);
 };
@@ -52,6 +53,15 @@ const displayButtonToCart = (elementHTML) => {
   }
 };
 
+//Создать настройку блюда 
+
+
+//Создание меню настройки блюда
+const createExtraItemsMenu = () => {
+  const extraHTML = document.querySelector(".extra")
+
+}
+
 //Создание модального окна продукта
 const createModalCard = (element) => {
   const modalCard = document.createElement("div");
@@ -66,6 +76,30 @@ const createModalCard = (element) => {
       <div class="structure_modal_card">${element.name}, <br> ${element.base} </div>
       <div class="weight_modal_card">${element.weight} грамм, ⌀ ${element.diameter}</div>
       <div class="compound_modal_card">${element.ingredients}</div>
+      <div class="structure_modal_card">Настроить</div>
+      <div class="extra">
+        <div class="extra_item">
+          <span>Двойной сыр <b>120₽</b></span>
+          <label class="toggle">
+            <input type="checkbox" id="" />
+            <div class="slider"></div>
+          </label>
+        </div>
+
+        <div class="extra_item">
+          <span>Острый Халапеньо <b>30₽</b></span>
+          <label class="toggle">
+            <input type="checkbox" id="" />
+            <div class="slider"></div>
+          </label>
+        </div>
+
+        <input
+          class="extra_item"
+          type="text"
+          placeholder="Не добавлять..."
+        />
+      </div>
       <div class="button_price_modal_card">${element.price}₽</div>
       <div class="button_to_cart">Перейти в корзину</div>
     </div>

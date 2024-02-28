@@ -232,3 +232,60 @@ const menuPosition = [
 ];
 
 window.menuPosition = menuPosition;
+
+const extraItems = [
+  {
+    name: "Моцарелла",
+    price: "",
+  },
+  {
+    name: "Блю Чиз",
+    price: "",
+  },
+  {
+    name: "Пармезан",
+    price: "",
+  },
+  {
+    name: "Чеддер",
+    price: "",
+  },
+  {
+    name: "Халапеньо",
+    price: "",
+  },
+  {
+    name: "Курица",
+    price: "",
+  },
+  {
+    name: "Говядина",
+    price: "",
+  },
+  {
+    name: "Бекон",
+    price: "",
+  },
+  {
+    name: "Ветчина",
+    price: "",
+  },
+  {
+    name: "Пепперони",
+    price: "",
+  },
+  {
+    name: "Грибы жареные",
+    price: "",
+  },
+  {
+    name: "Соленый огурчик",
+    price: "",
+  },
+  {
+    name: "Маслины/оливки",
+    price: "",
+  },
+];
+
+window.extraItems = extraItems;

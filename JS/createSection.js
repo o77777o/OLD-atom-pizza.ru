@@ -9,7 +9,8 @@ const createProductCard = () => {
     productCard.innerHTML = `<div class="img_product">
     <img
     src="${menuPosition[i].photo}"
-    alt=""/>
+    alt=""
+    title="Настроить"/>
     </div>
     <div class="description_product">
       <div class="structure_product">${menuPosition[i].name}, <br> ${menuPosition[i].base}</div>

@@ -23,21 +23,24 @@
     height: 15rem;
   }
 
-  .button_price_modal_card,
+  .button_price_modal_card {
+    height: 3rem;
+  }
+
   .button_price_product_card {
-    height: 2.1rem;
+    height: 2rem;
   }
 
   .button_open_site,
   .button_place_an_order,
   .button_to_cart {
-    height: 2.1rem;
+    height: 3rem;
   }
 
   .button_clear_order_configurate,
   .button_clear_address,
   .button_clear_all {
-    height: 2.1rem;
+    height: 3rem;
   }
 
   .modal_contact_info,
