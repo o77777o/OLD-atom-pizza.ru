@@ -53,14 +53,26 @@ const displayButtonToCart = (elementHTML) => {
   }
 };
 
-//Создать настройку блюда 
-
+//Создать настройку блюда
 
 //Создание меню настройки блюда
 const createExtraItemsMenu = () => {
-  const extraHTML = document.querySelector(".extra")
+  const DB_EXTRA_ITEMS = extraItems
+  console.log(DB_EXTRA_ITEMS)
 
-}
+  const extraHTML = document.querySelector(".extra");
+  const extraItem = document.createElement("div");
+  extraItem.classList.add("extra_item");
+
+  extraItem.innerHTML = `
+  <span>Убрать лук</span>
+  <label class="toggle">
+      <input type="checkbox" id="" />
+       <div class="slider"></div>
+  </label>
+  `;
+};
+createExtraItemsMenu()
 
 //Создание модального окна продукта
 const createModalCard = (element) => {
@@ -128,6 +140,7 @@ const openModal = (id) => {
   checkSecondModal();
   createModalBackground(modalWindow);
   modalWindow.appendChild(modalCard);
+  // тут функция внетрения допов по массиву
   addToCart(modalCard);
 
   activateButtonToCartFromModal();
