@@ -236,55 +236,55 @@ window.menuPosition = menuPosition;
 const extraItems = [
   {
     name: "Моцарелла",
-    price: "",
+    price: 79,
   },
   {
     name: "Блю Чиз",
-    price: "",
+    price: 79,
   },
   {
     name: "Пармезан",
-    price: "",
+    price: 79,
   },
   {
     name: "Чеддер",
-    price: "",
+    price: 79,
   },
   {
-    name: "Халапеньо",
-    price: "",
+    name: "Острый халапеньо",
+    price: 59,
   },
   {
-    name: "Курица",
-    price: "",
+    name: "Нежный цыпленок",
+    price: 79,
   },
   {
     name: "Говядина",
-    price: "",
+    price: 79,
   },
   {
-    name: "Бекон",
-    price: "",
+    name: "Сочный бекон",
+    price: 79,
   },
   {
     name: "Ветчина",
-    price: "",
+    price: 79,
   },
   {
-    name: "Пепперони",
-    price: "",
+    name: "Колбаска Пепперони",
+    price: 79,
   },
   {
     name: "Грибы жареные",
-    price: "",
+    price: 59,
   },
   {
     name: "Соленый огурчик",
-    price: "",
+    price: 59,
   },
   {
     name: "Маслины/оливки",
-    price: "",
+    price: 59,
   },
 ];
 
