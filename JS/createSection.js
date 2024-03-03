@@ -1,5 +1,5 @@
 const createProductCard = () => {
-  const PizzaContainer = document.querySelector(".section");
+  const pizzaContainer = document.querySelector(".section");
 
   for (let i = 0; i < menuPosition.length; i++) {
     const productCard = document.createElement("div");
@@ -18,25 +18,11 @@ const createProductCard = () => {
       <div class="button_price_product_card">${menuPosition[i].price} ₽</div>
     </div>`;
 
-    PizzaContainer.appendChild(productCard);
+    pizzaContainer.appendChild(productCard);
   }
 };
-
-// const setAttributeLazyLoad = () => {
-//   const images = document.querySelectorAll("img");
-//   images.forEach((img) => {
-//     img.setAttribute("loading", "lazy");
-//   });
-// };
-
-// const addAttributeLazyLoad = () => {
-//   document.addEventListener("DOMContentLoaded", () => {
-//     setAttributeLazyLoad();
-//   });
-// };
 
 //Точка входа
 const initProductCard = () => {
   createProductCard();
-  // addAttributeLazyLoad(); 
 };

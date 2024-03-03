@@ -106,3 +106,49 @@
 //   localStorage.setItem(DB_NAME, JSON.stringify(cart));
 // };
 
+//Получить объект допа
+const getObjectExtraItem = (checkbox) => {
+  const parentCheck = checkbox.parentNode;
+  const firstlevel = parentCheck.parentNode;
+  const secondLevel = firstlevel.parentNode;
+
+  const extraItemPriceObject = firstlevel.children[0].textContent;
+  const extraItemName = secondLevel.children[0].textContent;
+  const extraItemPrice = parseInt(extraItemPriceObject);
+  // ------------
+
+  const extraItem = {
+    name: extraItemName,
+    price: extraItemPrice,
+  };
+
+  return extraItem;
+};
+
+//Вернуть объект или удалить объект
+const checkedCheckbox = (checkbox, extra) => {
+  if (checkbox.checked) {
+    const objectExtraItem = getObjectExtraItem(checkbox);
+    return objectExtraItem;
+  } else {
+    return;
+  }
+};
+
+//активация чекбоксов
+const activateAllCheckboxes = () => {
+  let result = "";
+  const extra = [];
+  const extraCheckboxes = document.querySelectorAll(
+    '.extra_item input[type="checkbox"]'
+  );
+
+  extraCheckboxes.forEach((checkbox) => {
+    checkbox.addEventListener("change", () => {
+      result = checkedCheckbox(checkbox, extra);
+      console.log(result);
+      extra.push(result);
+      console.log(extra);
+    });
+  });
+};
