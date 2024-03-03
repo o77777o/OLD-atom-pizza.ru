@@ -92,7 +92,7 @@ const getObjectExtraItem = (checkbox) => {
   return extraItem;
 };
 
-//активация чекбоксов
+//активация чекбоксов, создание массива допов
 const activateAllCheckboxes = () => {
   const extra = [];
 
@@ -107,17 +107,13 @@ const activateAllCheckboxes = () => {
         extraItem = getObjectExtraItem(extraCheckboxes[i]);
         extra.push(extraItem);
         console.log(extra);
-        console.log(i);
       } else {
         extraItem = getObjectExtraItem(extraCheckboxes[i]);
-        console.log(extraItem.name)
-
+        const extraItemIndex = extra.findIndex(
+          (element) => element.name === extraItem.name
+        );
+        extra.splice(extraItemIndex, 1);
         console.log(extra);
-        let extraItemIndex = extra.indexOf(`${extraItem.name}`);
-        console.log(extraItemIndex)
-
-
-        // console.log(typeof extraItemIndex);
       }
     });
   }
