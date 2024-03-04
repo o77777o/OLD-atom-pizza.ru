@@ -20,8 +20,28 @@
   overflow: auto;
 }
 
+.product_info {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.product_extra {
+  
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+}
+.product_extra_item {
+  width: 100%;
+  display: flex;
+
+}
+
 .product {
   display: flex;
+  flex-direction: column;
+
   align-items: center;
   margin: 0.5rem;
   border-bottom: dashed 1px var(--general_border_color);

@@ -152,3 +152,14 @@ const activateAllCheckboxes = () => {
     });
   });
 };
+
+// -----------
+for (let i = 0; i < extraItems.length; i++) {
+  const productExtraHTML = document.querySelector(".product_extra");
+  const productExtraItem = document.createElement("div");
+  productExtraItem.classList.add("product_extra_item");
+  productExtraItem.innerHTML = `
+  - ${extraItems[i].name}
+  `;
+  productExtraHTML.appendChild(productExtraItem);
+}

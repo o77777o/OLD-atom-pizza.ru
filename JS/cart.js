@@ -42,7 +42,7 @@ const saveElementToLS = (array, element) => {
 const clearAllCart = () => {
   setEmptyStorage();
   const totalProductHTML = document.querySelector(".total_product");
-  totalProductHTML.innerHTML = ""
+  totalProductHTML.innerHTML = "";
   showSum();
   getArrayLength();
   console.log("LS and Cart has been cleared");
@@ -83,7 +83,8 @@ const deleteFromLS = (id) => {
 
 //Кнопка удаления товара из Cart, пересчет суммы, перезапись LS
 const pushToDelete = (product, id) => {
-  const deleteButton = product.children[2];
+  const firstLevel = product.children[0];
+  const deleteButton = firstLevel.children[2];
   deleteButton.addEventListener("click", () => {
     product.remove();
     deleteFromLS(id);
@@ -92,26 +93,58 @@ const pushToDelete = (product, id) => {
   });
 };
 
+//Отрисовка допов для элемента в Cart
+const displayExtraItems = (source) => {
+  const product = source;
+  console.log(product.extra);
+
+  if (product.extra.length) {
+    for (let i = 0; i < product.extra.length; i++) {
+      const productExtraItem = document.createElement("div");
+      productExtraItem.classList.add("product_extra_item");
+
+      productExtraItem.innerHTML = `
+      ${product.extra[i].name}
+      
+      `;
+      return productExtraItem;
+    }
+  }
+};
+
 //Отрисовка элемента в Cart
 const createElement = (source) => {
   product = document.createElement("div");
   product.classList.add("product");
   product.id = source.ID;
   product.innerHTML = `
-  <div class="product_name">• ${source.type} «${source.name}»</div>
-  <div class="product_price">${source.price} ₽</div>
-  <div class="button_delete"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round">
-  <line x1="18" y1="6" x2="6" y2="18" stroke="white"/>
-  <line x1="6" y1="6" x2="18" y2="18" stroke="white"/>
-  </svg></div>
-
+  <div class="product_info">
+    <div class="product_name">• ${source.type} «${source.name}»</div>
+    <div class="product_price">${source.price} ₽</div>
+    <div class="button_delete"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round">
+    <line x1="18" y1="6" x2="6" y2="18" stroke="white"/>
+    <line x1="6" y1="6" x2="18" y2="18" stroke="white"/>
+    </svg></div>
+  </div>
+  <div class="product_extra"></div>
   `;
+  const productExtra = product.querySelector(".product_extra");
+  if (source.extra.length) {
+    for (let i = 0; i < source.extra.length; i++) {
+      const productExtraItem = document.createElement("div");
+      productExtraItem.classList.add("product_extra_item");
+      productExtraItem.innerHTML = `
+      - ${source.extra[i].name}
+      
+      `;
+      productExtra.appendChild(productExtraItem);
+    }
+  }
+
   return product;
 };
 
 //------------------------------------------------------------
-
-
 
 //Отрисовка элементов в Cart из LS
 const displayAllPositionInCart = () => {
@@ -142,10 +175,10 @@ const pushButtonClearAll = () => {
 
 //Переход в зону доставки из корзины
 const pushButtonToCheckAddress = () => {
-  const buttonShortAddressHTML = document.querySelector(".short_address")
-  addClick(buttonShortAddressHTML, saveUserDataOrderToLS)
-  addClick(buttonShortAddressHTML, displayDeliveryModal)
-}
+  const buttonShortAddressHTML = document.querySelector(".short_address");
+  addClick(buttonShortAddressHTML, saveUserDataOrderToLS);
+  addClick(buttonShortAddressHTML, displayDeliveryModal);
+};
 
 //Отобразить сколько товаров в корзине
 const getArrayLength = () => {
@@ -154,10 +187,10 @@ const getArrayLength = () => {
   const array = getFromLS();
   if (!array.length) {
     countCartHTML.innerHTML = "";
-    buttonOpenCart.classList.remove("show")
+    buttonOpenCart.classList.remove("show");
     return;
   } else {
-    buttonOpenCart.classList.add("show")
+    buttonOpenCart.classList.add("show");
     countCartHTML.innerHTML = array.length;
   }
 };

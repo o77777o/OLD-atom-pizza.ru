@@ -20,8 +20,8 @@ const makeSmoothAnimation = (elementHTML) => {
 //Функция добавления элемента по ID в корзину и сохранения в LS
 const addToCart = (modalCard) => {
   const modalCardDescriptionHTML = modalCard.children[1];
-  buttonPriceModalCardHTML = modalCardDescriptionHTML.children[6];
-  buttonToCartHTML = modalCardDescriptionHTML.children[7];
+  buttonPriceModalCardHTML = modalCardDescriptionHTML.children[5];
+  buttonToCartHTML = modalCardDescriptionHTML.children[6];
 
   cardToCart(modalCard, buttonPriceModalCardHTML);
   addClick(buttonPriceModalCardHTML, displayButtonToCart, buttonToCartHTML);
@@ -92,9 +92,17 @@ const getObjectExtraItem = (checkbox) => {
   return extraItem;
 };
 
+//Сбросить настройку доп.опций элемента меню
+const resetExtra = (menuElement) => {
+  const menuItem = menuElement;
+  menuItem.extra = [];
+};
+
 //активация чекбоксов, создание массива допов
-const activateAllCheckboxes = () => {
+const activateAllCheckboxes = (menuElement) => {
+  resetExtra(menuElement);
   const extra = [];
+  const menuItem = menuElement;
 
   const extraCheckboxes = document.querySelectorAll(
     '.extra_item input[type="checkbox"]'
@@ -106,14 +114,14 @@ const activateAllCheckboxes = () => {
         let extraItem = {};
         extraItem = getObjectExtraItem(extraCheckboxes[i]);
         extra.push(extraItem);
-        console.log(extra);
+        menuItem.extra = extra;
       } else {
         extraItem = getObjectExtraItem(extraCheckboxes[i]);
         const extraItemIndex = extra.findIndex(
           (element) => element.name === extraItem.name
         );
         extra.splice(extraItemIndex, 1);
-        console.log(extra);
+        menuItem.extra = extra;
       }
     });
   }
@@ -134,14 +142,7 @@ const createModalCard = (element) => {
       <div class="weight_modal_card">${element.weight} грамм, ⌀ ${element.diameter}</div>
       <div class="compound_modal_card">${element.ingredients}</div>
       <div class="structure_modal_card">Настроить</div>
-      <input
-      class="extra_item"
-      type="text"
-      placeholder="Не добавлять..."
-      />
-      <div class="extra">
-
-      </div>
+      <div class="extra"></div>
       <div class="button_price_modal_card">${element.price}₽</div>
       <div class="button_to_cart">Перейти в корзину</div>
     </div>
@@ -149,8 +150,6 @@ const createModalCard = (element) => {
   makeSmoothAnimation(modalCard);
   return modalCard;
 };
-
-//Переход в корзину из модального окна
 
 //Удаление затемнения и модального окна продукта по кнопке
 const deleteModalCardButton = () => {
@@ -172,7 +171,7 @@ const openModal = (id) => {
   modalWindow.appendChild(modalCard);
   addToCart(modalCard);
   createExtraItemsMenu();
-  activateAllCheckboxes();
+  activateAllCheckboxes(element);
   activateButtonToCartFromModal();
   deleteModalCardButton();
 };
