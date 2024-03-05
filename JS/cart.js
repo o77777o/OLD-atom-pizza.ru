@@ -71,10 +71,21 @@ const showSum = () => {
 };
 
 //Удаление элемента из массива
-const deleteFromLS = (id) => {
+const deleteFromLS = (cartItem) => {
   let all = getFromLS();
 
-  const elementToDelete = all.findIndex((element) => element.ID === id);
+  const elementToDelete = all.findIndex((element) => {
+    return (
+      element.ID === cartItem.ID &&
+      element.extra.length === cartItem.extra.length &&
+      element.extra.every((extraItem, index) => {
+        return (
+          extraItem.name === cartItem.extra[index].name &&
+          extraItem.price === cartItem.extra[index].price
+        );
+      })
+    );
+  });
   if (elementToDelete !== -1) {
     all.splice(elementToDelete, 1);
     saveToLS(all);
@@ -82,12 +93,12 @@ const deleteFromLS = (id) => {
 };
 
 //Кнопка удаления товара из Cart, пересчет суммы, перезапись LS
-const pushToDelete = (product, id) => {
+const pushToDelete = (product, cartItem) => {
   const firstLevel = product.children[0];
   const deleteButton = firstLevel.children[2];
   deleteButton.addEventListener("click", () => {
     product.remove();
-    deleteFromLS(id);
+    deleteFromLS(cartItem);
     getArrayLength();
     showSum();
   });
@@ -154,7 +165,7 @@ const displayAllPositionInCart = () => {
   for (let i = 0; i < all.length; i++) {
     const product = createElement(all[i]);
     totalProduct.appendChild(product);
-    pushToDelete(product, all[i].ID);
+    pushToDelete(product, all[i]);
   }
   showSum();
 };
