@@ -127,7 +127,7 @@
   display: flex;
   flex: 1;
   flex-direction: column;
-  margin: 0.5rem;
+  margin: 0.5rem 2rem;
 }
 
 .structure_modal_card {

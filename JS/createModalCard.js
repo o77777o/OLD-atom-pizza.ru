@@ -98,6 +98,21 @@ const resetExtra = (menuElement) => {
   menuItem.extra = [];
 };
 
+//Актуальная цена итема с допами
+const calculateCurentItemPrice = (extraItem, extraItemCheckbox) => {
+  const buttonPriceModalCardHTML = document.querySelector(
+    ".button_price_modal_card"
+  );
+  const extraItemPrice = extraItem.price;
+  const itemPrice = parseInt(buttonPriceModalCardHTML.innerText);
+
+  if (extraItemCheckbox.checked) {
+    buttonPriceModalCardHTML.innerHTML = `${itemPrice + extraItemPrice}₽`;
+  } else {
+    buttonPriceModalCardHTML.innerHTML = `${itemPrice - extraItemPrice}₽`;
+  }
+};
+
 //активация чекбоксов, создание массива допов
 const activateAllCheckboxes = (menuElement) => {
   resetExtra(menuElement);
@@ -110,13 +125,14 @@ const activateAllCheckboxes = (menuElement) => {
 
   for (let i = 0; i < extraCheckboxes.length; i++) {
     extraCheckboxes[i].addEventListener("change", () => {
+      let extraItem = getObjectExtraItem(extraCheckboxes[i]);
+
+      calculateCurentItemPrice(extraItem, extraCheckboxes[i]);
+
       if (extraCheckboxes[i].checked) {
-        let extraItem = {};
-        extraItem = getObjectExtraItem(extraCheckboxes[i]);
         extra.push(extraItem);
         menuItem.extra = extra;
       } else {
-        extraItem = getObjectExtraItem(extraCheckboxes[i]);
         const extraItemIndex = extra.findIndex(
           (element) => element.name === extraItem.name
         );
@@ -160,6 +176,15 @@ const deleteModalCardButton = () => {
   });
 };
 
+//Сброс допов у элемента 
+const resetElementExtraItems = (element) => {
+  const removeZone = document.querySelector(".modal_background");
+
+  removeZone.addEventListener("click", () => {
+    element.extra = [];
+  });
+};
+
 //Отображение по id модального окна
 const openModal = (id) => {
   const element = findByID(id);
@@ -173,6 +198,7 @@ const openModal = (id) => {
   createExtraItemsMenu();
   activateAllCheckboxes(element);
   activateButtonToCartFromModal();
+  resetElementExtraItems(element)
   deleteModalCardButton();
 };
 

@@ -104,43 +104,10 @@ const pushToDelete = (product, cartItem) => {
   });
 };
 
-//Отрисовка допов для элемента в Cart
-const displayExtraItems = (source) => {
-  const product = source;
-  console.log(product.extra);
-
-  if (product.extra.length) {
-    for (let i = 0; i < product.extra.length; i++) {
-      const productExtraItem = document.createElement("div");
-      productExtraItem.classList.add("product_extra_item");
-
-      productExtraItem.innerHTML = `
-      ${product.extra[i].name}
-      
-      `;
-      return productExtraItem;
-    }
-  }
-};
-
-//Отрисовка элемента в Cart
-const createElement = (source) => {
-  product = document.createElement("div");
-  product.classList.add("product");
-  product.id = source.ID;
-  product.innerHTML = `
-  <div class="product_info">
-    <div class="product_name">• ${source.type} «${source.name}»</div>
-    <div class="product_price">${source.price} ₽</div>
-    <div class="button_delete"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round">
-    <line x1="18" y1="6" x2="6" y2="18" stroke="white"/>
-    <line x1="6" y1="6" x2="18" y2="18" stroke="white"/>
-    </svg></div>
-  </div>
-  <div class="product_extra"></div>
-  `;
-  const productExtra = product.querySelector(".product_extra");
+//Отрисковка допов для итема
+const createElementExtraItems = (product, source) => {
   if (source.extra.length) {
+    const productExtra = product.querySelector(".product_extra");
     for (let i = 0; i < source.extra.length; i++) {
       const productExtraItem = document.createElement("div");
       productExtraItem.classList.add("product_extra_item");
@@ -151,7 +118,44 @@ const createElement = (source) => {
       productExtra.appendChild(productExtraItem);
     }
   }
+};
 
+//Посчитать сумму доп итемов
+const calculateExtraItemPrice = (source) => {
+  if (source.extra.length) {
+    let totalExtraPrice = 0;
+    for (let i = 0; i < source.extra.length; i++) {
+      let extraPriceItem = source.extra[i].price;
+      totalExtraPrice += extraPriceItem
+
+    }
+    return (totalExtraPrice)
+  } else {
+    return 0
+  }
+  
+};
+
+//Отрисовка элемента в Cart
+const createElement = (source) => {
+  const cartItemPrice = source.price
+  const totalExtraItemPrice = calculateExtraItemPrice(source)
+  const finalCartItemPrice = cartItemPrice + totalExtraItemPrice
+  const product = document.createElement("div");
+  product.classList.add("product");
+  product.id = source.ID;
+  product.innerHTML = `
+  <div class="product_info">
+    <div class="product_name">• ${source.type} «${source.name}»</div>
+    <div class="product_price">${finalCartItemPrice} ₽</div>
+    <div class="button_delete"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round">
+    <line x1="18" y1="6" x2="6" y2="18" stroke="white"/>
+    <line x1="6" y1="6" x2="18" y2="18" stroke="white"/>
+    </svg></div>
+  </div>
+  <div class="product_extra"></div>
+  `;
+  createElementExtraItems(product, source);
   return product;
 };
 
