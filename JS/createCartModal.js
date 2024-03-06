@@ -27,6 +27,7 @@ const activateCart = () => {
   pushButtonClearAll();
   pushButtonToCheckAddress();
   configurateButtonClearOrderConfigurate();
+  configurateButtonPlaceAnOrder()
   displayAllPositionInCart();
   initOrderConfigurate();
 };

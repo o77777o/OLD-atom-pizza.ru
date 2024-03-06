@@ -126,21 +126,19 @@ const calculateExtraItemPrice = (source) => {
     let totalExtraPrice = 0;
     for (let i = 0; i < source.extra.length; i++) {
       let extraPriceItem = source.extra[i].price;
-      totalExtraPrice += extraPriceItem
-
+      totalExtraPrice += extraPriceItem;
     }
-    return (totalExtraPrice)
+    return totalExtraPrice;
   } else {
-    return 0
+    return 0;
   }
-  
 };
 
 //Отрисовка элемента в Cart
 const createElement = (source) => {
-  const cartItemPrice = source.price
-  const totalExtraItemPrice = calculateExtraItemPrice(source)
-  const finalCartItemPrice = cartItemPrice + totalExtraItemPrice
+  const cartItemPrice = source.price;
+  const totalExtraItemPrice = calculateExtraItemPrice(source);
+  const finalCartItemPrice = cartItemPrice + totalExtraItemPrice;
   const product = document.createElement("div");
   product.classList.add("product");
   product.id = source.ID;

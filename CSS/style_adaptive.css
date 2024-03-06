@@ -60,7 +60,6 @@
   .order_time,
   .payment_method,
   .phone_number {
-    
     height: 3rem;
   }
 
@@ -120,10 +119,7 @@
     height: 3rem;
   }
 
-
-
   .logo {
     display: none;
   }
-
 }

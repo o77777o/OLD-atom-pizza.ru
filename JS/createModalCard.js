@@ -176,10 +176,9 @@ const deleteModalCardButton = () => {
   });
 };
 
-//Сброс допов у элемента 
+//Сброс допов у элемента
 const resetElementExtraItems = (element) => {
   const removeZone = document.querySelector(".modal_background");
-
   removeZone.addEventListener("click", () => {
     element.extra = [];
   });
@@ -198,7 +197,7 @@ const openModal = (id) => {
   createExtraItemsMenu();
   activateAllCheckboxes(element);
   activateButtonToCartFromModal();
-  resetElementExtraItems(element)
+  resetElementExtraItems(element);
   deleteModalCardButton();
 };
 

@@ -1,5 +1,9 @@
 const DB_ORDER_CONFIGURATE = "Order configurate";
 
+const getUserData = () => {
+  return JSON.parse(localStorage.getItem(DB_ORDER_CONFIGURATE));
+};
+
 const setEmptyConfigurate = () => {
   let userData = {
     pickup: false,
@@ -31,8 +35,7 @@ const createEmptyConfigurate = () => {
 const updUserDataAddress = () => {
   console.log("Адрес очищен");
   createEmptyConfigurate();
-  const userData = JSON.parse(localStorage.getItem(DB_ORDER_CONFIGURATE));
-
+  const userData = getUserData();
   const inputAddressHTML = document.querySelector(".input_city_street_number");
   const inputEntranceHTML = document.querySelector(".input_entrance");
   const inputDoorCodeHTML = document.querySelector(".input_door_code");
@@ -65,26 +68,26 @@ const updUserDataAddress = () => {
 //Очистить данные настройки заказа
 const updUserDataOrder = () => {
   createEmptyConfigurate();
-  const userData = JSON.parse(localStorage.getItem(DB_ORDER_CONFIGURATE));
+  const userData = getUserData();
 
   const phonenumberHTML = document.querySelector("#input_phone_number");
   const commentForTheOrderHTML = document.querySelector(
     ".comment_for_the_order"
   );
-  const cutleryCountHTML = document.querySelector(".count"); 
-  
-  cutleryCountHTML.innerHTML = "0"
+  const cutleryCountHTML = document.querySelector(".count");
+
+  cutleryCountHTML.innerHTML = "0";
   phonenumberHTML.value = "";
   commentForTheOrderHTML.value = "";
 
-  userData.cutlery = "0"
+  userData.cutlery = "0";
   userData.paymentMethod = "cash";
   userData.phoneNumber = "";
   userData.orderComment = "";
 
   localStorage.setItem(DB_ORDER_CONFIGURATE, JSON.stringify(userData));
 
-  pickPaymentMethod()
+  pickPaymentMethod();
 };
 
 const initUserConfigurate = () => {

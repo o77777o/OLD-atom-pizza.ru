@@ -25,7 +25,7 @@ const makeOrderToGo = (checkbox, element) => {
 
 //Чекбокс на способ оплаты
 const pickPaymentMethod = () => {
-  const paymentCheckbox = document.querySelector("#payment")
+  const paymentCheckbox = document.querySelector("#payment");
   const userData = JSON.parse(localStorage.getItem(DB_ORDER_CONFIGURATE));
 
   if (userData.paymentMethod === "card") {
@@ -43,7 +43,7 @@ const pickPaymentMethod = () => {
       localStorage.setItem(DB_ORDER_CONFIGURATE, JSON.stringify(userData));
     }
   });
-}
+};
 
 //Настроить заказ на самовывоз
 const configurateToGo = () => {
@@ -81,6 +81,52 @@ const configurateButtonClearOrderConfigurate = () => {
   addClick(buttonClearOrderConfigurateHTML, updUserDataOrder);
 };
 
+//Активировать кнопку оформления заказ
+const configurateButtonPlaceAnOrder = () => {
+  const buttonPlaceAnOrderHTML = document.querySelector(
+    ".button_place_an_order"
+  );
+
+  addClick(buttonPlaceAnOrderHTML, getAllData);
+};
+
+//Получить все данные по заказу
+const getAllData = async () => {
+  const submitData = async () => {
+    const order = getFromLS();
+    const userData = getUserData();
+
+    const postDataObject = {
+      order: {
+        info: userData,
+        items: order,
+      },
+    };
+
+    postDataObject.order.items.forEach((item) => {
+      delete item.photo;
+    });
+
+    console.log(postDataObject);
+
+    try {
+      const response = await fetch("http://151.248.114.4/order/new", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(postDataObject),
+      });
+      const responseData = await response.json();
+      console.log("Данные успешно отправлены:", responseData);
+    } catch (error) {
+      console.error("Ошибка отправки данных:", error);
+    }
+  };
+
+  submitData();
+};
+
 //Вписать данные адреса из LS
 const getUserDataFromLS = () => {
   const userData = JSON.parse(localStorage.getItem(DB_ORDER_CONFIGURATE));
@@ -111,11 +157,11 @@ const getUserDataOrderFromLS = () => {
   );
   const cutleryCountHTML = document.querySelector(".count");
 
-  pickPaymentMethod()
+  pickPaymentMethod();
 
-  inputPhoneNumberHTML.value = userData.phoneNumber
-  commentForTheOrderHTML.value = userData.orderComment
-  cutleryCountHTML.innerHTML = userData.cutlery
+  inputPhoneNumberHTML.value = userData.phoneNumber;
+  commentForTheOrderHTML.value = userData.orderComment;
+  cutleryCountHTML.innerHTML = userData.cutlery;
 };
 
 //Записать данные адреса в LS
