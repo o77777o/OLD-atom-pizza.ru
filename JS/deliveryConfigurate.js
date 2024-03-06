@@ -117,8 +117,13 @@ const getAllData = async () => {
         },
         body: JSON.stringify(postDataObject),
       });
-      const responseData = await response.json();
-      console.log("Данные успешно отправлены:", responseData);
+
+      if (response.ok) {
+        const responseData = await response.json();
+        console.log("Данные успешно отправлены:", responseData);
+      } else {
+        throw new Error("Ошибка HTTP: " + response.status);
+      }
     } catch (error) {
       console.error("Ошибка отправки данных:", error);
     }
