@@ -107,9 +107,9 @@ const calculateCurentItemPrice = (extraItem, extraItemCheckbox) => {
   const itemPrice = parseInt(buttonPriceModalCardHTML.innerText);
 
   if (extraItemCheckbox.checked) {
-    buttonPriceModalCardHTML.innerHTML = `${itemPrice + extraItemPrice}₽`;
+    buttonPriceModalCardHTML.innerHTML = `${itemPrice + extraItemPrice} ₽`;
   } else {
-    buttonPriceModalCardHTML.innerHTML = `${itemPrice - extraItemPrice}₽`;
+    buttonPriceModalCardHTML.innerHTML = `${itemPrice - extraItemPrice} ₽`;
   }
 };
 
@@ -159,7 +159,7 @@ const createModalCard = (element) => {
       <div class="compound_modal_card">${element.ingredients}</div>
       <div class="structure_modal_card">Настроить</div>
       <div class="extra"></div>
-      <div class="button_price_modal_card">${element.price}₽</div>
+      <div class="button_price_modal_card">${element.price} ₽</div>
       <div class="button_to_cart">Перейти в корзину</div>
     </div>
     `;
