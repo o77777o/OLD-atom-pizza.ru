@@ -110,7 +110,7 @@ const getAllData = async () => {
     console.log(postDataObject);
 
     try {
-      const response = await fetch("http://151.248.114.4/order/new", {
+      const response = await fetch("https://api.atom-pizza.ru/order/new", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
