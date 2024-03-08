@@ -17,8 +17,8 @@ const displayCartModal = () => {
   createModalBackground(modalWindow);
   createCartModal(modalWindow);
   activateCart();
-  getUserDataOrderFromLS()
-  configurateButtonSaveUserDataOrderToLS()
+  getUserDataOrderFromLS();
+  configurateButtonSaveUserDataOrderToLS();
   deleteModalCardButton();
 };
 
@@ -27,8 +27,10 @@ const activateCart = () => {
   pushButtonClearAll();
   pushButtonToCheckAddress();
   configurateButtonClearOrderConfigurate();
-  configurateButtonPlaceAnOrder()
   displayAllPositionInCart();
+  // checkTotalOrderPriceForDelivery();
+  checkRestaurantScheduleInCart()
+  checkDeliveryMethod();
   initOrderConfigurate();
 };
 

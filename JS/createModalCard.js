@@ -2,7 +2,7 @@
 const createModalBackground = (parentElement) => {
   const modalBackground = document.createElement("div");
   modalBackground.classList.add("modal_background");
-
+  document.body.style.overflow = 'hidden';
   makeSmoothAnimation(modalBackground);
   parentElement.appendChild(modalBackground);
 };
@@ -32,6 +32,7 @@ const checkSecondModal = () => {
   const parentHTML = document.querySelector(".modal_window");
   if (parentHTML.children.length) {
     parentHTML.innerHTML = "";
+    document.body.style.overflow = '';
   }
 };
 

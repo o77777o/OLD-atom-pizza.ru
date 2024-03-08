@@ -6,7 +6,7 @@
 
 :root {
   --general_font_color: rgba(0, 0, 0, 0.8);
-  --general_bg_color: rgba(128, 128, 128, 0.3);
+  --general_bg_color: rgba(128, 128, 128, 0.4);
   --general_gray_font_color: rgb(128, 128, 128);
 
   --general_red_color: #fc4710;
@@ -32,7 +32,7 @@
 }
 
 body {
-  padding: 15%;
+  padding: 8% 13%;
   color: var(--general_font_color);
   font-family: var(--general_font), "Courier New";
 
@@ -92,3 +92,4 @@ b {
   background-color: var(--general_red_color);
   border-radius: 10px;
 }
+

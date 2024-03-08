@@ -130,6 +130,7 @@
   font-weight: 500;
   font-size: var(--3font_size);
   height: 2.8rem;
+  width: 100%;
   color: white;
   background-color: var(--general_green_color);
   transition: 0.3s;

@@ -44,6 +44,7 @@ const clearAllCart = () => {
   const totalProductHTML = document.querySelector(".total_product");
   totalProductHTML.innerHTML = "";
   showSum();
+  checkRestaurantScheduleInCart();
   getArrayLength();
   console.log("LS and Cart has been cleared");
 };
@@ -68,6 +69,7 @@ const showSum = () => {
 
   const totalCost = document.querySelector(".total_cost");
   totalCost.innerHTML = `Итого: ${sum} ₽`;
+  return sum;
 };
 
 //Удаление элемента из массива
@@ -101,6 +103,7 @@ const pushToDelete = (product, cartItem) => {
     deleteFromLS(cartItem);
     getArrayLength();
     showSum();
+    checkRestaurantScheduleInCart();
   });
 };
 

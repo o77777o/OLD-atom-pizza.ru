@@ -44,15 +44,15 @@ const getCurrentDateTimeInMoscow = () => {
 // Функция для проверки, является ли текущее время рабочим. Среда (3) - воскресение (7)
 const isWorkingTimeNow = () => {
   const moscowTime = getCurrentDateTimeInMoscow();
-  const dayOfWeek = moscowTime.getDay();
   const hours = moscowTime.getHours();
-  
-  if (dayOfWeek >= 3 && dayOfWeek <= 7) {
-    if (hours >= 10 && hours < 21) {
-      return true;
-    }
-  }
-  return false;
+  const minutes = moscowTime.getMinutes();
+
+  // Проверяем, что время в рамках каждого дня и часы в пределах 11:00 - 22:59
+  const isWorkingHours =
+    (hours > 11 || (hours === 11 && minutes >= 0)) &&
+    (hours < 23 || (hours === 23 && minutes === 0));
+
+  return isWorkingHours;
 };
 
 // Проверяем работает ли сегодня ресторан
@@ -69,15 +69,33 @@ const createAlertModal = (parentHTML) => {
   alertModal.classList.add("сlosed_restaurant");
 
   alertModal.innerHTML = `
-  <div class="work_time">
-  <div class="modal_window_title">Здравствуйте!</div> <p>Сейчас мы закрыты.</p> <p>Работаем с 10:00 до 21:00.</p> <p>Пн-Вт выходной.</p>
-  </div>
+  <div class="alert_content">
+  <div class="modal_window_title">Здравствуйте!</div> <p>Сейчас мы закрыты.</p> <p>Работаем с 11:00 – 23:00.</p> 
   <div class="button_open_site">Открыть сайт</div>
+  </div>
   `;
   makeSmoothAnimation(alertModal);
   parentHTML.appendChild(alertModal);
   activateButtonOpenSite();
   return alertModal;
+};
+
+const createStatusOrderModal = (parentHTML) => {
+  const statusOrderModal = document.createElement("div");
+  statusOrderModal.classList.add("status_order_modal");
+
+  statusOrderModal.innerHTML = `
+  <div class="alert_content">
+  <div class="modal_window_title">Спасибо за заказ!</div> 
+  <p>Ожидайте звонка оператора, для подтверждения</p> 
+  
+  <div class="button_open_site">Открыть сайт</div>
+  </div>
+  `;
+  makeSmoothAnimation(statusOrderModal);
+  parentHTML.appendChild(statusOrderModal);
+  activateButtonOpenSite();
+  return statusOrderModal;
 };
 
 const activateButtonOpenSite = () => {
@@ -92,10 +110,17 @@ const displayAlertModal = () => {
   createAlertModal(modalWindow);
 };
 
+const displayStatusOrderModal = () => {
+  const modalWindow = document.querySelector(".modal_window");
+  checkSecondModal();
+  createModalBackground(modalWindow);
+  createStatusOrderModal(modalWindow);
+};
+
 //Точка входа
 const initNavigation = () => {
   getCurentScroll();
-  // checkRestaurantSchedule();
+  checkRestaurantSchedule();
   hideGetToTop();
   getToTop();
 };
