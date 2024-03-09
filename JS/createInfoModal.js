@@ -1,6 +1,6 @@
 //Точка входа
 const initButtonOpenContactInfo = () => {
-  configurateButtonOpenContactInfo();
+  // configurateButtonOpenContactInfo();
 };
 
 //Настроить кнопку открытия корзины

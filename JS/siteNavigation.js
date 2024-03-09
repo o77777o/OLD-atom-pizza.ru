@@ -119,8 +119,8 @@ const displayStatusOrderModal = () => {
 
 //Точка входа
 const initNavigation = () => {
-  getCurentScroll();
+  // getCurentScroll();
   checkRestaurantSchedule();
-  hideGetToTop();
-  getToTop();
+  // hideGetToTop();
+  // getToTop();
 };

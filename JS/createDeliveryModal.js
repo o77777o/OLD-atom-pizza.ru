@@ -1,6 +1,6 @@
 //Точка входа
 const initButtonOpenDeliveryModal = () => {
-  configurateButtonOpenDelivery();
+  // configurateButtonOpenDelivery();
 };
 
 //Настроить кнопку открытия зоны доставки
