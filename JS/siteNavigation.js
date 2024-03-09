@@ -52,7 +52,7 @@ const isWorkingTimeNow = () => {
     (hours > 11 || (hours === 11 && minutes >= 0)) &&
     (hours < 23 || (hours === 23 && minutes === 0));
 
-  return isWorkingHours;
+  return true;
 };
 
 // Проверяем работает ли сегодня ресторан

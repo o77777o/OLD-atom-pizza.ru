@@ -122,4 +122,34 @@
   .logo {
     display: none;
   }
+
+  .description_modal_card {
+    flex: 1;
+    margin: 1.5rem;
+  }
+  
+  .structure_modal_card {
+    flex: 1;
+    margin: 0.5rem 0rem;
+  }
+  
+  .weight_modal_card {
+    flex: 1;
+  }
+  
+  .compound_modal_card {
+    flex: 2;
+  }
+  
+  .extra {
+    flex: 3;
+    display: flex;
+    /* justify-content: center; */
+    /* overflow: scroll; */
+    flex-direction: column;
+  
+    border-radius: 20px;
+  }
+
+
 }
