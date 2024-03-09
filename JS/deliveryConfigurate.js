@@ -90,6 +90,15 @@ const configurateButtonPlaceAnOrder = (buttonPlaceAnOrderHTML) => {
   });
 };
 
+//Деактивация кнопки оформить заказ
+const deactivateButtonPlaceAnOrder = () => {
+  const buttonPlaceAnOrderHTML = document.querySelector(
+    ".button_place_an_order"
+  );
+  buttonPlaceAnOrderHTML.style.pointerEvents = "none";
+  buttonPlaceAnOrderHTML.style.backgroundColor = "var(--general_bg_color)";
+};
+
 //Настройка заказа
 const checkDeliveryMethod = () => {
   const shortAddress = document.querySelector(".short_address");
@@ -119,8 +128,7 @@ const checkTotalOrderPriceForDelivery = () => {
   const totalOrderPrice = showSum();
 
   if (!userData.pickup && totalOrderPrice < 1100) {
-    buttonPlaceAnOrderHTML.style.pointerEvents = "none";
-    buttonPlaceAnOrderHTML.style.backgroundColor = "var(--general_bg_color)";
+    deactivateButtonPlaceAnOrder();
     buttonPlaceAnOrderHTML.innerHTML = `
     Доставим при заказе от 1100 ₽
     `;
@@ -133,11 +141,7 @@ const checkTotalOrderPriceForDelivery = () => {
 
 //Сообщить инфо, что ресторан не работает
 const reportRestaurantIsClose = () => {
-  const buttonPlaceAnOrderHTML = document.querySelector(
-    ".button_place_an_order"
-  );
-  buttonPlaceAnOrderHTML.style.pointerEvents = "none";
-  buttonPlaceAnOrderHTML.style.backgroundColor = "var(--general_bg_color)";
+  deactivateButtonPlaceAnOrder();
   buttonPlaceAnOrderHTML.innerHTML = `
     Мы закрыты. Работаем с 11:00 – 23:00
     `;
@@ -216,16 +220,18 @@ const getAllData = async (buttonPlaceAnOrderHTML) => {
         }
 
         // Очищаем корзину, сохраняем данные заказа в локальном хранилище и отображаем модальное окно статуса заказа
+        deactivateButtonPlaceAnOrder();
         clearAllCart();
         displayStatusOrderModal();
 
         return true; // Все проверки прошли успешно
     }
   } catch (error) {
+    buttonPlaceAnOrderHTML.style.pointerEvents = "none";
     buttonPlaceAnOrderHTML.style.backgroundColor = "var(--general_red_color)";
     buttonPlaceAnOrderHTML.innerHTML = `Не удалось оформить заказ`;
     console.error("Ошибка отправки данных:", error);
-    return false; // Произошла ошибка при отправке данных
+    return true; // Произошла ошибка при отправке данных
   }
 };
 
