@@ -209,7 +209,7 @@ const getAllData = async (buttonPlaceAnOrderHTML) => {
         });
 
         if (response.ok) {
-          const responseData = await response.json();
+          const responseData = "";
           console.log("Данные успешно отправлены:", responseData);
         } else {
           throw new Error("Ошибка HTTP: " + response.status);
@@ -222,8 +222,7 @@ const getAllData = async (buttonPlaceAnOrderHTML) => {
         return true; // Все проверки прошли успешно
     }
   } catch (error) {
-    buttonPlaceAnOrderHTML.style.backgroundColor =
-    "var(--general_red_color)";
+    buttonPlaceAnOrderHTML.style.backgroundColor = "var(--general_red_color)";
     buttonPlaceAnOrderHTML.innerHTML = `Не удалось оформить заказ`;
     console.error("Ошибка отправки данных:", error);
     return false; // Произошла ошибка при отправке данных
