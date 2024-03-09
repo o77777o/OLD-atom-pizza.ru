@@ -182,7 +182,7 @@ const getAllData = async (buttonPlaceAnOrderHTML) => {
         buttonPlaceAnOrderHTML.innerHTML = `В корзине ничего нет`;
         return false;
       default:
-        buttonPlaceAnOrderHTML.innerHTML = `Данные сохранены`;
+        buttonPlaceAnOrderHTML.innerHTML = `Оформить заказ`;
         buttonPlaceAnOrderHTML.style.backgroundColor =
           "var(--general_green_color)";
 
