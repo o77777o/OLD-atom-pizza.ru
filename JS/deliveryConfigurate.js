@@ -141,6 +141,9 @@ const checkTotalOrderPriceForDelivery = () => {
 
 //Сообщить инфо, что ресторан не работает
 const reportRestaurantIsClose = () => {
+  const buttonPlaceAnOrderHTML = document.querySelector(
+    ".button_place_an_order"
+  );
   deactivateButtonPlaceAnOrder();
   buttonPlaceAnOrderHTML.innerHTML = `
     Мы закрыты. Работаем с 11:00 – 23:00

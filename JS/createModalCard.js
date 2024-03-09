@@ -2,7 +2,7 @@
 const createModalBackground = (parentElement) => {
   const modalBackground = document.createElement("div");
   modalBackground.classList.add("modal_background");
-  document.body.style.overflow = 'hidden';
+  document.body.style.overflow = "hidden";
   makeSmoothAnimation(modalBackground);
   parentElement.appendChild(modalBackground);
 };
@@ -32,7 +32,7 @@ const checkSecondModal = () => {
   const parentHTML = document.querySelector(".modal_window");
   if (parentHTML.children.length) {
     parentHTML.innerHTML = "";
-    document.body.style.overflow = '';
+    document.body.style.overflow = "";
   }
 };
 
@@ -61,14 +61,17 @@ const createExtraItemsMenu = () => {
     const extraItem = document.createElement("div");
     extraItem.classList.add("extra_item");
     extraItem.innerHTML = `
+
       <span>${extraItems[i].name}</span>
       <span> 
-      <b>${extraItems[i].price}₽</b>
+      <b>${extraItems[i].price}</b>
       <label class="toggle">
-        <input type="checkbox" id="extraItem${i}" />
+        <input type="checkbox" id="extraItem${i}">
         <div class="slider"></div>
       </label>
       </span>
+      </div>
+
       `;
     extraHTML.appendChild(extraItem);
   }
