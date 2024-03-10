@@ -5,30 +5,28 @@ const scrollToTop = () => {
   });
 };
 
-//Подняться наверх
-const getToTop = () => {
-  const pushToTopHTML = document.querySelector(".fixed_logo");
-  addClick(pushToTopHTML, scrollToTop);
+const pushToTop = () => {
+  const pizzaLogoBarHTML = document.querySelector(".pizza_logo_bar");
+  addClick(pizzaLogoBarHTML, scrollToTop);
 };
 
-//Получить текущее значение прокрутки страницы
-const getCurentScroll = () => {
-  const fixedNavigationHTML = document.querySelector(".fixed_navigation");
-  const pushToTopHTML = document.querySelector(".fixed_logo");
-  const curentScroll = window.scrollY;
-  if (curentScroll >= 300) {
-    fixedNavigationHTML.classList.add("show");
-    pushToTopHTML.classList.add("show");
-  } else {
-    fixedNavigationHTML.classList.remove("show");
-    pushToTopHTML.classList.remove("show");
-  }
-};
+const pushToOpenBurgerMenu = () => {
+  const burgerMenuButtonHTML = document.querySelector(".burger_menu_button");
+  const navigationMenuHTML = document.querySelector(".navigation_menu");
+  navigationMenuHTML.addEventListener("click", () => {
+    if (navigationMenuHTML.style.left === "0%") {
+      navigationMenuHTML.style.left = "-100%"
+    } else {
+      navigationMenuHTML.style.left = "0%"
+    }
+  })
+  burgerMenuButtonHTML.addEventListener("click", () => {
+    if (navigationMenuHTML.style.left === "0%") {
+      navigationMenuHTML.style.left = "-100%"
+    } else {
+      navigationMenuHTML.style.left = "0%"
+    }
 
-// Спрятать кнопку поднятия наверх
-const hideGetToTop = () => {
-  window.addEventListener("scroll", () => {
-    getCurentScroll();
   });
 };
 
@@ -119,8 +117,7 @@ const displayStatusOrderModal = () => {
 
 //Точка входа
 const initNavigation = () => {
-  // getCurentScroll();
+  pushToOpenBurgerMenu();
+  pushToTop();
   checkRestaurantSchedule();
-  // hideGetToTop();
-  // getToTop();
 };
