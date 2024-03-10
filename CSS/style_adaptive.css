@@ -115,10 +115,6 @@
     height: 3rem;
   }
 
-  .logo {
-    display: none;
-  }
-
   .structure_modal_card {
     flex: none;
     margin: 0.5rem 0rem;
