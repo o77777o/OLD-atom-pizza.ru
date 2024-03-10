@@ -33,7 +33,6 @@ const createEmptyConfigurate = () => {
 
 //Очистить данные адреса доставки
 const updUserDataAddress = () => {
-  console.log("Адрес очищен");
   createEmptyConfigurate();
   const userData = getUserData();
   const inputAddressHTML = document.querySelector(".input_city_street_number");

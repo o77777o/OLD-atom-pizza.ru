@@ -46,7 +46,6 @@ const clearAllCart = () => {
   showSum();
   checkRestaurantScheduleInCart();
   getArrayLength();
-  console.log("LS and Cart has been cleared");
 };
 
 //Получение элемента и его сохранение в LS

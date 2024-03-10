@@ -2,7 +2,7 @@ const menuPosition = [
   {
     type: "Пицца",
     name: "Буритто",
-    photo: "./img_product/ветчина грибы-2.jpg",
+    photo: "./img_product/example.jpg",
     base: "томатная основа",
     ingredients:
       "Моцарелла, курочка, томатный соус, болгарский перец, лук, кукуруза, зелень, лёгкая пикантность",
@@ -15,7 +15,7 @@ const menuPosition = [
   {
     type: "Пицца",
     name: "Ветчина и грибы",
-    photo: "./img_product/ветчина грибы777.jpg",
+    photo: "./img_product/example.jpg",
     base: "томатная основа",
     ingredients: "Томатная основа, моцарелла, ветчина, грибы, зелень",
     diameter: "30 см",
@@ -27,7 +27,7 @@ const menuPosition = [
   {
     type: "Пицца",
     name: "Гавайская",
-    photo: "./img_product/ветчина грибы777.jpg",
+    photo: "./img_product/гавайская.png",
     base: "томатная основа",
     ingredients: "Соус фирменный, моцарелла, курица, ананас, пармезан",
     diameter: "30 см",
@@ -39,7 +39,7 @@ const menuPosition = [
   {
     type: "Пицца",
     name: "Грибная",
-    photo: "./img_product/ветчина грибы777.jpg",
+    photo: "./img_product/example.jpg",
     base: "томатная основа",
     ingredients:
       "Шампиньоны, томатный соус (бешамель на выбор), моцарелла, соус унаги, пармезан, руккола",
@@ -234,6 +234,19 @@ const menuPosition = [
     weight: 600,
     price: 699,
     ID: "b031f7d2-bcfc-408e-ac28-d3311dbcc2f7",
+    extra: [],
+  },
+  {
+    type: "Пицца",
+    name: "Пармская",
+    photo: "./img_product/Пицца NEW.jpg",
+    base: "сливочная основа",
+    ingredients:
+      "Соус бешамель, томаты черри, пармская ветчина, черный перец, руккола, пармезан",
+    diameter: "30 см",
+    weight: 600,
+    price: 749,
+    ID: "b031f7d2-bcfc-408e-ac28-d3311dbcc2f8",
     extra: [],
   },
 ];

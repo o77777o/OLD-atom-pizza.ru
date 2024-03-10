@@ -132,9 +132,7 @@ const checkTotalOrderPriceForDelivery = () => {
     buttonPlaceAnOrderHTML.innerHTML = `
     Доставим при заказе от 1100 ₽
     `;
-    // console.log("Кнопка неактивна");
   } else {
-    // console.log("Активация кнопки для оформления заказа");
     configurateButtonPlaceAnOrder(buttonPlaceAnOrderHTML);
   }
 };
@@ -203,8 +201,6 @@ const getAllData = async (buttonPlaceAnOrderHTML) => {
             items: order,
           },
         };
-
-        console.log(postDataObject);
 
         // Отправляем данные на сервер
         const response = await fetch("https://api.atom-pizza.ru/order/new", {
