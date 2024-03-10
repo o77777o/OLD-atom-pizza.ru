@@ -60,13 +60,6 @@
   border-radius: 20px;
 }
 
-/* .input_entrance,
-.input_door_code,
-.input_floor,
-.input_apartment {
-  margin: 0.5rem 0.5rem 0.5rem 0rem;
-} */
-
 .input_city_street_number:focus,
 .input_entrance:focus,
 .input_door_code:focus,

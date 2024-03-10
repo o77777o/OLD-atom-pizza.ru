@@ -27,7 +27,7 @@ const menuPosition = [
   {
     type: "Пицца",
     name: "Гавайская",
-    photo: "./img_product/гавайская.png",
+    photo: "./img_product/example.jpg",
     base: "томатная основа",
     ingredients: "Соус фирменный, моцарелла, курица, ананас, пармезан",
     diameter: "30 см",
@@ -239,7 +239,7 @@ const menuPosition = [
   {
     type: "Пицца",
     name: "Пармская",
-    photo: "./img_product/Пицца NEW.jpg",
+    photo: "./img_product/example.jpg",
     base: "сливочная основа",
     ingredients:
       "Соус бешамель, томаты черри, пармская ветчина, черный перец, руккола, пармезан",

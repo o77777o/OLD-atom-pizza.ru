@@ -17,9 +17,7 @@
 .fixed_about_us:hover,
 .fixed_delivery_zone:hover {
   border-radius: 20px;
-
   border: 1px solid var(--general_green_color);
-  /* transform: scale(1.1); */
 }
 
 .fixed_contacts,
@@ -101,22 +99,11 @@
   transition: 0.3s;
 }
 
+
 .burger_menu_button {
   cursor: pointer;
   user-select: none;
-}
-
-.burger_menu_button {
-  cursor: pointer;
   transition: 0.3s;
-}
-
-.burger_menu_button:hover {
-  rotate: 10deg;
-}
-
-.burger_menu_button:active {
-  rotate: 90deg;
 }
 
 .navigation_menu {
@@ -135,7 +122,6 @@
   transition: 0.2s;
 
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-  /* border: 1px solid var(--general_border_color); */
   -webkit-backdrop-filter: blur(3px);
   backdrop-filter: blur(3px);
 }

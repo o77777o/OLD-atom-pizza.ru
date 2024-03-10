@@ -15,18 +15,21 @@ const pushToOpenBurgerMenu = () => {
   const navigationMenuHTML = document.querySelector(".navigation_menu");
   navigationMenuHTML.addEventListener("click", () => {
     if (navigationMenuHTML.style.left === "0%") {
-      navigationMenuHTML.style.left = "-100%"
+      burgerMenuButtonHTML.style.rotate = "0deg";
+      navigationMenuHTML.style.left = "-100%";
     } else {
-      navigationMenuHTML.style.left = "0%"
+      burgerMenuButtonHTML.style.rotate = "90deg";
+      navigationMenuHTML.style.left = "0%";
     }
-  })
+  });
   burgerMenuButtonHTML.addEventListener("click", () => {
     if (navigationMenuHTML.style.left === "0%") {
-      navigationMenuHTML.style.left = "-100%"
+      burgerMenuButtonHTML.style.rotate = "0deg";
+      navigationMenuHTML.style.left = "-100%";
     } else {
-      navigationMenuHTML.style.left = "0%"
+      navigationMenuHTML.style.left = "0%";
+      burgerMenuButtonHTML.style.rotate = "90deg";
     }
-
   });
 };
 
@@ -50,7 +53,7 @@ const isWorkingTimeNow = () => {
     (hours > 11 || (hours === 11 && minutes >= 0)) &&
     (hours < 23 || (hours === 23 && minutes === 0));
 
-  return true;
+  return isWorkingHours;
 };
 
 // Проверяем работает ли сегодня ресторан

@@ -1,9 +1,3 @@
-/* @font-face {
-  font-family: "general_font";
-  src: url("../font/Archerus/Horizon\ Type\ -\ AcherusFeral-Light.otf")
-    format("opentype");
-} */
-
 :root {
   --general_font_color: rgba(0, 0, 0, 0.8);
   --general_bg_color: rgba(128, 128, 128, 0.4);
@@ -38,15 +32,6 @@ body {
 
   font-size: var(--2font_size);
 }
-
-/* body {
-  margin: 10% auto;
-  max-width: 75%;
-  color: var(--general_font_color);
-  font-family: var(--general_font), "Courier New";
-
-  font-size: var(--2font_size);
-} */
 
 img {
   width: 100%;

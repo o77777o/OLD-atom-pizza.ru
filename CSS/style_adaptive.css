@@ -1,9 +1,5 @@
 /* Под мобильный телефон */
 @media only screen and (max-width: 480px) {
-  /* body {
-    margin: 30% auto;
-    max-width: 95%;
-  } */
 
   body {
     padding: 25% 1%;
@@ -140,10 +136,17 @@
     flex: none;
     height: 12rem;
     display: flex;
-    /* justify-content: center; */
     overflow: scroll;
     flex-direction: column;
 
     border-radius: 20px;
+  }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1366px) {
+  .product_card {
+    margin: 0.5rem;
+    width: 16rem;
+    height: 23rem;
   }
 }

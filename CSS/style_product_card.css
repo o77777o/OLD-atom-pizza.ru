@@ -73,5 +73,4 @@
 .button_price_modal_card:active,
 .button_price_product_card:active {
   filter: brightness(80%);
-  /* transform: scale(0.9); */
 }
