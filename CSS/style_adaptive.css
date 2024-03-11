@@ -33,6 +33,10 @@
     height: 3rem;
   }
 
+  .button_place_an_order{
+    font-size: var(--2font_size);
+  }
+
   .button_clear_order_configurate,
   .button_clear_address,
   .button_clear_all {
