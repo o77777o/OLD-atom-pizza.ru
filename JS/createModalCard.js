@@ -62,14 +62,14 @@ const createExtraItemsMenu = () => {
     extraItem.classList.add("extra_item");
     extraItem.innerHTML = `
 
-      <span>${extraItems[i].name}</span>
-      <span> 
-      <b>${extraItems[i].price}</b>
+      <div>${extraItems[i].name}</div>
+      <div> 
+      <b>${extraItems[i].price} ₽</b>
       <label class="toggle">
         <input type="checkbox" id="extraItem${i}">
         <div class="slider"></div>
       </label>
-      </span>
+      </div>
       </div>
 
       `;

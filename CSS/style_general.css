@@ -64,7 +64,7 @@ b {
 }
 
 ::-webkit-scrollbar {
-  width: 4px;
+  width: 0px;
 }
 
 /* Цвет внутренней заливки */
@@ -75,6 +75,6 @@ b {
 /* Цвет ползунка прокрутки */
 ::-webkit-scrollbar-thumb {
   background-color: var(--general_red_color);
-  border-radius: 10px;
+  /* border-radius: 10px; */
 }
 
