@@ -1,9 +1,9 @@
 window.onload = () => {
-  initProductCard();
   initNavigation();
+  initProductCard();
+  initModal();
   initCart();
   initUserConfigurate();
-  initModal();
   initButtonOpenContactInfo();
   initButtonOpenCart();
   initButtonOpenDeliveryModal();
