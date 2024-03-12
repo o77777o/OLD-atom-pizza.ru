@@ -153,7 +153,7 @@ const menuPosition = [
   {
     type: "Пицца",
     name: "Сырная груша",
-    photo: "./img_product/example.jpg",
+    photo: "./img_product/Untitled-2.jpg",
     base: "сливочная основа",
     ingredients: "Соус бешамель, груша, Блю-чиз, моцарелла, миндаль, пармезан",
     diameter: "30 см",
@@ -255,56 +255,32 @@ window.menuPosition = menuPosition;
 
 const extraItems = [
   {
+    name: "Острый халапеньо",
+    price: 39,
+  },
+  {
     name: "Моцарелла",
-    price: 79,
+    price: 119,
   },
   {
     name: "Блю Чиз",
-    price: 79,
+    price: 119,
   },
   {
     name: "Пармезан",
-    price: 79,
+    price: 74,
   },
   {
-    name: "Чеддер",
-    price: 79,
+    name: "Бекон",
+    price: 74,
   },
   {
-    name: "Острый халапеньо",
-    price: 59,
+    name: "Соус Шрирача",
+    price: 39,
   },
   {
-    name: "Нежный цыпленок",
-    price: 79,
-  },
-  {
-    name: "Говядина",
-    price: 79,
-  },
-  {
-    name: "Сочный бекон",
-    price: 79,
-  },
-  {
-    name: "Ветчина",
-    price: 79,
-  },
-  {
-    name: "Колбаска Пепперони",
-    price: 79,
-  },
-  {
-    name: "Грибы жареные",
-    price: 59,
-  },
-  {
-    name: "Соленый огурчик",
-    price: 59,
-  },
-  {
-    name: "Маслины/оливки",
-    price: 59,
+    name: "Соус Унаги",
+    price: 39,
   },
 ];
 
