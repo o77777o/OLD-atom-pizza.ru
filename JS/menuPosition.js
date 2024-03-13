@@ -1,8 +1,20 @@
 const menuPosition = [
   {
     type: "Пицца",
+    name: "Марго",
+    photo: "./img_product/Марго.jpg",
+    base: "томатная основа",
+    ingredients: "Томатная основа, моцарелла, томаты, зелень",
+    diameter: "30 см",
+    weight: 600,
+    price: 499,
+    ID: "42a38cc0-3f29-4bd4-8318-49625a658663",
+    extra: [],
+  },
+  {
+    type: "Пицца",
     name: "Буритто",
-    photo: "./img_product/example.jpg",
+    photo: "./img_product/logobig.jpg",
     base: "томатная основа",
     ingredients:
       "Моцарелла, курочка, томатный соус, болгарский перец, лук, кукуруза, зелень, лёгкая пикантность",
@@ -15,7 +27,7 @@ const menuPosition = [
   {
     type: "Пицца",
     name: "Ветчина и грибы",
-    photo: "./img_product/example.jpg",
+    photo: "./img_product/logobig.jpg",
     base: "томатная основа",
     ingredients: "Томатная основа, моцарелла, ветчина, грибы, зелень",
     diameter: "30 см",
@@ -27,7 +39,7 @@ const menuPosition = [
   {
     type: "Пицца",
     name: "Гавайская",
-    photo: "./img_product/example.jpg",
+    photo: "./img_product/Гавайская.jpg",
     base: "томатная основа",
     ingredients: "Соус фирменный, моцарелла, курица, ананас, пармезан",
     diameter: "30 см",
@@ -39,7 +51,7 @@ const menuPosition = [
   {
     type: "Пицца",
     name: "Грибная",
-    photo: "./img_product/example.jpg",
+    photo: "./img_product/logobig.jpg",
     base: "томатная основа",
     ingredients:
       "Шампиньоны, томатный соус (бешамель на выбор), моцарелла, соус унаги, пармезан, руккола",
@@ -52,7 +64,7 @@ const menuPosition = [
   {
     type: "Пицца",
     name: "Дьябло",
-    photo: "./img_product/example.jpg",
+    photo: "./img_product/logobig.jpg",
     base: "томатная основа",
     ingredients:
       "Томатный соус, моцарелла, говядина, бекон, перец болгарский, лук",
@@ -65,7 +77,7 @@ const menuPosition = [
   {
     type: "Пицца",
     name: "Креветки томаты",
-    photo: "./img_product/example.jpg",
+    photo: "./img_product/logobig.jpg",
     base: "томатная основа",
     ingredients:
       "Моцарелла, томатный соус, тигровые креветки, томаты, салат, пармезан",
@@ -78,7 +90,7 @@ const menuPosition = [
   {
     type: "Пицца",
     name: "Курица-грибы",
-    photo: "./img_product/example.jpg",
+    photo: "./img_product/Курица-грибы.jpg",
     base: "томатная основа",
     ingredients: "Томатная основа, моцарелла, грибы, курочка, зелень",
     diameter: "30 см",
@@ -89,20 +101,8 @@ const menuPosition = [
   },
   {
     type: "Пицца",
-    name: "Марго",
-    photo: "./img_product/example.jpg",
-    base: "томатная основа",
-    ingredients: "Томатная основа, моцарелла, томаты, зелень",
-    diameter: "30 см",
-    weight: 600,
-    price: 499,
-    ID: "42a38cc0-3f29-4bd4-8318-49625a658663",
-    extra: [],
-  },
-  {
-    type: "Пицца",
     name: "Мидийность",
-    photo: "./img_product/example.jpg",
+    photo: "./img_product/logobig.jpg",
     base: "сливочная основа",
     ingredients:
       "Соус бешамель, моцарелла, чеснок, соус унаги, мидии, вяленный томат, руккола, пармезан",
@@ -115,7 +115,7 @@ const menuPosition = [
   {
     type: "Пицца",
     name: "Охотничья",
-    photo: "./img_product/example.jpg",
+    photo: "./img_product/logobig.jpg",
     base: "томатная основа",
     ingredients:
       "Томатная основа, моцарелла, колбаски, корнишоны, перец сладкий, лук",
@@ -128,7 +128,7 @@ const menuPosition = [
   {
     type: "Пицца",
     name: "Пепперони",
-    photo: "./img_product/example.jpg",
+    photo: "./img_product/logobig.jpg",
     base: "томатная основа",
     ingredients: "Томатная основа, моцарелла, томат, пепперони, зелень",
     diameter: "30 см",
@@ -140,7 +140,7 @@ const menuPosition = [
   {
     type: "Пицца",
     name: "Солянка",
-    photo: "./img_product/example.jpg",
+    photo: "./img_product/logobig.jpg",
     base: "томатная основа",
     ingredients:
       "Томатная основа, моцарелла, бекон, курочка с/к, охотничья колбаска, перец болгарский, каперсы, маслины, чеснок, зелень",
@@ -153,7 +153,7 @@ const menuPosition = [
   {
     type: "Пицца",
     name: "Сырная груша",
-    photo: "./img_product/Untitled-2.jpg",
+    photo: "./img_product/Сырная груша.jpg",
     base: "сливочная основа",
     ingredients: "Соус бешамель, груша, Блю-чиз, моцарелла, миндаль, пармезан",
     diameter: "30 см",
@@ -165,7 +165,7 @@ const menuPosition = [
   {
     type: "Пицца",
     name: "Сёмга сливочная",
-    photo: "./img_product/example.jpg",
+    photo: "./img_product/logobig.jpg",
     base: "сливочная основа",
     ingredients: "Соус бешамель, моцарелла, сёмга, руккола, пармезан",
     diameter: "30 см",
@@ -177,7 +177,7 @@ const menuPosition = [
   {
     type: "Пицца",
     name: "Друзья Ариель",
-    photo: "./img_product/example.jpg",
+    photo: "./img_product/logobig.jpg",
     base: "сливочная основа",
     ingredients:
       "Соус бешамель, моцарелла, тигровые креветки, мидии, гребешок, руккола, парmезан",
@@ -190,7 +190,7 @@ const menuPosition = [
   {
     type: "Пицца",
     name: "Том Ям",
-    photo: "./img_product/example.jpg",
+    photo: "./img_product/Том-ям.jpg",
     base: "паста Том Ям",
     ingredients:
       "Острый соус Том Ям (бешамель на выбор) бекон, пармезан, моцарелла, зелень",
@@ -203,7 +203,7 @@ const menuPosition = [
   {
     type: "Пицца",
     name: "Цезарь-креветки",
-    photo: "./img_product/example.jpg",
+    photo: "./img_product/Цезарь-креветки.jpg",
     base: "сливочная основа",
     ingredients: "Соус цезарь, моцарелла, черри, креветки, ромейн, пармезан",
     diameter: "30 см",
@@ -215,7 +215,7 @@ const menuPosition = [
   {
     type: "Пицца",
     name: "Цезарь-курица",
-    photo: "./img_product/example.jpg",
+    photo: "./img_product/logobig.jpg",
     base: "сливочная основа",
     ingredients: "Соус цезарь, моцарелла, черри, курочка, ромейн, пармезан",
     diameter: "30 см",
@@ -227,7 +227,7 @@ const menuPosition = [
   {
     type: "Пицца",
     name: "Четыре сыра",
-    photo: "./img_product/example.jpg",
+    photo: "./img_product/Четыре сыра.jpg",
     base: "сливочная основа",
     ingredients: "Соус бешамель, моцарелла, чеддар, блю чиз, пармезан",
     diameter: "30 см",
@@ -239,7 +239,7 @@ const menuPosition = [
   {
     type: "Пицца",
     name: "Пармская",
-    photo: "./img_product/example.jpg",
+    photo: "./img_product/Парма.jpg",
     base: "сливочная основа",
     ingredients:
       "Соус бешамель, томаты черри, пармская ветчина, черный перец, руккола, пармезан",
