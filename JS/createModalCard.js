@@ -55,12 +55,14 @@ const displayButtonToCart = (elementHTML) => {
 };
 
 //Создание меню настройки блюда
-const createExtraItemsMenu = () => {
-  const extraHTML = document.querySelector(".extra");
-  for (let i = 0; extraItems.length > i; i++) {
-    const extraItem = document.createElement("div");
-    extraItem.classList.add("extra_item");
-    extraItem.innerHTML = `
+const createExtraItemsMenu = (element) => {
+  if (element.type === "Пицца") {
+    resetElementExtraItems(element);
+    const extraHTML = document.querySelector(".extra");
+    for (let i = 0; extraItems.length > i; i++) {
+      const extraItem = document.createElement("div");
+      extraItem.classList.add("extra_item");
+      extraItem.innerHTML = `
 
       <div>${extraItems[i].name}</div>
       <div> 
@@ -73,8 +75,11 @@ const createExtraItemsMenu = () => {
       </div>
 
       `;
-    extraHTML.appendChild(extraItem);
+      extraHTML.appendChild(extraItem);
+    }
+    activateAllCheckboxes(element);
   }
+  return;
 };
 
 //Получить объект допа
@@ -153,7 +158,8 @@ const createModalCard = (element) => {
   modalCard.classList.add("modal_card");
   modalCard.id = element.ID;
 
-  modalCard.innerHTML = `
+  if (element.type === "Пицца") {
+    modalCard.innerHTML = `
     <div class="img_modal_card">
       <img src="${element.photo}" alt="" />
     </div>
@@ -167,6 +173,22 @@ const createModalCard = (element) => {
       <div class="button_to_cart">Перейти в корзину</div>
     </div>
     `;
+  } else {
+    modalCard.innerHTML = `
+    <div class="img_modal_card">
+      <img src="${element.photo}" alt="" />
+    </div>
+    <div class="description_modal_card">
+      <div class="structure_modal_card">${element.name}</div>
+      <div class="weight_modal_card">${element.weight} грамм</div>
+      <div class="compound_modal_card">${element.ingredients}</div>
+      <div class="structure_modal_card"></div>
+      <div class="extra"></div>
+      <div class="button_price_modal_card">${element.price} ₽</div>
+      <div class="button_to_cart">Перейти в корзину</div>
+    </div>
+    `;
+  }
   makeSmoothAnimation(modalCard);
   return modalCard;
 };
@@ -198,10 +220,8 @@ const openModal = (id) => {
   createModalBackground(modalWindow);
   modalWindow.appendChild(modalCard);
   addToCart(modalCard);
-  createExtraItemsMenu();
-  activateAllCheckboxes(element);
+  createExtraItemsMenu(element);
   activateButtonToCartFromModal();
-  resetElementExtraItems(element);
   deleteModalCardButton();
 };
 

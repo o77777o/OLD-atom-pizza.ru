@@ -42,7 +42,7 @@ const getCurrentDateTimeInMoscow = () => {
   return moscowTime;
 };
 
-// Функция для проверки, является ли текущее время рабочим. Среда (3) - воскресение (7)
+// Функция для проверки, является ли текущее время рабочим.
 const isWorkingTimeNow = () => {
   const moscowTime = getCurrentDateTimeInMoscow();
   const hours = moscowTime.getHours();
@@ -50,10 +50,10 @@ const isWorkingTimeNow = () => {
 
   // Проверяем, что время в рамках каждого дня и часы в пределах 11:00 - 21:00
   const isWorkingHours =
-    (hours > 11 || (hours === 11 && minutes >= 0)) &&
-    (hours < 21 || (hours === 21 && minutes === 0));
+    (hours > TIME_START || (hours === TIME_START && minutes >= 0)) &&
+    (hours < TIME_END || (hours === TIME_END && minutes === 0));
 
-  return isWorkingHours;
+  return isWorkingHours && POWER_BUTTON;
 };
 
 // Проверяем работает ли сегодня ресторан
@@ -69,12 +69,23 @@ const createAlertModal = (parentHTML) => {
   const alertModal = document.createElement("div");
   alertModal.classList.add("сlosed_restaurant");
 
-  alertModal.innerHTML = `
+  if (POWER_BUTTON) {
+    alertModal.innerHTML = `
   <div class="alert_content">
-  <div class="modal_window_title">Здравствуйте!</div> <p>Сейчас мы закрыты.</p> <p>Работаем с 11:00 – 21:00.</p> 
+  <div class="modal_window_title">Здравствуйте!</div> <p>Сейчас мы закрыты.</p> <p>Работаем с ${TIME_START}:00 – ${TIME_END}:00.</p> 
   <div class="button_open_site">Открыть сайт</div>
   </div>
   `;
+  } else {
+    alertModal.innerHTML = `
+  <div class="alert_content">
+  <div class="modal_window_title">Здравствуйте!</div> <p>Cейчас мы не принимаем заказы.</p>
+  <div class="button_open_site">Открыть сайт</div>
+  </div>
+  `;
+  }
+
+
   makeSmoothAnimation(alertModal);
   parentHTML.appendChild(alertModal);
   activateButtonOpenSite();

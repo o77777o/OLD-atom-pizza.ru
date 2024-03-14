@@ -40,7 +40,7 @@ const func = () => {
   let myDeliveryZone = new ymaps.Polygon(
     [deliveryZoneCoordinates],
     {
-      hintContent: "Заказ от 1100₽",
+      hintContent: `Заказ от ${MIN_ORDER_PRICE} ₽`,
     },
     {
       fillColor: "#fc471090",

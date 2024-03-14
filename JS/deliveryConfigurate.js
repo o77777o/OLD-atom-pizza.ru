@@ -119,7 +119,7 @@ const checkDeliveryMethod = () => {
   }
 };
 
-//Условие доставки от 1100 рублей на заказ
+//Условие доставки от 1300 рублей на заказ
 const checkTotalOrderPriceForDelivery = () => {
   const buttonPlaceAnOrderHTML = document.querySelector(
     ".button_place_an_order"
@@ -127,10 +127,10 @@ const checkTotalOrderPriceForDelivery = () => {
   const userData = getUserData();
   const totalOrderPrice = showSum();
 
-  if (!userData.pickup && totalOrderPrice < 1100) {
+  if (!userData.pickup && totalOrderPrice < MIN_ORDER_PRICE) {
     deactivateButtonPlaceAnOrder();
     buttonPlaceAnOrderHTML.innerHTML = `
-    Доставим при заказе от 1100 ₽
+    Доставим при заказе от ${MIN_ORDER_PRICE} ₽
     `;
   } else {
     configurateButtonPlaceAnOrder(buttonPlaceAnOrderHTML);
@@ -143,9 +143,15 @@ const reportRestaurantIsClose = () => {
     ".button_place_an_order"
   );
   deactivateButtonPlaceAnOrder();
+  if (POWER_BUTTON) {
   buttonPlaceAnOrderHTML.innerHTML = `
-    Мы закрыты. Работаем с 11:00 – 21:00
+    Мы закрыты. Работаем с ${TIME_START}:00 – ${TIME_END}:00
     `;
+  } else {
+    buttonPlaceAnOrderHTML.innerHTML = `
+    Сейчас мы не принимаем заказы
+    `;
+  }
 };
 
 //Условие работы ресторана

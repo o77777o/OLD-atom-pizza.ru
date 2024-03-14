@@ -16,7 +16,7 @@ const displayContactInfoModal = () => {
   checkSecondModal();
   createModalBackground(modalWindow);
   createContactModal(modalWindow);
-  initYmapsContactInfo()
+  initYmapsContactInfo();
   deleteModalCardButton();
 };
 
@@ -32,10 +32,11 @@ const createContactModal = (parentHTML) => {
         <a class="pizza_address" href="https://yandex.ru/maps/-/CDFCFV7d" target="_blank">Проспект Маршала Блюхера, 12ГК</a>
         <a class="pizza_phone" href="tel: +79040874827">+7 (904) 087 48 27</a>
         <a class="pizza_community" href="https://t.me/KyXoNbKa" target="_blank">Обратная связь</a>
-        <div class="work_time">Работаем с 11:00 – 21:00</div>
+        <div class="work_time">Работаем с ${TIME_START}:00 – ${TIME_END}:00</div>
     </div>
   
       `;
+
   makeSmoothAnimation(contactModal);
   parentHTML.appendChild(contactModal);
 

@@ -1,4 +1,74 @@
+//Время начала работы ресторана (указывать только часы)
+const TIME_START = 0;
+
+//Время окончания работы ресторана (указывать только часы)
+const TIME_END = 21;
+
+//ПРИЕМ ЗАКАЗОВ true=работает по расписанию. false=всегда не работает (Менять на false, если заказы ставим на стоп.)
+const POWER_BUTTON = true;
+
+//Минимальная сумма заказа.
+const MIN_ORDER_PRICE = 1300
+
+//Все позиции меню
 const menuPosition = [
+    // САЛАТЫ
+    {
+      type: "Салат",
+      name: "Цезарь-курица",
+      photo: "./img_product/Салат цезарь курица.jpg",
+      ingredients:
+        "Листья салата айсберг и ромейн, черри, соус Цезарь, курочка , пармезан, сухарики",
+      weight: 350,
+      price: 499,
+      ID: "4e029697-e8a5-478d-9a01-f08602577c86",
+      extra: [],
+    },
+    {
+      type: "Салат",
+      name: "Цезарь-креветки",
+      photo: "./img_product/Салат цезарь креветки.jpg",
+      ingredients:
+        "Листья салата айсберг и ромейн, черри, соус Цезарь, креветки , пармезан, сухарики",
+      weight: 350,
+      price: 649,
+      ID: "111eb448-29fc-431d-8340-faa7466d669f",
+      extra: [],
+    },
+    // РОЛЛ
+    {
+      type: "Ролл",
+      name: "Сендвич с Пепперони",
+      photo: "./img_product/Ролл сендвич с Пепперони.jpg",
+      ingredients:
+        "Лаваш, Халапеньо, салат айсберг, томат, фирменный соус, пепперони, кетчуп, моцарелла",
+      weight: 350,
+      price: 399,
+      ID: "fe7139a1-e1b3-49d2-b413-6d782639a651",
+      extra: [],
+    },
+    {
+      type: "Ролл",
+      name: "Сендвич с курицей",
+      photo: "./img_product/Ролл сендвич с курицей.jpg",
+      ingredients: "Лаваш, соус фирменный, салат айсберг, курица, пармезан, томат ",
+      weight: 350,
+      price: 399,
+      ID: "671b4d16-ff8b-4e9a-a94e-f9b057ebc63c",
+      extra: [],
+    },
+    {
+      type: "Ролл",
+      name: "Сендвич с креветками",
+      photo: "./img_product/Ролл сендвич с креветками.jpg",
+      ingredients:
+        "Лаваш, салат ромейн, томат, креветки тигровые, пармезан, соус фирменный",
+      weight: 250,
+      price: 599,
+      ID: "74b040fc-1438-4e8d-8d09-1cd17811d3ae",
+      extra: [],
+    },
+  // ПИЦЦА
   {
     type: "Пицца",
     name: "Марго",
@@ -246,13 +316,11 @@ const menuPosition = [
     diameter: "30 см",
     weight: 600,
     price: 749,
-    ID: "b031f7d2-bcfc-408e-ac28-d3311dbcc2f8",
+    ID: "b9398c4c-08b5-4e46-b168-f916625327ba",
     extra: [],
   },
 ];
-
-window.menuPosition = menuPosition;
-
+// все допы для пиццы
 const extraItems = [
   {
     name: "Острый халапеньо",
@@ -284,4 +352,9 @@ const extraItems = [
   },
 ];
 
+const reserv = [
+
+];
+
 window.extraItems = extraItems;
+window.menuPosition = menuPosition;
