@@ -144,7 +144,7 @@ const reportRestaurantIsClose = () => {
   );
   deactivateButtonPlaceAnOrder();
   buttonPlaceAnOrderHTML.innerHTML = `
-    Мы закрыты. Работаем с 11:00 – 23:00
+    Мы закрыты. Работаем с 11:00 – 21:00
     `;
 };
 

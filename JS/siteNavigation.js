@@ -48,10 +48,10 @@ const isWorkingTimeNow = () => {
   const hours = moscowTime.getHours();
   const minutes = moscowTime.getMinutes();
 
-  // Проверяем, что время в рамках каждого дня и часы в пределах 11:00 - 22:59
+  // Проверяем, что время в рамках каждого дня и часы в пределах 11:00 - 21:00
   const isWorkingHours =
     (hours > 11 || (hours === 11 && minutes >= 0)) &&
-    (hours < 23 || (hours === 23 && minutes === 0));
+    (hours < 21 || (hours === 21 && minutes === 0));
 
   return isWorkingHours;
 };
@@ -71,7 +71,7 @@ const createAlertModal = (parentHTML) => {
 
   alertModal.innerHTML = `
   <div class="alert_content">
-  <div class="modal_window_title">Здравствуйте!</div> <p>Сейчас мы закрыты.</p> <p>Работаем с 11:00 – 23:00.</p> 
+  <div class="modal_window_title">Здравствуйте!</div> <p>Сейчас мы закрыты.</p> <p>Работаем с 11:00 – 21:00.</p> 
   <div class="button_open_site">Открыть сайт</div>
   </div>
   `;
