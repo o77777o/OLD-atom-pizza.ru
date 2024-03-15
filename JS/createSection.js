@@ -22,8 +22,8 @@ const createSiteMenu = (menuArray) => {
     titleDiv.id = type;
     fragment.appendChild(titleDiv);
 
-    const hr = document.createElement("hr");
-    fragment.appendChild(hr);
+    // const hr = document.createElement("hr");
+    // fragment.appendChild(hr);
 
     items.forEach((item) => {
       const productCard = document.createElement("div");
