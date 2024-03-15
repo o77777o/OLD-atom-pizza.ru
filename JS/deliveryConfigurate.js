@@ -144,7 +144,7 @@ const reportRestaurantIsClose = () => {
   );
   deactivateButtonPlaceAnOrder();
   if (POWER_BUTTON) {
-  buttonPlaceAnOrderHTML.innerHTML = `
+    buttonPlaceAnOrderHTML.innerHTML = `
     Мы закрыты. Работаем с ${TIME_START}:00 – ${TIME_END}:00
     `;
   } else {
@@ -224,10 +224,9 @@ const getAllData = async (buttonPlaceAnOrderHTML) => {
           throw new Error("Ошибка HTTP: " + response.status);
         }
 
-        // Очищаем корзину, сохраняем данные заказа в локальном хранилище и отображаем модальное окно статуса заказа
+        displayStatusOrderModal();
         deactivateButtonPlaceAnOrder();
         clearAllCart();
-        displayStatusOrderModal();
 
         return true; // Все проверки прошли успешно
     }
