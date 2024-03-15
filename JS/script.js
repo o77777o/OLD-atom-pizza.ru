@@ -10,6 +10,3 @@ window.onload = () => {
   initFooter();
 };
 
-window.addEventListener("load", function () {
-  window.location.reload(true);
-});
