@@ -13,6 +13,7 @@ const createSiteMenu = (menuArray) => {
     const titleDiv = document.createElement("div");
     titleDiv.classList.add("title");
     titleDiv.textContent = type;
+    titleDiv.id = type;
     menuContainer.appendChild(titleDiv);
 
     const hr = document.createElement("hr");
@@ -20,7 +21,6 @@ const createSiteMenu = (menuArray) => {
 
     const sectionDiv = document.createElement("div");
     sectionDiv.classList.add("section");
-
     groupedMenu[type].forEach((item) => {
       const productCard = document.createElement("div");
       productCard.classList.add("product_card");
