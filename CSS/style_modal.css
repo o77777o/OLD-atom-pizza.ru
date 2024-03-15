@@ -107,7 +107,7 @@
 .img_modal_card {
   display: flex;
   flex: 2;
-  min-height: 60%;
+  min-height: 55%;
   justify-content: center;
   align-content: center;
   object-fit: contain;
@@ -139,7 +139,7 @@
 }
 
 .extra {
-  /* flex: 3; */
+  flex: 3;
   display: flex;
   overflow: scroll;
   flex-direction: column;
