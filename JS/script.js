@@ -9,3 +9,7 @@ window.onload = () => {
   initButtonOpenDeliveryModal();
   initFooter();
 };
+
+window.addEventListener("load", function () {
+  window.location.reload(true);
+});
