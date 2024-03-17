@@ -20,6 +20,7 @@
   border: 1px solid var(--general_green_color);
 }
 
+.anchor_menu,
 .fixed_contacts,
 .fixed_promo,
 .fixed_pizza,
@@ -28,7 +29,7 @@
 .fixed_about_us {
   display: flex;
   cursor: pointer;
-
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   margin: 0.2rem 0rem;

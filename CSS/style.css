@@ -8,7 +8,9 @@
 }
 
 .title {
+  margin: 3rem 0rem 1rem 0rem;
   font-size: var(--4font_size);
+  border-bottom: 1px solid var(--general_font_color);
 }
 
 .section {

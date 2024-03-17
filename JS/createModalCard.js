@@ -158,40 +158,27 @@ const createModalCard = (element) => {
   modalCard.classList.add("modal_card");
   modalCard.id = element.ID;
 
-  if (element.type === "Пицца") {
-    modalCard.innerHTML = `
+  const cardHTML = `
     <div class="img_modal_card">
       <img src="${element.photo}" alt="" />
     </div>
     <div class="description_modal_card">
-      <div class="structure_modal_card">${element.name}, <br> ${element.base} </div>
-      <div class="weight_modal_card">${element.weight} грамм, ⌀ ${element.diameter}</div>
+      <div class="structure_modal_card">${element.name}${element.type === "Пицца" ? `, <br> ${element.base}` : ""}</div>
+      <div class="weight_modal_card">${element.weight} грамм${element.type === "Пицца" ? `, ⌀ ${element.diameter}` : ""}</div>
       <div class="compound_modal_card">${element.ingredients}</div>
-      <div class="structure_modal_card">Настроить</div>
+      <div class="structure_modal_card">${element.type === "Пицца" ? "Настроить" : ""}</div>
       <div class="extra"></div>
       <div class="button_price_modal_card">${element.price} ₽</div>
       <div class="button_to_cart">Перейти в корзину</div>
     </div>
-    `;
-  } else {
-    modalCard.innerHTML = `
-    <div class="img_modal_card">
-      <img src="${element.photo}" alt="" />
-    </div>
-    <div class="description_modal_card">
-      <div class="structure_modal_card">${element.name}</div>
-      <div class="weight_modal_card">${element.weight} грамм</div>
-      <div class="compound_modal_card">${element.ingredients}</div>
-      <div class="structure_modal_card"></div>
-      <div class="extra"></div>
-      <div class="button_price_modal_card">${element.price} ₽</div>
-      <div class="button_to_cart">Перейти в корзину</div>
-    </div>
-    `;
-  }
+  `;
+
+  modalCard.innerHTML = cardHTML;
+
   makeSmoothAnimation(modalCard);
   return modalCard;
 };
+
 
 //Удаление затемнения и модального окна продукта по кнопке
 const deleteModalCardButton = () => {
