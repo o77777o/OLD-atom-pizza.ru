@@ -132,7 +132,7 @@
   align-items: center;
   font-weight: 500;
   font-size: var(--3font_size);
-  height: 2.8rem;
+  min-height: 2.8rem;
   width: 100%;
   color: white;
   background-color: var(--general_green_color);
@@ -157,7 +157,7 @@
   font-size: var(--3font_size);
   color: white;
   font-weight: 500;
-  height: 2.8rem;
+  min-height: 2.8rem;
   padding: 0rem 0.5rem;
   cursor: pointer;
   user-select: none;

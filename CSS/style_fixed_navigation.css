@@ -46,8 +46,8 @@
 
 .button_open_cart {
   position: fixed;
-  bottom: 50%;
-  left: 2rem;
+  bottom: 70vh;
+  right: 8rem;
 
   user-select: none;
   display: flex;

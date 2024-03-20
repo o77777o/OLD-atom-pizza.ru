@@ -122,42 +122,43 @@
 }
 
 .structure_modal_card {
-  flex: 1;
   font-size: var(--3font_size);
   font-weight: 500;
   margin: 0.5rem 0rem;
 }
 
 .weight_modal_card {
-  flex: 1;
+  margin: 0.5rem 0;
   color: var(--general_gray_font_color);
 }
 
 .compound_modal_card {
-  overflow: auto;
-  flex: 2;
+  margin: 0.5rem 0;
+
 }
 
 .extra {
-  flex: 3;
   display: flex;
-  overflow: scroll;
+  /* overflow: scroll; */
   flex-direction: column;
 
   border-radius: 20px;
 }
 
+.total_modal_info {
+  overflow: scroll;
+  display: flex;
+  /* flex: 1; */
+  flex-direction: column;
+}
+
 .extra_item {
   display: flex;
   justify-content: space-between;
-  align-items: center; 
+  align-items: center;
   padding: 0rem 0.5rem;
   border: 1px solid var(--general_border_color);
   border-radius: 20px;
   margin: 0.25rem 0rem;
   min-height: 3rem;
 }
-
-
-
-

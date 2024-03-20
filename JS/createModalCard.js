@@ -20,8 +20,8 @@ const makeSmoothAnimation = (elementHTML) => {
 //Функция добавления элемента по ID в корзину и сохранения в LS
 const addToCart = (modalCard) => {
   const modalCardDescriptionHTML = modalCard.children[1];
-  buttonPriceModalCardHTML = modalCardDescriptionHTML.children[5];
-  buttonToCartHTML = modalCardDescriptionHTML.children[6];
+  buttonPriceModalCardHTML = modalCardDescriptionHTML.children[1];
+  buttonToCartHTML = modalCardDescriptionHTML.children[2];
 
   cardToCart(modalCard, buttonPriceModalCardHTML);
   addClick(buttonPriceModalCardHTML, displayButtonToCart, buttonToCartHTML);
@@ -163,11 +163,13 @@ const createModalCard = (element) => {
       <img src="${element.photo}" alt="" />
     </div>
     <div class="description_modal_card">
+      <div class="total_modal_info">
       <div class="structure_modal_card">${element.name}${element.type === "Пицца" ? `, <br> ${element.base}` : ""}</div>
       <div class="weight_modal_card">${element.weight} грамм${element.type === "Пицца" ? `, ⌀ ${element.diameter}` : ""}</div>
       <div class="compound_modal_card">${element.ingredients}</div>
       <div class="structure_modal_card">${element.type === "Пицца" ? "Настроить" : ""}</div>
       <div class="extra"></div>
+    </div>
       <div class="button_price_modal_card">${element.price} ₽</div>
       <div class="button_to_cart">Перейти в корзину</div>
     </div>
