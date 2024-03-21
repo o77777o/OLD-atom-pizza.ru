@@ -224,9 +224,9 @@ const getAllData = async (buttonPlaceAnOrderHTML) => {
           throw new Error("Ошибка HTTP: " + response.status);
         }
 
-        displayStatusOrderModal();
-        deactivateButtonPlaceAnOrder();
         clearAllCart();
+        deactivateButtonPlaceAnOrder();
+        displayStatusOrderModal();
 
         return true; // Все проверки прошли успешно
     }
