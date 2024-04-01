@@ -1,2 +1,2 @@
-## atom-pizza.ru vanilla
+## ATOM-PIZZA.RU
 
