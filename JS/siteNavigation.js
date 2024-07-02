@@ -48,10 +48,14 @@ const isWorkingTimeNow = () => {
   const hours = moscowTime.getHours();
   const minutes = moscowTime.getMinutes();
 
-  // Проверяем, что время в рамках каждого дня и часы в пределах 11:00 - 21:00
   const isWorkingHours =
-    (hours > TIME_START || (hours === TIME_START && minutes >= 0)) &&
-    (hours < TIME_END || (hours === TIME_END && minutes === 0));
+    TIME_START <= TIME_END
+      ? (hours > TIME_START || (hours === TIME_START && minutes >= 0)) &&
+        (hours < TIME_END || (hours === TIME_END && minutes === 0))
+      : hours > TIME_START ||
+        (hours === TIME_START && minutes >= 0) ||
+        hours < TIME_END ||
+        (hours === TIME_END && minutes === 0);
 
   return isWorkingHours && POWER_BUTTON;
 };
@@ -84,7 +88,6 @@ const createAlertModal = (parentHTML) => {
   </div>
   `;
   }
-
 
   makeSmoothAnimation(alertModal);
   parentHTML.appendChild(alertModal);
