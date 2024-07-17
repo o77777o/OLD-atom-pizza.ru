@@ -28,14 +28,14 @@ const createSiteMenu = (menuArray) => {
     items.forEach((item) => {
       const productCard = document.createElement("div");
       productCard.classList.add("product_card");
-      productCard.id = item.ID;
+      productCard.id = item.id;
 
       const cardHTML = `
         <div class="img_product">
           <img src="${item.photo}" alt="" title="Настроить"/>
         </div>
         <div class="description_product">
-          <div class="structure_product">${item.name}${type === "Пицца" ? `, <br> ${item.base}` : ""}</div>
+          <div class="structure_product">${item.name}</div>
           <div class="weight_product">${item.weight} грамм${type === "Пицца" ? `, ⌀ ${item.diameter}` : ""}</div>
           <div class="button_price_product_card">${item.price} ₽</div>
         </div>`;

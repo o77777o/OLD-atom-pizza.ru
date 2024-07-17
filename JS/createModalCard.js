@@ -156,7 +156,7 @@ const activateAllCheckboxes = (menuElement) => {
 const createModalCard = (element) => {
   const modalCard = document.createElement("div");
   modalCard.classList.add("modal_card");
-  modalCard.id = element.ID;
+  modalCard.id = element.id;
 
   const cardHTML = `
     <div class="img_modal_card">
@@ -164,7 +164,7 @@ const createModalCard = (element) => {
     </div>
     <div class="description_modal_card">
       <div class="total_modal_info">
-      <div class="structure_modal_card">${element.name}${element.type === "Пицца" ? `, <br> ${element.base}` : ""}</div>
+      <div class="structure_modal_card">${element.name}</div>
       <div class="weight_modal_card">${element.weight} грамм${element.type === "Пицца" ? `, ⌀ ${element.diameter}` : ""}</div>
       <div class="compound_modal_card">${element.ingredients}</div>
       <div class="structure_modal_card">${element.type === "Пицца" ? "Настроить" : ""}</div>

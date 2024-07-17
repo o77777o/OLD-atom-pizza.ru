@@ -8,7 +8,8 @@ const setEmptyStorage = () => {
 
 //Поиск объекта по ID
 const findByID = (id) => {
-  element = menuPosition.find((position) => position.ID === id);
+  let element = menuPosition.find((item) => item.id === +id);
+
   if (!element) {
     alert("Ошибка");
     return;
@@ -77,7 +78,7 @@ const deleteFromLS = (cartItem) => {
 
   const elementToDelete = all.findIndex((element) => {
     return (
-      element.ID === cartItem.ID &&
+      element.id === cartItem.id &&
       element.extra.length === cartItem.extra.length &&
       element.extra.every((extraItem, index) => {
         return (
@@ -143,7 +144,7 @@ const createElement = (source) => {
   const finalCartItemPrice = cartItemPrice + totalExtraItemPrice;
   const product = document.createElement("div");
   product.classList.add("product");
-  product.id = source.ID;
+  product.id = source.id;
   product.innerHTML = `
   <div class="product_info">
     <div class="product_name">• ${source.type} «${source.name}»</div>
