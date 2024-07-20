@@ -1,6 +1,5 @@
 window.onload = () => {
   initNavigation();
-  initProductCard();
   initModal();
   initCart();
   initUserConfigurate();

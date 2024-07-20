@@ -40,6 +40,18 @@
   align-items: center;
 }
 
+.swiper-button-prev {
+  color: var(--general_bg_color);
+}
+
+.swiper-button-next {
+  color: var(--general_bg_color);
+}
+
+.swiper-pagination-bullet-active {
+  background-color: var(--general_red_color);
+}
+
 .swiper-slide img {
   display: block;
   width: 100%;

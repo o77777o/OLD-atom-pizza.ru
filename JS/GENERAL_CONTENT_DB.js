@@ -1,7 +1,7 @@
 const API_URL = "http://localhost:3001";
 
 //Время начала работы ресторана (указывать только часы)
-let TIME_START = 1;
+let TIME_START = 11;
 
 //Время окончания работы ресторана (указывать только часы)
 let TIME_END = 1;
@@ -14,6 +14,7 @@ let MIN_ORDER_PRICE = 1300;
 
 let menuPosition = [];
 let extraItems = [];
+let sliderPhotos = [];
 
 (async () => {
   const requestForMenu = await fetch(`${API_URL}/api/front/cards`, {
@@ -29,6 +30,7 @@ let extraItems = [];
   }
 
   menuPosition = await requestForMenu.json();
+  createSiteMenu(menuPosition);
 
   const requestForExtra = await fetch(`${API_URL}/api/front/extra-products`, {
     method: "GET",
@@ -43,6 +45,24 @@ let extraItems = [];
   }
 
   extraItems = await requestForExtra.json();
+
+  const requestForSliderPhotos = await fetch(
+    `${API_URL}/api/front/slider-photos`,
+    {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    }
+  );
+
+  if (!requestForSliderPhotos.ok) {
+    alert("Системная ошибка");
+    return;
+  }
+
+  sliderPhotos = await requestForSliderPhotos.json();
+  createSlider();
 
   const requestForConfiguration = await fetch(
     `${API_URL}/api/front/cofiguration`,
@@ -70,8 +90,6 @@ let extraItems = [];
   POWER_BUTTON =
     (data.find((item) => item.option === "POWER_BUTTON") || {}).value ===
     "true";
-
-  console.log(POWER_BUTTON);
 })();
 
 window.extraItems = extraItems;

@@ -52,8 +52,3 @@ const createSiteMenu = (menuArray) => {
 };
 
 
-
-//Точка входа
-const initProductCard = () => {
-  createSiteMenu(menuPosition);
-};

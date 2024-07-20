@@ -32,6 +32,10 @@
     <title>Atomic Pizza - Вкусная и недорогая пицца в Санкт-Петербурге</title>
 
     <link type="Image/x-icon" href="./svg/favicon.ico" rel="icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
     <link rel="stylesheet" href="./CSS/style_general.css" />
     <link rel="stylesheet" href="./CSS/style.css" />
     <link rel="stylesheet" href="./CSS/style_fixed_navigation.css" />
@@ -48,10 +52,6 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Noto+Sans+JP:wght@100..900&family=Roboto:wght@100;300;400;500&display=swap"
       rel="stylesheet"
     />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
 
     <script defer src="./JS/GENERAL_CONTENT_DB.js"></script>
     <script defer src="./JS/script.js"></script>
@@ -66,10 +66,17 @@
     <script defer src="./JS/createCartModal.js"></script>
     <script defer src="./JS/createDeliveryModal.js"></script>
     <script defer src="./JS/createFooterModal.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"
+    ></script>
     <script defer src="./JS/yandexMap.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script defer src="./JS/progressCircle.js"></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"
+    ></script>
+    <script defer src="./JS/createSlider.js"></script>
+
     <script
       defer=""
       src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=5bc6a18b-520c-4a08-af73-0d2ea6068eee&amp;suggest_apikey=558f8ae7-2cad-4815-b735-84beba7d5ae2"
@@ -77,36 +84,7 @@
     ></script>
   </head>
   <body>
-    <div class="swiper mySwiper">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide">
-          <img src="./slider_photo/SLIDERBIG.png" alt="" />
-        </div>
-        <div class="swiper-slide">
-          <img src="./slider_photo/SLIDERBIG.png" alt="" />
-        </div>
-      </div>
-      <div class="swiper-button-next"></div>
-      <div class="swiper-button-prev"></div>
-      <div class="swiper-pagination"></div>
-      <div class="autoplay-progress">
-        <svg viewBox="0 0 48 48">
-          <circle cx="24" cy="24" r="20"></circle>
-        </svg>
-        <span></span>
-      </div>
-    </div>
-
-    <!-- Swiper JS -->
-
-    <!-- Initialize Swiper -->
-    <script>
-      var swiper = new Swiper(".mySwiper", {
-        pagination: {
-          el: ".swiper-pagination",
-        },
-      });
-    </script>
+    <div class="slider-create"></div>
 
     <div class="button_open_cart">
       <div class="count_cart"></div>
