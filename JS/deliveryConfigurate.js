@@ -209,7 +209,7 @@ const getAllData = async (buttonPlaceAnOrderHTML) => {
         };
 
         // Отправляем данные на сервер
-        const response = await fetch("https://api.atom-pizza.ru/order/new", {
+        const response = await fetch(`${API_URL}/order/new`, {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
