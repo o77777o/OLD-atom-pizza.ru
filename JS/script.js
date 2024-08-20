@@ -1,5 +1,5 @@
-window.onload = () => {
-  initNavigation();
+window.onload = async () => {
+  await getAllDataFromApi();
   initModal();
   initCart();
   initUserConfigurate();

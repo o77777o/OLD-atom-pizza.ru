@@ -1,10 +1,10 @@
-const API_URL = "http://localhost:3000";
+const API_URL = 'https://api.atom-pizza.ru';
 
 //Время начала работы ресторана (указывать только часы)
-let TIME_START = 11;
+let TIME_START = 0;
 
 //Время окончания работы ресторана (указывать только часы)
-let TIME_END = 1;
+let TIME_END = 0;
 
 //ПРИЕМ ЗАКАЗОВ true=работает по расписанию. false=всегда не работает (Менять на false, если заказы ставим на стоп.)
 let POWER_BUTTON = true;
@@ -16,16 +16,16 @@ let menuPosition = [];
 let extraItems = [];
 let sliderPhotos = [];
 
-(async () => {
+const getAllDataFromApi = async () => {
   const requestForMenu = await fetch(`${API_URL}/api/front/cards`, {
-    method: "GET",
+    method: 'GET',
     headers: {
-      "Content-Type": "application/json",
+      'Content-Type': 'application/json',
     },
   });
 
   if (!requestForMenu.ok) {
-    alert("Системная ошибка");
+    alert('Системная ошибка');
     return;
   }
 
@@ -33,14 +33,14 @@ let sliderPhotos = [];
   createSiteMenu(menuPosition);
 
   const requestForExtra = await fetch(`${API_URL}/api/front/extra-products`, {
-    method: "GET",
+    method: 'GET',
     headers: {
-      "Content-Type": "application/json",
+      'Content-Type': 'application/json',
     },
   });
 
   if (!requestForExtra.ok) {
-    alert("Системная ошибка");
+    alert('Системная ошибка');
     return;
   }
 
@@ -49,15 +49,15 @@ let sliderPhotos = [];
   const requestForSliderPhotos = await fetch(
     `${API_URL}/api/front/slider-photos`,
     {
-      method: "GET",
+      method: 'GET',
       headers: {
-        "Content-Type": "application/json",
+        'Content-Type': 'application/json',
       },
     }
   );
 
   if (!requestForSliderPhotos.ok) {
-    alert("Системная ошибка");
+    alert('Системная ошибка');
     return;
   }
 
@@ -67,30 +67,31 @@ let sliderPhotos = [];
   const requestForConfiguration = await fetch(
     `${API_URL}/api/front/cofiguration`,
     {
-      method: "GET",
+      method: 'GET',
       headers: {
-        "Content-Type": "application/json",
+        'Content-Type': 'application/json',
       },
     }
   );
 
   if (!requestForConfiguration.ok) {
-    alert("Системная ошибка");
+    alert('Системная ошибка');
     return;
   }
 
   const data = await requestForConfiguration.json();
 
-  TIME_START = +(data.find((item) => item.option === "TIME_START") || {}).value;
-  TIME_END = +(data.find((item) => item.option === "TIME_END") || {}).value;
+  TIME_START = +(data.find((item) => item.option === 'TIME_START') || {}).value;
+  TIME_END = +(data.find((item) => item.option === 'TIME_END') || {}).value;
   MIN_ORDER_PRICE = +(
-    data.find((item) => item.option === "MIN_ORDER_PRICE") || {}
+    data.find((item) => item.option === 'MIN_ORDER_PRICE') || {}
   ).value;
 
   POWER_BUTTON =
-    (data.find((item) => item.option === "POWER_BUTTON") || {}).value ===
-    "true";
-})();
+    (data.find((item) => item.option === 'POWER_BUTTON') || {}).value ===
+    'true';
+  initNavigation();
+}
 
 window.extraItems = extraItems;
 window.menuPosition = menuPosition;
